@@ -373,7 +373,7 @@ else if (Config.WORKTYPE == 'public') {
     Asena.addCommand({pattern: 'superai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
-        var downloading = await message.client.sendMessage(message.jid,'Enhancing... 🖌️',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'Mejorando... 🖌️',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
