@@ -44,12 +44,12 @@ if (Config.WORKTYPE == 'private') {
     
 	    memeMaker({
             image: location,         
-            outfile: 'asena-meme.png',
+            outfile: 'skuel-meme.png',
             topText: topText,
             bottomText: bottomText,
         }, async function(err) {
             if(err) throw new Error(err)
-            await message.client.sendMessage(message.jid, fs.readFileSync('asena-meme.png'), MessageType.image, {filename: 'asena-meme.png', mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid, fs.readFileSync('skuel-meme.png'), MessageType.image, {filename: 'skuel-meme.png', mimetype: Mimetype.png, caption: 'Hecho por *Skueletor*'});
             await info.delete();    
         });
     }));
@@ -82,12 +82,12 @@ else if (Config.WORKTYPE == 'public') {
     
 	    memeMaker({
             image: location,         
-            outfile: 'asena-meme.png',
+            outfile: 'skuel-meme.png',
             topText: topText,
             bottomText: bottomText,
         }, async function(err) {
             if(err) throw new Error(err)
-            await message.client.sendMessage(message.jid, fs.readFileSync('asena-meme.png'), MessageType.image, {filename: 'asena-meme.png', mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
+            await message.client.sendMessage(message.jid, fs.readFileSync('skuel-meme.png'), MessageType.image, {filename: 'skuel-meme.png', mimetype: Mimetype.png, caption: 'Hecho por *Skueletor*'});
             await info.delete();    
         });
     }));
