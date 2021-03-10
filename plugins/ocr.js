@@ -45,7 +45,7 @@ if (Config.WORKTYPE == 'private') {
 
         await info.delete();
         if ( result === ' ' || result.length == 1 ) {
-            return await message.reply(Lang.ERROR.format(' Empty text'));
+            return await message.reply(Lang.ERROR.format(' No se encontró texto :('));
         }
 
         return await message.reply(Lang.RESULT.format(dil[2], result));
@@ -81,7 +81,7 @@ else if (Config.WORKTYPE == 'public') {
 
         await info.delete();
         if ( result === ' ' || result.length == 1 ) {
-            return await message.reply(Lang.ERROR.format(' Empty text'));
+            return await message.reply(Lang.ERROR.format(' No se encontró texto :('));
         }
 
         return await message.reply(Lang.RESULT.format(dil[2], result));
