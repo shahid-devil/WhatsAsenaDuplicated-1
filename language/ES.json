@@ -232,16 +232,17 @@
             "SPEEDTEST_RESULT": "*¡Prueba de velocidad hecha!*",
             "UPLOAD": "Subida",
             "DOWNLOAD": "Bajada",
-            "PING_DESC": "Mide tu ping."
+            "PING_DESC": "Mide tu ping.",
+            "URL": "Acorta el enlace largo."
         },
         "conventer": {
-            "MP4TOAUDIO_DESC": "Convierte video en sonido.",
-            "MP4TOAUDIO_NEEDREPLY": "*Tienes que respond a un video!*",
-            "MP4TOAUDIO": "```El video se convierte en sonido...```",
-            "STICKER_DESC": "Convierte sticker en foto",
-            "STICKER_NEEDREPLY": "*¡Tienes que responder a un sticker!*",
-            "STICKER": "```El stciker convierte en foto...```",
-            "XMEDIA_DESC": "Es un complemento con más de 25 herramientas multimedia."
+            "MP4TOAUDİO_DESC": "Convierte video en sonido.",
+            "MP4TOAUDİO_NEEDREPLY": "*Tienes que respond a un video!*",
+            "MP4TOAUDİO": "```El video se convierte en audio...```",
+            "STİCKER_DESC": "Convierte sticker en foto",
+            "STİCKER_NEEDREPLY": "*¡Tienes que responder a un sticker!*",
+            "STİCKER": "```Convirtiendo el sticker en foto...```",
+            "XMEDİA_DESC": "Es un complemento con más de 25 herramientas multimedia.",
             "T_FALSE": "```❌ ¡Se ha introducido un efecto de Blend incorrecto!```\n```🔎 Comandos existentes:```\n\n*$dodge* - Aplica un filtro de color rosa al video.\n*$multiply* - Aplica un filtro de color verde al video.\n*$grainmerge* - Aumenta el contraste del video.\n*$and* - Aplica efecto de rayo negro según la velocidad del video.\n*$or* - Aplica un efecto de rayo blanco según la velocidad del video.\n*$burn* - Aplica contraste verde al video.\n*$difference* - Muestra las diferencias aplicando relieve verde al video.\n*$grainextract* - Muestra las diferencias aplicando un relieve gris al video.\n*$divide* - Demuestra las diferencias aplicando un relieve rosa al video.\n*$xor* - Aplica tanto relieve verde como efecto relámpago al vídeo.\n*$hardmix* - Mezcla los colores del video en un tono amarillo y rojo.\n*$negation* - Convierte la dinámica del video en rosa.",
             "T_NOT": "```💭 ¡Necesita ingresar cualquier efecto de Blend!\n```🔎 Comandos existentes:```\n\n*$dodge* - Aplica un filtro de color rosa al video.\n*$multiply* - Aplica un filtro de color verde al video.\n*$grainmerge* - Aumenta los valores de contraste del video.\n*$and* - Aplica efecto de rayo negro según la velocidad del video.\n*$or* - Aplica un efecto de rayo blanco según la velocidad del video.\n*$burn* - Aplica contraste verde al video.\n*$difference* - Muestra las diferencias aplicando relieve verde al video.\n*$grainextract* - Muestra las diferencias aplicando un relieve gris al video.\n*$divide* - Demuestra las diferencias aplicando un relieve rosa al video.\n*$xor* - Aplica tanto relieve verde como efecto relámpago al vídeo.\n*$hardmix* - Mezcla los colores del video en un tono amarillo y rojo.\n*$negation* - Convierte la dinámica del video en rosa.",
             "T_DESC": "Aplica el efecto TBlend seleccionado a los videos." 
@@ -358,19 +359,19 @@
         },
         "deepai": {
             "DEEPAI_DESC": "Ejecuta las herramientas de inteligencia artificial más poderosas utilizando redes neuronales artificiales.",
-            "TEXT": "*¡Debes ingresar texto! Aunque soy una poderosa inteligencia artificial, no puedo leer tus pensamientos!*",
+            "TEXT": "*¡Debes ingresar texto!\n¡Aunque soy una poderosa inteligencia artificial, no puedo leer tus pensamientos!*",
             "URL": "*¡Debes ingresar la URL de la imagen*\n*Ejemplo:* https://i.hizliresim.com/nrg50b.jpg"
         },
         "ttp": {
             "TTP_DESC": "Convierte texto en pintura simple.",
             "NEED_WORD": "*¡Debes ingresar palabras!*",
-            "ANIME_DESC": "Escribe el texto dentro de la pancarta sostenida por la chica anime.",	
-            "TRUMP_DESC": "Convierte el texto al tweet de Trump.",	
-            "CHANGE_DESC": "Convierte el artículo en un póster de change my mind.",	
+            "ANIME_DESC": "Escribe el texto dentro de la pancarta sostenida por la chica anime.",
+            "TRUMP_DESC": "Convierte el texto al tweet de Trump.",
+            "CHANGE_DESC": "Convierte el artículo en un póster de change my mind.",
             "ATTP_DESC": "Convierte el texto en sticker de colores"
         },
         "wallpaper": {
-            "WP": "Envía fondos de pantalla de alta resolución diferentes."
+            "WP": "Envía diferentes fondos de pantalla en alta resolución."
         },
         "webss": {
             "SS_DESC": "Toma una captura de pantalla de la página en el enlace dado.",
@@ -387,17 +388,17 @@
             "NO_SAVED": "No has encontrado ninguna nota grabada.",
             "SAVED": "Aquí están las notas que grabó: ",
             "SAVE_USAGE": "Registra el mensaje al que responde o la nota oficial.",
-            "REPLY": "Por favor cite un mensaje o usar como .save <yournote>",
+            "REPLY": "Por favor cite un mensaje o usar como /save <yournote>",
             "SUCCESSFULLY_ADDED": "Tu nota ha sido guardada con éxito, puede acceder a sus notas escribiendo .notes",
-            "UNSUCCESSFUL": "Encontramos un error al guardar tu nota, ınténtalo de nuevo. Si el problema persiste, comuníquese con los desarrolladores de WhatsAsena.",
+            "UNSUCCESSFUL": "Encontramos un error al guardar tu nota, ınténtalo de nuevo. Si el problema persiste, comuníquese con el desarrollador del bot mediante t.me/skueletor_bot.",
             "DELETE_USAGE": "Elimina *todas* las notas que ha guardado.",
             "SUCCESSFULLY_DELETED": "Todas tus notas se han eliminado correctamente."
-        },    
+        },
         "instagram": {
             "NEED_WORD": "*Escribe cualquier nombre de usuario de Instagram.*",
-            "USAGE": ".insta <nombre de usuario>",
+            "USAGE": "/insta <nombre de usuario>",
             "DESC": "Acceso a la información del usuario de Instagram.",
-            "LOADING": "Cargando perfil de usuario.. Espere por favor.",
+            "LOADING": "Cargando perfil de usuario. Espere por favor...",
             "USERNAME": "Nombre de usuario",
             "NAME": "Nombre",
             "BIO": "Biografía",
