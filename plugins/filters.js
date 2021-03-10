@@ -27,7 +27,7 @@ Asena.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC}
         }
     } else {
         if (match.length < 2) {
-            return await message.client.sendMessage(message.jid,Lang.NEED_REPLY + ' ```.filter "sa" "as"',MessageType.text);
+            return await message.client.sendMessage(message.jid,Lang.NEED_REPLY + ' ```/filter "sa" "as"',MessageType.text);
         }
         await FilterDb.setFilter(message.jid, match[0].replace(/['"“]+/g, ''), match[1].replace(/['"“]+/g, '').replace(/[#]+/g, '\n'), match[0][0] === "'" ? true : false);
         await message.client.sendMessage(message.jid,Lang.FILTERED.format(match[0].replace(/['"]+/g, '')),MessageType.text);
@@ -37,7 +37,7 @@ Asena.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC}
 Asena.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
     if (match === null) {
-        return await message.client.sendMessage(message.jid,Lang.NEED_REPLY + '\n*Example:* ```.stop "hello"```',MessageType.text)
+        return await message.client.sendMessage(message.jid,Lang.NEED_REPLY + '\n*Ejemplo:* ```/stop "hola"```',MessageType.text)
     }
 
     del = await FilterDb.deleteFilter(message.jid, match[0].replace(/['"“]+/g, ''));
