@@ -23,14 +23,14 @@ if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'deepai', fromMe: true, deleteCommand: false, desc: Lang.DEEPAI_DESC}, (async (message, match) => {
 
-        await message.sendMessage('💻 Usage: *.moodai <text>*\nℹ️ Desc: 🇹🇷 Yazdığınız yazıdan ruh halinizi bulur.\n🇬🇧 It finds your mood from the article you wrote.\n\n💻 Usage: *.colorai*\nℹ️ Desc: 🇹🇷 Siyah beyaz fotoğrafları renklendirir.\n🇬🇧 It colorize bw photos.\n\n💻 Usage: *.superai*\nℹ️ Desc: 🇹🇷 Fotoğrafın kalitesini yapay zeka ile arttırır.\n🇬🇧 Improves the quality of photos with Neural AI.\n\n💻 Usage: *.waifuai*\nℹ️ Desc: 🇹🇷 Fotoğrafların renk paletlerini yapay zeka ile birleştirir.\n🇬🇧 Combines the color palettes of photos with artificial intelligence.\n\n💻 Usage: *.dreamai*\nℹ️ Desc: 🇹🇷 Fotoğrafa deepdream efekti uygular.\n🇬🇧 Applies deepdream effect to the photo.\n\n💻 Usage: *.neuraltalkai*\nℹ️ Desc: 🇹🇷 Fotoğrafki olan şeyi yapay zeka ile açıklar.\n🇬🇧 Explain the phenomenon in the photo with artificial intelligence.\n\n💻 Usage: *.ttiai <text>*\nℹ️ Desc: 🇹🇷 Yazıyı resme dönüştürür.\n🇬🇧 Converts text to a picture. (Text-to-Image)\n\n💻 Usage: *.toonai*\nℹ️ Desc: 🇹🇷 Fotoğraftaki yüzü çizgi film karakterine çevirir.\n🇬🇧 Turns the face in the photo into a cartoon character.\n\n💻 Usage: *.textai <text>*\nℹ️ Desc: 🇹🇷 Yazdığınız cümleden size yapay bir hikaye yaratır.\n🇬🇧 It creates an artificial story for you from your sentence.\n\n💻 Usage: *.nudityai*\nℹ️ Desc: 🇹🇷 Fotoğraftaki NSFW değerini 1 ve 0 arasında gösterir. \n🇬🇧 It shows the NSFW value between 1 and 0 in the photo.\n\n💻 Usage: *.ganstyle*\nℹ️ Desc: 🇹🇷 Yanıtladığınız fotoğrafı seçili olan resim ile birleştirir.\n🇬🇧 Combines the photo you answered with the selected picture.\n\n⚠️ 🇹🇷 *Bütün bu yapay zeka araçlarını derin öğrenme ile çalışır. Ne kadar fazla kullanırsanız o kadar fazla bilgiyi depolar.* ```Sadece ingilizce karakter kullanın!```\n\n⚠️ 🇬🇧 *All the tools here work with deep learning. The more you use it, the more information it stores.* ```Use only english characters!```');
+        await message.sendMessage('💻 Uso: */colorai*\nℹ️ Descripción: Convierte cualquier imágen en una foto blanco y negro.\n\n💻 Uso: */superai*\nℹ️ Descripción: Mejora la calidad de las fotos con Inteligencia Artificial.\n\n💻 Uso: */waifuai*\nℹ️ Descripción: Combina las paletas de colores de las fotos con Inteligencia Artificial.\n\n💻 Uso: */dreamai*\nℹ️ Descripción: Aplica efecto de ensueño a la foto.\n\n💻 Uso: */neuraltalkai*\nℹ️ Descripción: Explica el fenómeno de la foto con Inteligencia Artificial.\n\n💻 Uso: */ttiai <texto>*\nℹ️ Descripción: Convierte texto en una imagen. (Texto-a-Imagen)\n\n💻 Uso: */toonai*\nℹ️ Descripción: Convierte la cara de la foto en un personaje de dibujos animados con Inteligencia Artificial.\n\n💻 Uso: */textai <texto>*\nℹ️ Descripción: Crea una historia artificial para ti a partir de tu oración, por ahora solo en inglés.\n\n💻 Uso: */nudityai*\nℹ️ Descripción: Muestra el valor NSFW entre 1 y 0 en la foto.\n\n💻 Uso: */ganstyle*\nℹ️ Descripción: Combina la foto que respondiste con la foto seleccionada.\n\n⚠️ *Todas las herramientas aquí funcionan con aprendizaje profundo. Cuanto más lo use, funcionará mejor ya que más información almacenará. (Inteligencia Artificial)* ```Y de preferencia utiliza solo caracteres en inglés.```\n\n*Gracias a Skueletor por programar todo :D*');
 
     }));
 
     Asena.addCommand({pattern: 'colorai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
+        if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
-        var downloading = await message.client.sendMessage(message.jid,'Colorizing.. 🎨',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'Convirtiendo en blanco y negro... 🎨',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -49,7 +49,7 @@ if (Config.WORKTYPE == 'private') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *Skueletor*'})
 
             });
 
@@ -58,9 +58,9 @@ if (Config.WORKTYPE == 'private') {
     }));
 
     Asena.addCommand({pattern: 'waifuai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
+        if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
-        var downloading = await message.client.sendMessage(message.jid,'Mixing.. 🧩',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'Mezclando... 🧩',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -79,7 +79,7 @@ if (Config.WORKTYPE == 'private') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *Skueletor*'})
 
             });
 
@@ -88,9 +88,9 @@ if (Config.WORKTYPE == 'private') {
     }));
 
     Asena.addCommand({pattern: 'superai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
+        if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
-        var downloading = await message.client.sendMessage(message.jid,'Enhancing.. 🖌️',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'Mejorando... 🖌️',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -109,7 +109,7 @@ if (Config.WORKTYPE == 'private') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *Skueletor'})
 
             });
 
@@ -130,9 +130,9 @@ if (Config.WORKTYPE == 'private') {
     }));
 
     Asena.addCommand({pattern: 'dreamai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
+        if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
-        var downloading = await message.client.sendMessage(message.jid,'Starry Night.. 🌃',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'Noche estrellada... 🌃',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -151,7 +151,7 @@ if (Config.WORKTYPE == 'private') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *Skueletor*'})
 
             });
 
@@ -160,9 +160,9 @@ if (Config.WORKTYPE == 'private') {
     }));
 
     Asena.addCommand({pattern: 'neuraltalkai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
+        if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
-        var downloading = await message.client.sendMessage(message.jid,'Reading.. 🙇🏻',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'Leyendo... 🙇🏻',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -197,14 +197,14 @@ if (Config.WORKTYPE == 'private') {
 
         var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *Skueletor*'})
 
     }));
 
     Asena.addCommand({pattern: 'toonai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
+        if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
-        var downloading = await message.client.sendMessage(message.jid,'Tooning.. 🌟',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'Cariturizando... 🌟',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -232,9 +232,9 @@ if (Config.WORKTYPE == 'private') {
     }));
 
     Asena.addCommand({pattern: 'nudityai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
+        if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
-        var downloading = await message.client.sendMessage(message.jid,'Finding NSFW.. 🔥',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'Revisando la cantidad de NSFW... 🔥',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -272,9 +272,9 @@ if (Config.WORKTYPE == 'private') {
     }));
 
     Asena.addCommand({pattern: 'ganstyle', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
+        if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
-        var downloading = await message.client.sendMessage(message.jid,'Creating.. ♻️',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'Creando... ♻️',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -294,7 +294,7 @@ if (Config.WORKTYPE == 'private') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *Skueletor*'})
 
             });
 
@@ -306,14 +306,14 @@ else if (Config.WORKTYPE == 'public') {
 
     Asena.addCommand({pattern: 'deepai', fromMe: false, deleteCommand: false, desc: Lang.DEEPAI_DESC}, (async (message, match) => {
 
-        await message.sendMessage('💻 Usage: *.moodai <text>*\nℹ️ Desc: 🇹🇷 Yazdığınız yazıdan ruh halinizi bulur.\n🇬🇧 It finds your mood from the article you wrote.\n\n💻 Usage: *.colorai*\nℹ️ Desc: 🇹🇷 Siyah beyaz fotoğrafları renklendirir.\n🇬🇧 It colorize bw photos.\n\n💻 Usage: *.superai*\nℹ️ Desc: 🇹🇷 Fotoğrafın kalitesini yapay zeka ile arttırır.\n🇬🇧 Improves the quality of photos with Neural AI.\n\n💻 Usage: *.waifuai*\nℹ️ Desc: 🇹🇷 Fotoğrafların renk paletlerini yapay zeka ile birleştirir.\n🇬🇧 Combines the color palettes of photos with artificial intelligence.\n\n💻 Usage: *.dreamai*\nℹ️ Desc: 🇹🇷 Fotoğrafa deepdream efekti uygular.\n🇬🇧 Applies deepdream effect to the photo.\n\n💻 Usage: *.neuraltalkai*\nℹ️ Desc: 🇹🇷 Fotoğrafki olan şeyi yapay zeka ile açıklar.\n🇬🇧 Explain the phenomenon in the photo with artificial intelligence.\n\n💻 Usage: *.ttiai <text>*\nℹ️ Desc: 🇹🇷 Yazıyı resme dönüştürür.\n🇬🇧 Converts text to a picture. (Text-to-Image)\n\n💻 Usage: *.toonai*\nℹ️ Desc: 🇹🇷 Fotoğraftaki yüzü çizgi film karakterine çevirir.\n🇬🇧 Turns the face in the photo into a cartoon character.\n\n💻 Usage: *.textai <text>*\nℹ️ Desc: 🇹🇷 Yazdığınız cümleden size yapay bir hikaye yaratır.\n🇬🇧 It creates an artificial story for you from your sentence.\n\n💻 Usage: *.nudityai*\nℹ️ Desc: 🇹🇷 Fotoğraftaki NSFW değerini 1 ve 0 arasında gösterir. \n🇬🇧 It shows the NSFW value between 1 and 0 in the photo.\n\n💻 Usage: *.ganstyle*\nℹ️ Desc: 🇹🇷 Yanıtladığınız fotoğrafı seçili olan resim ile birleştirir.\n🇬🇧 Combines the photo you answered with the selected picture.\n\n⚠️ 🇹🇷 *Bütün bu yapay zeka araçlarını derin öğrenme ile çalışır. Ne kadar fazla kullanırsanız o kadar fazla bilgiyi depolar.* ```Sadece ingilizce karakter kullanın!```\n\n⚠️ 🇬🇧 *All the tools here work with deep learning. The more you use it, the more information it stores.* ```Use only english characters!```');
+        await message.sendMessage('💻 Uso: */colorai*\nℹ️ Descripción: Convierte cualquier imágen en una foto blanco y negro.\n\n💻 Uso: */superai*\nℹ️ Descripción: Mejora la calidad de las fotos con Inteligencia Artificial.\n\n💻 Uso: */waifuai*\nℹ️ Descripción: Combina las paletas de colores de las fotos con Inteligencia Artificial.\n\n💻 Uso: */dreamai*\nℹ️ Descripción: Aplica efecto de ensueño a la foto.\n\n💻 Uso: */neuraltalkai*\nℹ️ Descripción: Explica el fenómeno de la foto con Inteligencia Artificial.\n\n💻 Uso: */ttiai <texto>*\nℹ️ Descripción: Convierte texto en una imagen. (Texto-a-Imagen)\n\n💻 Uso: */toonai*\nℹ️ Descripción: Convierte la cara de la foto en un personaje de dibujos animados con Inteligencia Artificial.\n\n💻 Uso: */textai <texto>*\nℹ️ Descripción: Crea una historia artificial para ti a partir de tu oración, por ahora solo en inglés.\n\n💻 Uso: */nudityai*\nℹ️ Descripción: Muestra el valor NSFW entre 1 y 0 en la foto.\n\n💻 Uso: */ganstyle*\nℹ️ Descripción: Combina la foto que respondiste con la foto seleccionada.\n\n⚠️ *Todas las herramientas aquí funcionan con aprendizaje profundo. Cuanto más lo use, funcionará mejor ya que más información almacenará. (Inteligencia Artificial)* ```Y de preferencia utiliza solo caracteres en inglés.```\n\n*Gracias a Skueletor por programar todo :D*');
 
     }));
 
     Asena.addCommand({pattern: 'colorai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
+        if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
-        var downloading = await message.client.sendMessage(message.jid,'Colorizing.. 🎨',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'Convirtiendo en blanco y negro... 🎨',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -332,7 +332,7 @@ else if (Config.WORKTYPE == 'public') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *Skueletor*'})
 
             });
 
@@ -341,9 +341,9 @@ else if (Config.WORKTYPE == 'public') {
     }));
 
     Asena.addCommand({pattern: 'waifuai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
+        if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
-        var downloading = await message.client.sendMessage(message.jid,'Mixing.. 🧩',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'Mezclando... 🧩',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -362,7 +362,7 @@ else if (Config.WORKTYPE == 'public') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *Skueletor*'})
 
             });
 
@@ -371,9 +371,9 @@ else if (Config.WORKTYPE == 'public') {
     }));
 
     Asena.addCommand({pattern: 'superai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
+        if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
-        var downloading = await message.client.sendMessage(message.jid,'Enhancing.. 🖌️',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'Enhancing... 🖌️',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -392,7 +392,7 @@ else if (Config.WORKTYPE == 'public') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *Skueletor*'})
 
             });
 
@@ -413,9 +413,9 @@ else if (Config.WORKTYPE == 'public') {
     }));
 
     Asena.addCommand({pattern: 'dreamai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
+        if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
-        var downloading = await message.client.sendMessage(message.jid,'Starry Night.. 🌃',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'Noche estrellada... 🌃',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -434,7 +434,7 @@ else if (Config.WORKTYPE == 'public') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *Skueletor*'})
 
             });
 
@@ -443,9 +443,9 @@ else if (Config.WORKTYPE == 'public') {
     }));
 
     Asena.addCommand({pattern: 'neuraltalkai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
+        if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
-        var downloading = await message.client.sendMessage(message.jid,'Reading.. 🙇🏻',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'Leyendo... 🙇🏻',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -480,14 +480,14 @@ else if (Config.WORKTYPE == 'public') {
 
         var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *Skueletor*'})
 
     }));
 
     Asena.addCommand({pattern: 'toonai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
+        if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
-        var downloading = await message.client.sendMessage(message.jid,'Tooning.. 🌟',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'Cariturizando... 🌟',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -515,9 +515,9 @@ else if (Config.WORKTYPE == 'public') {
     }));
 
     Asena.addCommand({pattern: 'nudityai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
+        if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
-        var downloading = await message.client.sendMessage(message.jid,'Finding NSFW.. 🔥',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'Revisando la cantidad de NSFW... 🔥',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -555,9 +555,9 @@ else if (Config.WORKTYPE == 'public') {
     }));
 
     Asena.addCommand({pattern: 'ganstyle', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
+        if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
-        var downloading = await message.client.sendMessage(message.jid,'Creating.. ♻️',MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'Creando... ♻️',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -577,7 +577,7 @@ else if (Config.WORKTYPE == 'public') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *Skueletor*'})
 
             });
 
