@@ -574,8 +574,8 @@ if (Config.WORKTYPE == 'private') {
     })); 
 
     Asena.addCommand({pattern: 'gif', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('Need Video!');
-        var downloading = await message.client.sendMessage(message.jid,'```Converting to Gif..```',MessageType.text);
+        if (message.reply_message === false) return await message.sendMessage('¡Responde a un video!');
+        var downloading = await message.client.sendMessage(message.jid,'```Convirtiendo en Gif...```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -590,7 +590,7 @@ if (Config.WORKTYPE == 'private') {
             .videoBitrate(500)
             .save('output_gif.mp4')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output_gif.mp4'), MessageType.video, {mimetype: Mimetype.gif, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output_gif.mp4'), MessageType.video, {mimetype: Mimetype.gif, caption: 'Hecho por *Skueletor*'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -1432,8 +1432,8 @@ else if (Config.WORKTYPE == 'public') {
     })); 
 
     Asena.addCommand({pattern: 'gif', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('Need Video!');
-        var downloading = await message.client.sendMessage(message.jid,'```Converting to Gif..```',MessageType.text);
+        if (message.reply_message === false) return await message.sendMessage('¡Responde a un video!');
+        var downloading = await message.client.sendMessage(message.jid,'```Convirtiendo en Gif...```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1448,14 +1448,14 @@ else if (Config.WORKTYPE == 'public') {
             .videoBitrate(500)
             .save('output_gif.mp4')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output_gif.mp4'), MessageType.video, {mimetype: Mimetype.gif, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output_gif.mp4'), MessageType.video, {mimetype: Mimetype.gif, caption: 'Hecho por *Skueletor*'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
     Asena.addCommand({pattern: 'agif', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('Need Video!');
-        var downloading = await message.client.sendMessage(message.jid,'```Converting to Gif..```',MessageType.text);
+        if (message.reply_message === false) return await message.sendMessage('¡Responde a un video!');
+        var downloading = await message.client.sendMessage(message.jid,'```Convirtiendo en Gif...```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1469,7 +1469,7 @@ else if (Config.WORKTYPE == 'public') {
                 .videoBitrate(500)
                 .save('output_gif.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output_gif.mp4'), MessageType.video, {mimetype: Mimetype.gif, caption: 'Made by WhatsAsena'});
+                    await message.sendMessage(fs.readFileSync('output_gif.mp4'), MessageType.video, {mimetype: Mimetype.gif, caption: 'Hecho por *Skueletor*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }));
