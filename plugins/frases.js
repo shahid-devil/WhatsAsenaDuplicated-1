@@ -22,18 +22,18 @@ Asena.addCommand({pattern: 'hack', fromMe: true}, (async (message, match) => {
     await new Promise(r => setTimeout(r, 1000));
 
     await message.sendMessage('*¡El sistema de destino está siendo hackeado ahora mismo!*\n𝕎𝕙𝕒𝕥𝕤𝔸𝕡𝕡: 1%\n𝔾𝕒𝕝𝕖𝕣í𝕒: 3%\n𝔻𝕠𝕔𝕦𝕞𝕖𝕟𝕥𝕠𝕤: 6%\n𝔸𝕣𝕔𝕙𝕚𝕧𝕠𝕤: 1%\nℂá𝕞𝕒𝕣𝕒: 3%');
-    await new Promise(r => setTimeout(r, 800));
+    await new Promise(r => setTimeout(r, 1000));
     await message.sendMessage('*Proceso en ejecución...*\n𝕎𝕙𝕒𝕥𝕤𝔸𝕡𝕡: 18%\n𝔾𝕒𝕝𝕖𝕣í𝕒: 25%\n𝔻𝕠𝕔𝕦𝕞𝕖𝕟𝕥𝕠𝕤: 34%\n𝔸𝕣𝕔𝕙𝕚𝕧𝕠𝕤: 14%\nℂá𝕞𝕒𝕣𝕒: 16%');
-    await new Promise(r => setTimeout(r, 800));
+    await new Promise(r => setTimeout(r, 1000));
     await message.sendMessage('*Hackeando el sistema de seguridad del sistema*\n𝕎𝕙𝕒𝕥𝕤𝔸𝕡𝕡: 48%\n𝔾𝕒𝕝𝕖𝕣í𝕒: 44%\n𝔻𝕠𝕔𝕦𝕞𝕖𝕟𝕥𝕠𝕤: 57%\n𝔸𝕣𝕔𝕙𝕚𝕧𝕠𝕤: 14%\nℂá𝕞𝕒𝕣𝕒: 62%');
-    await new Promise(r => setTimeout(r, 800));
+    await new Promise(r => setTimeout(r, 1000));
     await message.sendMessage('*Eliminando los bloqueos del sistema...*\n𝕎𝕙𝕒𝕥𝕤𝔸𝕡𝕡: 68%\n𝔾𝕒𝕝𝕖𝕣í𝕒: 84%\n𝔻𝕠𝕔𝕦𝕞𝕖𝕟𝕥𝕠𝕤: 92%\n𝔸𝕣𝕔𝕙𝕚𝕧𝕠𝕤: 89%\nℂá𝕞𝕒𝕣𝕒: 86%');
-    await new Promise(r => setTimeout(r, 800));
+    await new Promise(r => setTimeout(r, 1000));
     await message.sendMessage('*Conectando a la cuenta de destino mediante la API WEB de WhatsApp*\n𝕎𝕙𝕒𝕥𝕤𝔸𝕡𝕡: 93%\n𝔾𝕒𝕝𝕖𝕣í𝕒: 90%\n𝔻𝕠𝕔𝕦𝕞𝕖𝕟𝕥𝕠𝕤: 88%\n𝔸𝕣𝕔𝕙𝕚𝕧𝕠𝕤: 94%\nℂá𝕞𝕒𝕣𝕒: 96%');
-    await new Promise(r => setTimeout(r, 800));
+    await new Promise(r => setTimeout(r, 1000));
     await message.sendMessage('😎 *Cuenta Hackeada*\n𝕎𝕙𝕒𝕥𝕤𝔸𝕡𝕡: 100%\n𝔾𝕒𝕝𝕖𝕣í𝕒: 100%\n𝔻𝕠𝕔𝕦𝕞𝕖𝕟𝕥𝕠𝕤: 100%\n𝔸𝕣𝕔𝕙𝕚𝕧𝕠𝕤: 100%\nℂá𝕞𝕒𝕣𝕒: 100%');
 
-    await new Promise(r => setTimeout(r, 1400));
+    await new Promise(r => setTimeout(r, 1600));
 
     await message.sendMessage('*¡Información guardada en la base de datos de Skueletor!*');
 
@@ -42,5 +42,32 @@ Asena.addCommand({pattern: 'hack', fromMe: true}, (async (message, match) => {
 Asena.addCommand({pattern: 'infohack', fromMe: true}, (async (message, match) => {
 
     await message.sendMessage("*Configurado por Skueletor*\nComando para hackear a alguien\n💻Uso: */hack*")
+
+}));
+
+Asena.addCommand({pattern: 'chocolate', fromMe: true}, (async (message, match) => {
+
+    await message.sendMessage('{__/}\n( • - • )\n/>🍫 te doy un chocolate');
+    await new Promise(r => setTimeout(r, 750));
+    await message.sendMessage('{__/}\n( • - • )\n🍫 <   O no. tu ya tienes');
+    await new Promise(r => setTimeout(r, 750));
+    await message.sendMessage('{__/}\n( • - • )\n/>🍫 No puedo sacrificarte...');
+    await new Promise(r => setTimeout(r, 750));
+    await message.sendMessage('{__/}\n( • - • )\n/>☕️ Mejor te doy esto');
+    await new Promise(r => setTimeout(r, 750));
+    await message.sendMessage('{__/}\n( • - • )\n/>❤️ toma esto también pero no lo rompas, por favor');
+    await new Promise(r => setTimeout(r, 750));
+    await message.sendMessage('{__/}\n( • - • )\n/>💔 Dije que no lo rompas');
+    await new Promise(r => setTimeout(r, 750));
+    await message.sendMessage('{__/}\n( • - • )\n💔< Debes arrepentirte de haberlo hecho...');
+    await new Promise(r => setTimeout(r, 750));
+    await message.sendMessage('{__/}\n( • - • )\n/> ❤️ o toma otro...');
+    await new Promise(r => setTimeout(r, 750));
+    await message.sendMessage('{__/}\n( • - • )\n/>💔 te odio');
+    await new Promise(r => setTimeout(r, 750));
+    await message.sendMessage('{__/}\n( • - • )\n/>❤️ toma esto una vez más, pero si lo rompes, me enojaré');
+    await new Promise(r => setTimeout(r, 1400));
+
+    await message.sendMessage('Hecho por *Skueletor*');
 
 }));
