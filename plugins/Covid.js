@@ -1,9 +1,9 @@
 const Asena = require("../events");
 const {MessageType} = require("@adiwajshing/baileys");
 const got = require("got");
-const Config = require('../config');
+const cn = require('../config');
 
-if (Config.WORKTYPE == 'private') {
+if (cn.WORKTYPE == 'private') {
     
     Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match) => {
     if (match[1] === "") {
@@ -270,7 +270,7 @@ Asena.addCommand({pattern: "infocovid", fromMe: true}, (async (message,match) =>
     }));
 }    
 
-else if (Config.WORKTYPE == 'public') {
+else if (cn.WORKTYPE == 'public') {
     
     Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match) => {
     if (match[1] === "") {
