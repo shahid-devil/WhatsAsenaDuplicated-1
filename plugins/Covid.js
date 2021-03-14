@@ -3,7 +3,7 @@ const {MessageType} = require("@adiwajshing/baileys");
 const got = require("got");
 const cn = require('../config');
 
-if (cn.WORKTYPE == 'private') {
+if (cn.WORKTYPE == 'public') {
     
     Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match) => {
     if (match[1] === "") {
