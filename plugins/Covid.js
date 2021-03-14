@@ -2,7 +2,7 @@ const Asena = require("../events");
 const {MessageType} = require("@adiwajshing/baileys");
 const got = require("got");
 
-if (cn.WORKTYPE == 'private') {
+if (Config.WORKTYPE == 'private') {
     
     Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match) => {
     if (match[1] === "") {
@@ -266,9 +266,10 @@ Asena.addCommand({pattern: "infocovid", fromMe: true}, (async (message,match) =>
 
     
     
-}));}
+    }));
+}    
 
-else if (cn.WORKTYPE == 'public') {
+else if (Config.WORKTYPE == 'public') {
     
     Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match) => {
     if (match[1] === "") {
@@ -532,5 +533,6 @@ Asena.addCommand({pattern: "infocovid", fromMe: true}, (async (message,match) =>
 
     
     
-}));}
+    }));
+}
 
