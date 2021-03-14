@@ -259,8 +259,7 @@ if (cn.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }  
-    }));
-}
+}));
 
 Asena.addCommand({pattern: "infocovid", fromMe: true}, (async (message,match) => {
     
@@ -527,8 +526,7 @@ else if (cn.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }  
-    }));
-}
+}));
 
 Asena.addCommand({pattern: "infocovid", fromMe: true}, (async (message,match) => {
     
