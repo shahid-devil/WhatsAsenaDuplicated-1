@@ -8,7 +8,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
             //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json());
             const respo = await got("https://coronavirus-19-api.herokuapp.com/all").then(async ok => {
                 const resp = JSON.parse(ok.body);
-                await message.reply(`🌍 *World-Wide Results:*\n🌐 *Total Cases:* ${resp.cases}\n☠️ *Total Deaths:* ${resp.deaths}\n⚕️ *Total Recovered:* ${resp.recovered}`);
+                await message.reply(`🌍 *Resultados mundiales:*\n🌐 *Casos en total:* ${resp.cases}\n☠️ *Muertes en total:* ${resp.deaths}\n⚕️ *Recuperados en total:* ${resp.recovered}`);
 
             });
 
@@ -21,7 +21,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Bolivia").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇧🇴 *Datos de Bolivia:*\n😷 *Casos en Total:* ${resp.cases}🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
+                await message.reply(`🇧🇴 *Datos de Bolivia:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
             });
         } catch (err) {
             await message.reply(`Bir Hata Oluştu, İşte Hata : \n${err.message}`, MessageType.text)
@@ -44,7 +44,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Argentina").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇦🇷 *Datos de Argentina:*\n😷 *Casos en Total:* ${resp.cases}🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
+                await message.reply(`🇦🇷 *Datos de Argentina:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
 
             });
 
@@ -56,7 +56,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Colombia").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇨🇴 *Datos de Colombia:*\n😷 *Casos en Total:* ${resp.cases}🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
+                await message.reply(`🇨🇴 *Datos de Colombia:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
 
             });
 
@@ -66,9 +66,9 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
     }
     else if (match[1] === "br") {
         try{
-            const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Brasil").then(async ok  => {
+            const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Brazil").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇧🇷 *Dados do brasil:*\n😷 *Casos no total:* ${resp.cases}🏥 *Casos Diários:* ${resp.todayCases}\n⚰️ *Total de mortes:* ${resp.deaths}\n☠️ *Mortes diárias:* ${resp.todayDeaths}\n💊 *Totalmente recuperado:* ${resp.recovered}\n😷 *Casos ativos:* ${resp.active}\n🆘 *Casos Críticos:* ${resp.critical}\n🧪 *Testes totais:* ${resp.totalTests}`);
+                await message.reply(`🇧🇷 *Dados do brasil:*\n😷 *Casos no total:* ${resp.cases}\n🏥 *Casos Diários:* ${resp.todayCases}\n⚰️ *Total de mortes:* ${resp.deaths}\n☠️ *Mortes diárias:* ${resp.todayDeaths}\n💊 *Totalmente recuperado:* ${resp.recovered}\n😷 *Casos ativos:* ${resp.active}\n🆘 *Casos Críticos:* ${resp.critical}\n🧪 *Testes totais:* ${resp.totalTests}`);
 
             });
 
@@ -80,7 +80,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Chile").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇨🇱 *Datos de Chile:*\n😷 *Casos en Total:* ${resp.cases}🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
+                await message.reply(`🇨🇱 *Datos de Chile:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
 
             });
 
@@ -92,7 +92,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Costa%20Rica").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇨🇷 *Datos de Costa Rica:*\n😷 *Casos en Total:* ${resp.cases}🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
+                await message.reply(`🇨🇷 *Datos de Costa Rica:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
 
             });
 
@@ -104,7 +104,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Ecuador").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇪🇨 *Datos de Ecuador:*\n😷 *Casos en Total:* ${resp.cases}🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
+                await message.reply(`🇪🇨 *Datos de Ecuador:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
 
             });
 
@@ -116,7 +116,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/El%20Salvador").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇸🇻 *Datos de El Salvador:*\n😷 *Casos en Total:* ${resp.cases}🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
+                await message.reply(`🇸🇻 *Datos de El Salvador:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
 
             });
 
@@ -128,7 +128,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Guatemala").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇬🇹 *Datos de Guatemala:*\n😷 *Casos en Total:* ${resp.cases}🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
+                await message.reply(`🇬🇹 *Datos de Guatemala:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
 
             });
 
@@ -140,7 +140,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Honduras").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇭🇳 *Datos de Honduras:*\n😷 *Casos en Total:* ${resp.cases}🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
+                await message.reply(`🇭🇳 *Datos de Honduras:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
 
             });
 
@@ -152,7 +152,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Mexico").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇲🇽 *Datos de México:*\n😷 *Casos en Total:* ${resp.cases}🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
+                await message.reply(`🇲🇽 *Datos de México:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
 
             });
 
@@ -164,7 +164,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Nicaragua").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇳🇮 *Datos de Nicaragua:*\n😷 *Casos en Total:* ${resp.cases}🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
+                await message.reply(`🇳🇮 *Datos de Nicaragua:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
 
             });
 
@@ -176,7 +176,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Panama").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇵🇦 *Datos de Panamá:*\n😷 *Casos en Total:* ${resp.cases}🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
+                await message.reply(`🇵🇦 *Datos de Panamá:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
 
             });
 
@@ -188,7 +188,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Cuba").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇨🇺 *Datos de Cuba:*\n😷 *Casos en Total:* ${resp.cases}🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
+                await message.reply(`🇨🇺 *Datos de Cuba:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
 
             });
 
@@ -200,7 +200,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Paraguay").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇵🇾 *Datos de Paraguay:*\n😷 *Casos en Total:* ${resp.cases}🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
+                await message.reply(`🇵🇾 *Datos de Paraguay:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
 
             });
 
@@ -212,7 +212,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Peru").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇵🇪 *Datos de Perú:*\n😷 *Casos en Total:* ${resp.cases}🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
+                await message.reply(`🇵🇪 *Datos de Perú:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
 
             });
 
@@ -224,7 +224,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Dominican%20Republic").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇩🇴 *Datos de República Dominicana:*\n😷 *Casos en Total:* ${resp.cases}🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
+                await message.reply(`🇩🇴 *Datos de República Dominicana:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
 
             });
 
@@ -236,7 +236,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Uruguay").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇺🇾 *Datos de Uruguay:*\n😷 *Casos en Total:* ${resp.cases}🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
+                await message.reply(`🇺🇾 *Datos de Uruguay:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
 
             });
 
@@ -248,7 +248,7 @@ Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match)
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Venezuela").then(async ok  => {
                 resp = JSON.parse(ok.body);
-                await message.reply(`🇻🇪 *Datos de Venezuela:*\n😷 *Casos en Total:* ${resp.cases}🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
+                await message.reply(`🇻🇪 *Datos de Venezuela:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
 
             });
 
