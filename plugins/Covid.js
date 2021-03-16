@@ -6,7 +6,7 @@ const cn = require('../config');
 if (cn.WORKTYPE == 'public') {
     
     Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match) => {
-    if (match[1] === "") {
+    else if (match[1] === "") {
         try{
             //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json());
             const respo = await got("https://coronavirus-19-api.herokuapp.com/all").then(async ok => {
