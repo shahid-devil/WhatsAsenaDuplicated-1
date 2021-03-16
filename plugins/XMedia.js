@@ -289,8 +289,8 @@ if (Config.WORKTYPE == 'private') {
     }));
 
     Asena.addCommand({pattern: 'mp4reverse', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
+        if (message.reply_message === false) return await message.sendMessage('*¡Necesito que respondas a un video!*');
+        var downloading = await message.client.sendMessage(message.jid,'```Editando...```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -305,7 +305,7 @@ if (Config.WORKTYPE == 'private') {
             .fps(22)
             .save('output.mp4')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Hecho por *Skueletor*'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -745,8 +745,8 @@ if (Config.WORKTYPE == 'private') {
     }));
 
     Asena.addCommand({pattern: 'mp4art', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
+        if (message.reply_message === false) return await message.sendMessage('*¡Necesito que respondas a un video!*');
+        var downloading = await message.client.sendMessage(message.jid,'```Editando...```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -760,7 +760,7 @@ if (Config.WORKTYPE == 'private') {
             .format('mp4')
             .save('output.mp4')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Hecho por *Skueletor*'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -1106,8 +1106,8 @@ else if (Config.WORKTYPE == 'public') {
     }));
 
     Asena.addCommand({pattern: 'mp3reverse', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Converting..```',MessageType.text);
+        if (message.reply_message === false) return await message.sendMessage('*¡Necesito que respondas a un audio!*');
+        var downloading = await message.client.sendMessage(message.jid,'```Convirtiendo...```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1147,8 +1147,8 @@ else if (Config.WORKTYPE == 'public') {
     }));
 
     Asena.addCommand({pattern: 'mp4reverse', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
-        if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
-        var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
+        if (message.reply_message === false) return await message.sendMessage('*¡Necesito que respondas a un video!*');
+        var downloading = await message.client.sendMessage(message.jid,'```Editando...```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -1163,7 +1163,7 @@ else if (Config.WORKTYPE == 'public') {
             .fps(22)
             .save('output.mp4')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Hecho por *Skueletor*'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
