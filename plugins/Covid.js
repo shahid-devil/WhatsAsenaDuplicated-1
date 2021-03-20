@@ -5,7 +5,7 @@ const con = require('../config');
 
 if (con.WORKTYPE == 'public') {
     
-    Asena.addCommand({pattern: "covid ?(.*)"}, (async (message, match) => {
+    Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match) => {
     if (match[1] === "") {
         try{
             //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json());
@@ -272,7 +272,7 @@ Asena.addCommand({pattern: "infocovid", fromMe: true}, (async (message,match) =>
 
 else if (con.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: "covid ?(.*)"}, (async (message, match) => {
+    Asena.addCommand({pattern: "covid ?(.*)", fromMe: false}, (async (message, match) => {
     if (match[1] === "") {
         try{
             //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json());
