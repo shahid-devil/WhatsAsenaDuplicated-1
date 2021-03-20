@@ -1,8 +1,6 @@
 /* Copyright (C) 2020 Yusuf Usta.
-
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-
 WhatsAsena - Yusuf Usta
 */
 
@@ -16,11 +14,17 @@ const Lang = Language.getString('_asena');
 if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'skueletor ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         var CMD_HELP = '';
         if (match[1] === '') {
             Asena.commands.map(
                 async (command) =>  {
-                    if (command.dontAddCommandList || command.pattern === undefined) return;
+                    if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
                         var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşiöç1234567890]*)/);
                     } catch {
@@ -46,10 +50,15 @@ if (Config.WORKTYPE == 'private') {
                 message.jid,'●▬▬▬ *Skueletor Private* ▬▬▬●\n\n' + CMD_HELP, MessageType.text
             );    
         } else {
+
+            if (message.jid === '905524317852-1612300121@g.us') {
+
+                return;
+            }
             var CMD_HELP = '';
             Asena.commands.map(
                 async (command) =>  {
-                    if (command.dontAddCommandList || command.pattern === undefined) return;
+                    if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
                         var cmatch = command.pattern.toString().match(/(\W*)([A-Za-zğüşiöç1234567890]*)/);
                     } catch {
@@ -81,12 +90,18 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'asenaskuel ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'skuelasena ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         var CMD_HELP = '';
         if (match[1] === '') {
             Asena.commands.map(
                 async (command) =>  {
-                    if (command.dontAddCommandList || command.pattern === undefined) return;
+                    if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
                         var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşiöç1234567890]*)/);
                     } catch {
@@ -112,10 +127,15 @@ else if (Config.WORKTYPE == 'public') {
                 message.jid,'●▬▬▬ *Skueletor Public* ▬▬▬●\n\n' + CMD_HELP, MessageType.text
             );    
         } else {
+
+            if (message.jid === '905524317852-1612300121@g.us') {
+
+                return;
+            }
             var CMD_HELP = '';
             Asena.commands.map(
                 async (command) =>  {
-                    if (command.dontAddCommandList || command.pattern === undefined) return;
+                    if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
                         var cmatch = command.pattern.toString().match(/(\W*)([A-Za-zğüşiöç1234567890]*)/);
                     } catch {
