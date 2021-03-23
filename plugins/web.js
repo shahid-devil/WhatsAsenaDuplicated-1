@@ -52,15 +52,3 @@ Asena.addCommand({pattern: 'ping', fromMe: true, deleteCommand: false, desc: Lan
   await message.client.sendMessage(
     message.jid,'*¡Pong!*\n```' + (end - start) + 'ms```', MessageType.text);
 }));
-
-Asena.addCommand({pattern: 'short ?(.*)', fromMe: true, desc: Lang.URL}, (async (message, match) => {
-
-    if (match[1] === '') return await message.client.sendMessage(message.jid, SLang.LİNK, MessageType.text);
-
-    TinyURL.shorten(`${match[1]}`, async(res, err) => {
-      if (err)
-        await message.client.sendMessage(message.jid, '*#### ¡Error! ####*\n\n' + '```' + err + '```', MessageType.text);
-
-        await message.client.sendMessage(message.jid,`*Enlace original:* ${match[1]}\n*Enlace corto:* ` + res, MessageType.text)
-         });
-    }));
