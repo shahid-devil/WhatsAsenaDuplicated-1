@@ -62,5 +62,5 @@ Asena.addCommand({pattern: 'short ?(.*)', fromMe: true, desc: Lang.URL}, (async 
         await message.client.sendMessage(message.jid, '*#### ¡Error! ####*\n\n' + '```' + err + '```', MessageType.text);
 
         await message.client.sendMessage(message.jid,`*Enlace original:* ${match[1]}\n*Enlace corto:* ` + res, MessageType.text)
-         });
-    }));
+    });
+}));
