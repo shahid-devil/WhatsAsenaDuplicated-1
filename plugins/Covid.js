@@ -31,17 +31,6 @@ if (con.WORKTYPE == 'public') {
         }
 
     }
-    else if (match[1] === "es") {
-        try{
-            const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Spain").then(async ok  => {
-                resp = JSON.parse(ok.body);
-                await message.reply(`🇪🇸 *Datos de España:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
-            });
-        } catch (err) {
-            await message.reply(`Bir Hata Oluştu, İşte Hata : \n${err.message}`, MessageType.text)
-        }
-
-    }
     else if (match[1] === "usa") {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/USA").then(async ok  => {
@@ -301,17 +290,6 @@ else if (con.WORKTYPE == 'private') {
     else if (match[1] === "bo") {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Bolivia").then(async ok  => {
-                resp = JSON.parse(ok.body);
-                await message.reply(`🇧🇴 *Datos de Bolivia:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
-            });
-        } catch (err) {
-            await message.reply(`Bir Hata Oluştu, İşte Hata : \n${err.message}`, MessageType.text)
-        }
-
-    }
-    else if (match[1] === "es") {
-        try{
-            const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Spain").then(async ok  => {
                 resp = JSON.parse(ok.body);
                 await message.reply(`🇧🇴 *Datos de Bolivia:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
             });
