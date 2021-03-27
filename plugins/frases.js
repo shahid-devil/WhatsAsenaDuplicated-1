@@ -3,7 +3,7 @@ const {MessageType} = require('@adiwajshing/baileys');
 
 Asena.addCommand({pattern: 'hack', fromMe: true}, (async (message, match) => {
 
-    await message.sendMessage('*Este usuario será hackeado* >:)\nPython Version: 3.6\nHacker: *Skueletor*\nWEB API: True');
+    await message.sendMessage('*Este usuario será hackeado* >:)\nPython Version: 3.6\nHacker: *Lily*\nWEB API: True');
     await new Promise(r => setTimeout(r, 800));
     await message.sendMessage('██╗░░██╗\n██║░░██║\n███████║\n██╔══██║\n██║░░██║\n╚═╝░░╚═╝');
     await new Promise(r => setTimeout(r, 400));
@@ -35,7 +35,7 @@ Asena.addCommand({pattern: 'hack', fromMe: true}, (async (message, match) => {
 
     await new Promise(r => setTimeout(r, 1600));
 
-    await message.sendMessage('*¡Información guardada en la base de datos de Skueletor!*');
+    await message.sendMessage('*¡Información guardada en la base de datos de Lily! >:D*');
 
 }));
 
@@ -68,6 +68,6 @@ Asena.addCommand({pattern: 'chocolate', fromMe: true}, (async (message, match) =
     await message.sendMessage('{__/}\n( • - • )\n/>❤️ toma esto una vez más, pero si lo rompes, me enojaré');
     await new Promise(r => setTimeout(r, 1400));
 
-    await message.sendMessage('Hecho por *Skueletor*');
+    await message.sendMessage('Hecho por *Lily* >:D');
 
 }));
