@@ -17,7 +17,7 @@ const con = require('../config');
       
         await message.client.sendMessage(
             message.jid, 
-            url: ("whatsasena/Skueletor.jpg"),
+            url: ("https://telegra.ph/file/470496095696fab0eb394.jpg"),
             MessageType.photo, 
             { mimetype: Mimetype.photo, caption: `¡Me alegra saber que quieres donar!\nSkueletor es un proyecto nuevo que necesita apoyo, te dejo el enlace de PayPal: paypal.me/proyectomenacho por si quieres ayudar con este nuevo proyecto, de antemano, *muchas gracias* ❤️.` }
           )
@@ -42,7 +42,7 @@ const con = require('../config');
       
         await message.client.sendMessage(
             message.jid, 
-            url: ("whatsasena/Skueletor.jpg"),
+            url: ("https://telegra.ph/file/470496095696fab0eb394.jpg"),
             MessageType.photo, 
             { mimetype: Mimetype.photo, caption: `¡Me alegra saber que quieres donar!\nSkueletor es un proyecto nuevo que necesita apoyo, te dejo el enlace de PayPal: paypal.me/proyectomenacho por si quieres ayudar con este nuevo proyecto, de antemano, *muchas gracias* ❤️.` }
           )
