@@ -9,24 +9,12 @@ const fs = require('fs');
   
     Asena.addCommand({pattern: 'donation', fromMe: true}, (async (message, match) => {
       
-      await message.sendMessage(message.jid, '¡Hola' + '@' + message.reply_message.jid.split('@')[0] + ', soy *Skueletor*!', MessageType.text, {
-                quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
-
-            });
-      
-        await new Promise(r => setTimeout(r, 800));
-      
           var image = await axios.get ('https://telegra.ph/file/470496095696fab0eb394.jpg', {responseType: 'arraybuffer'})
-       await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.jpg, caption: `¡Me alegra saber que quieres donar!\nSkueletor es un proyecto nuevo que necesita apoyo, te dejo el enlace de PayPal: paypal.me/proyectomenacho por si quieres ayudar con este nuevo proyecto, de antemano, *muchas gracias* ❤️.`})
+       await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.jpg, caption: `*Hola, soy _Skueletor_*\n\n¡Me alegra saber que quieres donar ☺️!\n_Skueletor_ es un proyecto nuevo que necesita apoyo, Por ahora solamente tenemos PayPal para recibir donaciones: paypal.me/proyectomenacho\n\nDe antemano, *muchas gracias*. ❤️`})
       
-      
-        await new Promise(r => setTimeout(r, 1000));
-  
-        await message.sendMessage('¡Me alegra saber que quieres donar!\nSkueletor es un proyecto nuevo que necesita apoyo, te dejo el enlace de PayPal: paypal.me/proyectomenacho por si quieres ayudar con este nuevo proyecto, de antemano, *muchas gracias* ❤️.');
-
         await new Promise(r => setTimeout(r, 1650));
   
-        await message.sendMessage('Por cierto, muy pronto los donadores tendrán beneficios dentro del bot...\nAsí que si decides *apoyar* este proyecto, cuando hagas tu donación envíame una captura de pantalla por Telegram, t.me/DKzippO\nCuando me escribas, dime cuál es tu número de teléfono con el que utilizas el bot y te tomaré en cuenta.');
+        await message.sendMessage('Por cierto... Muy pronto los donadores tendrán beneficios dentro del bot...\nPor ahora, los donadores tendrán acceso a que el bot sea añadido a un grupo, si *deseas y puedes apoyar* este proyecto, envíame una captura de pantalla de tu donación por Telegram, t.me/DKzippO\nCuando me escribas, dime cuál es tu número de teléfono con el que utilizas el bot y te tomaré en cuenta.');
   
         }));
   }
@@ -34,24 +22,12 @@ const fs = require('fs');
   
     Asena.addCommand({pattern: 'donation', fromMe: false}, (async (message, match) => {
       
-      await message.sendMessage(message.jid, '¡Hola' + '@' + message.reply_message.jid.split('@')[0] + ', soy *Skueletor*!', MessageType.text, {
-                quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
-
-            });
-      
-        await new Promise(r => setTimeout(r, 800));
-      
           var image = await axios.get ('https://telegra.ph/file/470496095696fab0eb394.jpg', {responseType: 'arraybuffer'})
-       await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.jpg, caption: `¡Me alegra saber que quieres donar!\nSkueletor es un proyecto nuevo que necesita apoyo, te dejo el enlace de PayPal: paypal.me/proyectomenacho por si quieres ayudar con este nuevo proyecto, de antemano, *muchas gracias* ❤️.`})
+       await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.jpg, caption: `*Hola, soy _Skueletor_*\n\n¡Me alegra saber que quieres donar ☺️!\n_Skueletor_ es un proyecto nuevo que necesita apoyo, Por ahora solamente tenemos PayPal para recibir donaciones: paypal.me/proyectomenacho\n\nDe antemano, *muchas gracias*. ❤️`})
       
-      
-        await new Promise(r => setTimeout(r, 1000));
-  
-        await message.sendMessage('¡Me alegra saber que quieres donar!\nSkueletor es un proyecto nuevo que necesita apoyo, te dejo el enlace de PayPal: paypal.me/proyectomenacho por si quieres ayudar con este nuevo proyecto, de antemano, *muchas gracias* ❤️.');
-
         await new Promise(r => setTimeout(r, 1650));
   
-        await message.sendMessage('Por cierto, muy pronto los donadores tendrán beneficios dentro del bot...\nAsí que si decides *apoyar* este proyecto, cuando hagas tu donación envíame una captura de pantalla por Telegram, t.me/DKzippO\nCuando me escribas, dime cuál es tu número de teléfono con el que utilizas el bot y te tomaré en cuenta.');
+        await message.sendMessage('Por cierto... Muy pronto los donadores tendrán beneficios dentro del bot...\nPor ahora, los donadores tendrán acceso a que el bot sea añadido a un grupo, si *deseas y puedes apoyar* este proyecto, envíame una captura de pantalla de tu donación por Telegram, t.me/DKzippO\nCuando me escribas, dime cuál es tu número de teléfono con el que utilizas el bot y te tomaré en cuenta.');
   
         }));
   }
