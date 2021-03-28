@@ -1,6 +1,7 @@
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const con = require('../config');
+
   
   if (con.WORKTYPE == 'private') {
   
