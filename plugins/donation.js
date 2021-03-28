@@ -14,7 +14,7 @@ const fs = require('fs');
       
         await new Promise(r => setTimeout(r, 1650));
   
-        await message.sendMessage('Por cierto... Muy pronto los donadores tendrán beneficios dentro del bot...\nPor ahora, los donadores tendrán acceso a que el bot sea añadido a un grupo, si *deseas y puedes apoyar* este proyecto, envíame una captura de pantalla de tu donación por Telegram, t.me/DKzippO\nCuando me escribas, dime cuál es tu número de teléfono con el que utilizas el bot y te tomaré en cuenta.');
+        await message.sendMessage('Por cierto... Muy pronto los donadores tendrán beneficios dentro del bot... 😌\nPor ahora, los donadores tendrán acceso a que el bot sea añadido a un grupo, si *deseas y puedes apoyar* este proyecto, envíame una captura de pantalla de tu donación por Telegram, t.me/DKzippO\nCuando me escribas, dime cuál es tu número de teléfono con el que utilizas el bot y te tomaré en cuenta. 🤭');
   
         }));
   }
@@ -27,7 +27,7 @@ const fs = require('fs');
       
         await new Promise(r => setTimeout(r, 1650));
   
-        await message.sendMessage('Por cierto... Muy pronto los donadores tendrán beneficios dentro del bot...\nPor ahora, los donadores tendrán acceso a que el bot sea añadido a un grupo, si *deseas y puedes apoyar* este proyecto, envíame una captura de pantalla de tu donación por Telegram, t.me/DKzippO\nCuando me escribas, dime cuál es tu número de teléfono con el que utilizas el bot y te tomaré en cuenta.');
+        await message.sendMessage('Por cierto... Muy pronto los donadores tendrán beneficios dentro del bot... 😌\nPor ahora, los donadores tendrán acceso a que el bot sea añadido a un grupo, si *deseas y puedes apoyar* este proyecto, envíame una captura de pantalla de tu donación por Telegram, t.me/DKzippO\nCuando me escribas, dime cuál es tu número de teléfono con el que utilizas el bot y te tomaré en cuenta. 🤭');
   
         }));
   }
