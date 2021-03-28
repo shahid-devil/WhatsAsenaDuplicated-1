@@ -15,7 +15,7 @@ const fs = require('fs');
       
         await new Promise(r => setTimeout(r, 800));
       
-      await message.client.sendMessage(message.jid, '¡Hola' + '@' + message.reply_message.jid.split('@')[0] + ', soy *Skueletor*!', MessageType.text, {
+      await message.sendMessage(message.jid, '¡Hola' + '@' + message.reply_message.jid.split('@')[0] + ', soy *Skueletor*!', MessageType.text, {
                 quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
 
             });
@@ -40,7 +40,7 @@ const fs = require('fs');
       
         await new Promise(r => setTimeout(r, 800));
       
-      await message.client.sendMessage(message.jid, '¡Hola' + '@' + message.reply_message.jid.split('@')[0] + ', soy *Skueletor*!', MessageType.text, {
+      await message.sendMessage(message.jid, '¡Hola' + '@' + message.reply_message.jid.split('@')[0] + ', soy *Skueletor*!', MessageType.text, {
                 quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
 
             });
