@@ -30,7 +30,7 @@ const con = require('../config');
   }
   else if (con.WORKTYPE == 'public') {
   
-    Asena.addCommand({pattern: 'donation', fromMe: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'donation', fromMe: false}, (async (message, match) => {
 
       
        await message.client.sendMessage(message.jid, '¡Hola' + '@' + message.reply_message.jid.split('@')[0] + ', soy *Skueletor*!', MessageType.text, {
