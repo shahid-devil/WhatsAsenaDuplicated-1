@@ -17,6 +17,7 @@ const Lang = Language.getString('conventer');
 if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'mp4audio', fromMe: true, desc: Lang.MP4TOAUDİO_DESC}, (async (message, match) => {    
+
         if (message.reply_message === false) return await message.client.sendMessage(message.jid, Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(message.jid,Lang.MP4TOAUDİO,MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -36,7 +37,8 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    Asena.addCommand({pattern: 'imagesticker', fromMe: true, desc: Lang.STİCKER_DESC}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'imagesticker', fromMe: true, desc: Lang.STİCKER_DESC}, (async (message, match) => {   
+ 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid, Lang.STİCKER_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(message.jid,Lang.STİCKER,MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -59,6 +61,7 @@ if (Config.WORKTYPE == 'private') {
 else if (Config.WORKTYPE == 'public') {
 
     Asena.addCommand({pattern: 'mp4audio', fromMe: false, desc: Lang.MP4TOAUDİO_DESC}, (async (message, match) => {    
+
         if (message.reply_message === false) return await message.client.sendMessage(message.jid, Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(message.jid,Lang.MP4TOAUDİO,MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -79,6 +82,7 @@ else if (Config.WORKTYPE == 'public') {
     }));
 
     Asena.addCommand({pattern: 'imagesticker', fromMe: false, desc: Lang.STİCKER_DESC}, (async (message, match) => {    
+
         if (message.reply_message === false) return await message.client.sendMessage(message.jid, Lang.STİCKER_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(message.jid,Lang.STİCKER,MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
