@@ -7,6 +7,7 @@ const Asena = require('../events');
 const Language = require('../language');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const Lang = Language.getString('spammer');
+const Heroku = require('heroku-client');
 
 let totalMaxSpamCount = 50
 
