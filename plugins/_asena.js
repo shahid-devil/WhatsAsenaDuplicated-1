@@ -13,12 +13,7 @@ const Lang = Language.getString('_asena');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'skueletor ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-
-        if (message.jid === '905524317852-1612300121@g.us') {
-
-            return;
-        }
+    Asena.addCommand({pattern: 'skuelbotprivate ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
         var CMD_HELP = '';
         if (match[1] === '') {
@@ -26,7 +21,7 @@ if (Config.WORKTYPE == 'private') {
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
-                        var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşiöç1234567890]*)/);
+                        var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşiö ç1234567890]*)/);
                     } catch {
                         var match = [command.pattern];
                     }
@@ -51,10 +46,6 @@ if (Config.WORKTYPE == 'private') {
             );    
         } else {
 
-            if (message.jid === '905524317852-1612300121@g.us') {
-
-                return;
-            }
             var CMD_HELP = '';
             Asena.commands.map(
                 async (command) =>  {
@@ -90,12 +81,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'skuelasena ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
-
-        if (message.jid === '905524317852-1612300121@g.us') {
-
-            return;
-        }
+    Asena.addCommand({pattern: 'skuelbotpublic ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
         var CMD_HELP = '';
         if (match[1] === '') {
@@ -103,7 +89,7 @@ else if (Config.WORKTYPE == 'public') {
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
-                        var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşiöç1234567890]*)/);
+                        var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşiö ç1234567890]*)/);
                     } catch {
                         var match = [command.pattern];
                     }
@@ -128,10 +114,6 @@ else if (Config.WORKTYPE == 'public') {
             );    
         } else {
 
-            if (message.jid === '905524317852-1612300121@g.us') {
-
-                return;
-            }
             var CMD_HELP = '';
             Asena.commands.map(
                 async (command) =>  {
@@ -150,7 +132,7 @@ else if (Config.WORKTYPE == 'public') {
                         } else {
                             HANDLER = '.';
                         }
-                        CMD_HELP += '*🛠 ' + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmatch[2]) : command.pattern) + (command.desc === '' ? '```\n\n' : '```\n');
+                        CMD_HELP += '*🛠️ ' + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmatch[2]) : command.pattern) + (command.desc === '' ? '```\n\n' : '```\n');
                         if (command.desc !== '') CMD_HELP += '*💬 ' + Lang.DESC + ':* ```' + command.desc + (command.warn === '' ? '```\n\n' : '```\n');
                         if (command.usage !== '') CMD_HELP += '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
                         if (command.warn !== '') CMD_HELP += '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n';
