@@ -38,7 +38,7 @@
             "DEMOTE_DESC": "Reduce la autoridad de cualquier persona.",
             "ALREADY_NOT_ADMIN": "```¿Cómo puedo desautorizar a alguien que aún no es administrador?```",
             "DEMOTED": "```¡Se ha eliminado el rango a esa persona!```",
-            "MUTE_DESC": "Chat del grupo cerrado. Ahora sólo los administradores pueden publicar mensajes.",
+            "MUTE_DESC": "Chat del grupo cerrado. Ahora sólo los administradores pueden publicar mensajes.\n⌨️ Ejemplo: /mute 5m etc",
             "MUTED": "```¡El chat está cerrado hasta que decida abrirlo nuevamente!```",
             "UNMUTE_DESC": "El chat del grupo está abierto. Ahora cualquiera puede enviar un mensaje.",
             "UNMUTED": "¡El chat del grupo está abierto. Ahora cualquiera puede enviar un mensaje!",
@@ -60,7 +60,8 @@
             "AFK_TEXT_NOMD": "¡Bip, bop! Este es un barco. No estoy aquí ahora mismo.",
             "HOUR": "Hora",
             "MINUTE": "Minuto",
-            "SECOND": "Segundo"
+            "SECOND": "Segundo",
+            "AGO": "```Hace```"
         },
         "evaluators": {
             "TERM_DESC": "Le permite ejecutar comandos en el shell del servidor.",
@@ -345,7 +346,16 @@
             "SPAM_DESC": "Es spam hasta que lo detengas.\n⌨️ Ejemplo: /spam test",
             "NEED_WORD": "*Tienes que escribir palabras!*",
             "STOP_SPAMDESC": "Detiene el comando de spam.",
-            "STOP_SPAM": "✅ *El spam se detuvo correctamente! Por favor, espere un momento.*"
+            "STOP_SPAM": "✅ *El spam se detuvo correctamente! Por favor, espere un momento.*",
+            "ST_DESC": "Convierta la foto o el video respondido para pegarlo y envíelo como spam.",
+            "ST_ST": "```¡No responda a un Sticker!```\n```¡Solo responda a una foto o a un video!```",
+            "ST_NEED": "```¡Debes responder a cualquier video o foto!```",
+            "AU_DESC": "Envía la voz contestada como spam.",
+            "AU_REP": "```¡Responda solo al archivo de audio!```",
+            "FOTO_DESC": "Envía la foto respondida como spam.",
+            "FOTO_FOT": "```¡Responda a cualquier imagen!```",
+            "VİD_DESC": "Envía el video respondido como spam.",
+            "VİD_NEED": "```¡Responde a cualquier video!```"
         },
         "carbon": {
             "CARBON_DESC": "Convierte texto en imagen con carbon.sh.",
@@ -368,7 +378,8 @@
             "ANIME_DESC": "Escribe el texto dentro de la pancarta sostenida por la chica anime.",
             "TRUMP_DESC": "Convierte el texto al tweet de Trump.",
             "CHANGE_DESC": "Convierte el artículo en un póster de change my mind.",
-            "ATTP_DESC": "Convierte el texto en sticker de colores"
+            "ATTP_DESC": "Convierte el texto en sticker de colores",
+            "GLOW_DESC": "Convierte el texto en pintura de neón."
         },
         "wallpaper": {
             "WP": "Envía diferentes fondos de pantalla en alta resolución."
@@ -430,6 +441,28 @@
             "HİRE": "¿Se puede alquilar?:",
             "URL": "Enlace de perfil:",
             "UPDATE": "Última actualización:"
+        },
+        "tiktok": {
+            "TİKTOK": "Descarga video de Tiktok.",
+            "NEED": "```¡Debes ingresar cualquier enlace de Tiktok!``` \n*Ejemplo:* ```/tiktok https://vm.tiktok.com/ZSJY27ExT/```",
+            "DOWN": "```Descargando video...```",
+            "CAPTİON": "Explicación:",
+            "USERNAME": "Nombre de usuario:",
+            "NAME": "El nombre:",
+            "LİKE": "Número de Likes:",
+            "COMM": "Número de Comentarios:",
+            "VİEW": "Vistas:",
+            "SHARE": "Número de veces compartido:",
+            "MUSİC": "Música:",
+            "M_AUT": "Propietario de la música:"
+        },
+        "lyrics": {
+            "LY_DESC": "Encuentra la letra.",
+            "NEED": "```¡Por favor, escribe el nombre de alguna canción!```",
+            "SLY": "Letra:",
+            "AUT": "Propietario de la canción:",
+            "BUL": "Canción encontrada:",
+            "ARAT": "Canción buscada:"
         }
     }
 }
