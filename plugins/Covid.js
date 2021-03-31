@@ -20,7 +20,7 @@ if (con.WORKTYPE == 'public') {
         }
 
     }
-    else if (match[1] === "bo") {
+        else if (match[1] === "bo" || match[1] === "BO" || match[1] === "Bo" || match[1].includes('bolivia') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Bolivia").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -30,7 +30,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "es") {
+        else if (match[1] === "es" || match[1] === "Es" || match[1] === "ES" || match[1].includes('españa') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Spain").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -40,7 +40,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }        
     }
-    else if (match[1] === "usa") {
+        else if (match[1] === "usa" || match[1] === "Usa" || match[1] === "USA" || match[1].includes('america') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/USA").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -52,7 +52,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "arg") {
+        else if (match[1] === "arg" || match[1] === "Arg" || match[1] === "ARG" || match[1].includes('argentina') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Argentina").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -64,7 +64,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "co") {
+        else if (match[1] === "co" || match[1] === "Co" || match[1] === "CO" || match[1].includes('colombia') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Colombia").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -76,7 +76,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "br") {
+        else if (match[1] === "br" || match[1] === "Br" || match[1] === "BR" || match[1].includes('brasil') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Brazil").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -88,7 +88,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "cl") {
+        else if (match[1] === "cl" || match[1] === "Cl" || match[1] === "CL" || match[1].includes('chile') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Chile").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -100,7 +100,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "cr") {
+        else if (match[1] === "cr" || match[1] === "Cr" || match[1] === "CR" || match[1].includes('costa rica') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Costa%20Rica").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -112,7 +112,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "ec") {
+        else if (match[1] === "ec" || match[1] === "Ec" || match[1] === "EC" || match[1].includes('ecuador') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Ecuador").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -124,7 +124,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "sv") {
+        else if (match[1] === "sv" || match[1] === "Sv" || match[1] === "SV" || match[1].includes('salvador') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/El%20Salvador").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -136,7 +136,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "gt") {
+        else if (match[1] === "gt" || match[1] === "Gt" || match[1] === "GT" || match[1].includes('guatemala') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Guatemala").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -148,7 +148,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "hn") {
+        else if (match[1] === "hn" || match[1] === "Hn" || match[1] === "HN" || match[1].includes('honduras') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Honduras").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -160,7 +160,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "mx") {
+        else if (match[1] === "mx" || match[1] === "Mx" || match[1] === "MX" || match[1].includes('mexico') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Mexico").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -172,7 +172,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "ni") {
+        else if (match[1] === "ni" || match[1] === "Ni" || match[1] === "NI" || match[1].includes('nicaragua') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Nicaragua").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -184,7 +184,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "pa") {
+        else if (match[1] === "pa" || match[1] === "Pa" || match[1] === "PA" || match[1].includes('panama') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Panama").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -196,7 +196,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "cu") {
+        else if (match[1] === "cu" || match[1] === "Cu" || match[1] === "CU" || match[1].includes('cuba') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Cuba").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -208,7 +208,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "py") {
+        else if (match[1] === "py" || match[1] === "Py" || match[1] === "PY" || match[1].includes('paraguay') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Paraguay").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -220,7 +220,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "pe") {
+        else if (match[1] === "pe" || match[1] === "Pe" || match[1] === "PE" || match[1].includes('peru') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Peru").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -232,7 +232,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "do") {
+        else if (match[1] === "do" || match[1] === "Do" || match[1] === "DO" || match[1].includes('republica dominicana') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Dominican%20Republic").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -244,7 +244,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "uy") {
+        else if (match[1] === "uy" || match[1] === "Uy" || match[1] === "UY" || match[1].includes('uruguay') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Uruguay").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -256,7 +256,7 @@ if (con.WORKTYPE == 'public') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "ve") {
+        else if (match[1] === "ve" || match[1] === "VE" || match[1] === "Ve" || match[1].includes('venezuela') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Venezuela").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -273,14 +273,11 @@ if (con.WORKTYPE == 'public') {
 Asena.addCommand({pattern: "infocovid", fromMe: false}, (async (message,match) => {
     
     await message.sendMessage("_Datos actualizados de coronavirus._\n💻Uso: */covid*\nℹ️Descripción: Datos de Covid19 en el mundo\n\n💻Uso: */covid arg*\nℹ️Descripción: Datos de Covid19 en Argentina 🇦🇷\n\n💻Uso: */covid bo*\nℹ️Descripción: Datos de Covid19 en Bolivia 🇧🇴\n\n💻Uso: */covid usa*\nℹ️Descripción: Datos de Covid19 en Estados Unidos 🇺🇸\n\n💻Uso: */covid br*\nℹ️Descripción: Datos de Covid19 en Brasil 🇧🇷\n\n💻Uso: */covid cl*\nℹ️Descripción: Datos de Covid19 en Chile 🇨🇱\n\n💻Uso: */covid co*\nℹ️Descripción: Datos de Covid19 en Colombia 🇨🇴\n\n💻Uso: */covid cr*\nℹ️Descripción: Datos de Covid19 en Costa Rica 🇨🇷\n\n💻Uso: */covid cu*\nℹ️Descripción: Datos de Covid19 en Cuba 🇨🇺\n\n💻Uso: */covid ec*\nℹ️Descripción: Datos de Covid19 en Ecuador 🇪🇨\n\n💻Uso: */covid sv*\nℹ️Descripción: Datos de Covid19 en El Salvador 🇸🇻\n\n💻Uso: */covid gt*\nℹ️Descripción: Datos de Covid19 en Guatemala 🇬🇹\n\n💻Uso: */covid hn*\nℹ️Descripción: Datos de Covid19 en Honduras 🇭🇳\n\n💻Uso: */covid mx*\nℹ️Descripción: Datos de Covid19 en México 🇲🇽\n\n💻Uso: */covid ni*\nℹ️Descripción: Datos de Covid19 en Nicaragua 🇳🇮\n\n💻Uso: */covid pa*\nℹ️Descripción: Datos de Covid19 en Panamá 🇵🇦\n\n💻Uso: */covid py*\nℹ️Descripción: Datos de Covid19 en Paraguay 🇵🇾\n\n💻Uso: */covid pe*\nℹ️Descripción: Datos de Covid19 en Perú 🇵🇪\n\n💻Uso: */covid do*\nℹ️Descripción: Datos de Covid19 en República Dominicana 🇩🇴\n\n💻Uso: */covid uy*\nℹ️Descripción: Datos de Covid19 en Uruguay 🇺🇾\n\n💻Uso: */covid ve*\nℹ️Descripción: Datos de Covid19 en Venezuela 🇻🇪\n\n💻Uso: /covid es*\nℹ️Descripción: Datos de Covid19 en España 🇪🇸");
-
-    
     
     }));
 }
 
 else if (con.WORKTYPE == 'private') {
-
     Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match) => {
     if (match[1] === "") {
         try{
@@ -296,17 +293,17 @@ else if (con.WORKTYPE == 'private') {
         }
 
     }
-    else if (match[1] === "bo") {
+        else if (match[1] === "bo" || match[1] === "BO" || match[1] === "Bo" || match[1].includes('bolivia') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Bolivia").then(async ok  => {
                 resp = JSON.parse(ok.body);
                 await message.reply(`🇧🇴 *Datos de Bolivia:*\n😷 *Casos en Total:* ${resp.cases}\n🏥 *Casos diarios:* ${resp.todayCases}\n⚰️ *Muertes en total:* ${resp.deaths}\n☠️ *Muertes diarias:* ${resp.todayDeaths}\n💊 *Recuperados en total:* ${resp.recovered}\n😷 *Casos activos:* ${resp.active}\n🆘 *Casos críticos:* ${resp.critical}\n🧪 *Pruebas totales:* ${resp.totalTests}`);
             });
         } catch (err) {
-            await message.reply(`Bir Hata Oluştu, İşte Hata : \n${err.message}`, MessageType.text)
+            await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "es") {
+        else if (match[1] === "es" || match[1] === "Es" || match[1] === "ES" || match[1].includes('españa') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Spain").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -316,7 +313,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }        
     }
-    else if (match[1] === "usa") {
+        else if (match[1] === "usa" || match[1] === "Usa" || match[1] === "USA" || match[1].includes('america') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/USA").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -328,7 +325,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "arg") {
+        else if (match[1] === "arg" || match[1] === "Arg" || match[1] === "ARG" || match[1].includes('argentina') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Argentina").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -340,7 +337,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "co") {
+        else if (match[1] === "co" || match[1] === "Co" || match[1] === "CO" || match[1].includes('colombia') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Colombia").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -352,7 +349,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "br") {
+        else if (match[1] === "br" || match[1] === "Br" || match[1] === "BR" || match[1].includes('brasil') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Brazil").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -364,7 +361,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "cl") {
+        else if (match[1] === "cl" || match[1] === "Cl" || match[1] === "CL" || match[1].includes('chile') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Chile").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -376,7 +373,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "cr") {
+        else if (match[1] === "cr" || match[1] === "Cr" || match[1] === "CR" || match[1].includes('costa rica') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Costa%20Rica").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -388,7 +385,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "ec") {
+        else if (match[1] === "ec" || match[1] === "Ec" || match[1] === "EC" || match[1].includes('ecuador') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Ecuador").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -400,7 +397,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "sv") {
+        else if (match[1] === "sv" || match[1] === "Sv" || match[1] === "SV" || match[1].includes('salvador') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/El%20Salvador").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -412,7 +409,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "gt") {
+        else if (match[1] === "gt" || match[1] === "Gt" || match[1] === "GT" || match[1].includes('guatemala') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Guatemala").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -424,7 +421,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "hn") {
+        else if (match[1] === "hn" || match[1] === "Hn" || match[1] === "HN" || match[1].includes('honduras') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Honduras").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -436,7 +433,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "mx") {
+        else if (match[1] === "mx" || match[1] === "Mx" || match[1] === "MX" || match[1].includes('mexico') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Mexico").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -448,7 +445,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "ni") {
+        else if (match[1] === "ni" || match[1] === "Ni" || match[1] === "NI" || match[1].includes('nicaragua') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Nicaragua").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -460,7 +457,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "pa") {
+        else if (match[1] === "pa" || match[1] === "Pa" || match[1] === "PA" || match[1].includes('panama') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Panama").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -472,7 +469,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "cu") {
+        else if (match[1] === "cu" || match[1] === "Cu" || match[1] === "CU" || match[1].includes('cuba') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Cuba").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -484,7 +481,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "py") {
+        else if (match[1] === "py" || match[1] === "Py" || match[1] === "PY" || match[1].includes('paraguay') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Paraguay").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -496,7 +493,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "pe") {
+        else if (match[1] === "pe" || match[1] === "Pe" || match[1] === "PE" || match[1].includes('peru') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Peru").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -508,7 +505,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "do") {
+        else if (match[1] === "do" || match[1] === "Do" || match[1] === "DO" || match[1].includes('republica dominicana') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Dominican%20Republic").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -520,7 +517,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "uy") {
+        else if (match[1] === "uy" || match[1] === "Uy" || match[1] === "UY" || match[1].includes('uruguay') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Uruguay").then(async ok  => {
                 resp = JSON.parse(ok.body);
@@ -532,7 +529,7 @@ else if (con.WORKTYPE == 'private') {
             await message.reply(`Error : \n${err.message}`, MessageType.text)
         }
     }
-    else if (match[1] === "ve") {
+        else if (match[1] === "ve" || match[1] === "VE" || match[1] === "Ve" || match[1].includes('venezuela') ) {
         try{
             const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Venezuela").then(async ok  => {
                 resp = JSON.parse(ok.body);
