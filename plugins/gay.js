@@ -261,4 +261,3 @@ const ENREP = "```¡Debes responder algún mensaje!```"
             )
         }));
     }
-}
