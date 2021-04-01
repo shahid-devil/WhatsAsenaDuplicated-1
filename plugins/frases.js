@@ -1,9 +1,24 @@
 const Asena = require('../events');
-const {MessageType} = require('@adiwajshing/baileys');
+const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
+const fs = require('fs');
 
-Asena.addCommand({pattern: 'hack', fromMe: true}, (async (message, match) => {
+// Descriptions
+const ENGAY = "Mide el porcentaje de gay al que respondas."
 
-    await message.sendMessage('*Este usuario será hackeado* >:)\nPython Version: 3.6\nHacker: *Skueletor*\nWEB API: True');
+// Need Reply
+const ENREP = "```¡Debes responder algún mensaje!```"
+
+
+Asena.addCommand({pattern: 'hack', fromMe: true, desc: ENGAY}, (async (message, match) => {
+    
+    if (message.reply_message === false) return await message.client.sendMessage(message.jid, ENREP, MessageType.text);
+
+    await message.client.sendMessage(message.jid, '*Hackeando a*' + '@' + message.reply_message.jid.split('@')[0] + '_>:)_', MessageType.text, {
+        quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
+
+            });
+
+    await message.sendMessage('Python Version: 3.6\nHacker: *Skueletor*\nWEB API: True');
     await new Promise(r => setTimeout(r, 800));
     await message.sendMessage('██╗░░██╗\n██║░░██║\n███████║\n██╔══██║\n██║░░██║\n╚═╝░░╚═╝');
     await new Promise(r => setTimeout(r, 400));
@@ -36,12 +51,6 @@ Asena.addCommand({pattern: 'hack', fromMe: true}, (async (message, match) => {
     await new Promise(r => setTimeout(r, 1600));
 
     await message.sendMessage('*¡Información guardada en la base de datos de Skueletor! >:D*');
-
-}));
-
-Asena.addCommand({pattern: 'infohack', fromMe: true}, (async (message, match) => {
-
-    await message.sendMessage("*Configurado por Skueletor*\nComando para hackear a alguien\n💻Uso: */hack*")
 
 }));
 
