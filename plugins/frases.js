@@ -13,7 +13,7 @@ Asena.addCommand({pattern: 'hack', fromMe: true, desc: ENGAY}, (async (message, 
     
     if (message.reply_message === false) return await message.client.sendMessage(message.jid, ENREP, MessageType.text);
 
-    await message.client.sendMessage(message.jid, '*Hackeando a*' + '@' + message.reply_message.jid.split('@')[0] + '_>:)_', MessageType.text, {
+    await message.client.sendMessage(message.jid, '*Hackeando a*' + '@' + message.reply_message.jid.split('@')[0] + '... >:)', MessageType.text, {
         quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
 
             });
