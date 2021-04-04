@@ -251,11 +251,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     '*Gerçekleşen Hata:* ```' + error + '```\n\n'
                                     , MessageType.text, {detectLinks: false});
                             } else {
-                                await conn.sendMessage(conn.user.jid, '*-- ERROR REPORT [WHATSASENA] --*' + 
-                                    '\n*WhatsAsena an error has occurred!*'+
-                                    '\n_This error log may include your number or the number of an opponent. Please be careful with it!_' +
-                                    '\n_You can write to our Telegram group for help._' +
-                                    '\n_This message should have gone to your number (saved messages)._\n\n' +
+                                await conn.sendMessage(conn.user.jid, '*-- ERROR REPORT [SKUELETOR] --*' + 
+                                    '\n*¡El bot Skueletor ha tenido un error!*'+
+                                    '\n_Este es tu número de registro del bot, aquí se reportarán todos los errores que tenga._' +
+                                    '\n_Puedes escribir a nuestro grupo de *soporte VIP* para obtener ayuda._' +
+                                    '\n_Este mensaje debería haber ido a su número (mensajes guardados)._\n\n' +
                                     '*Error:* ```' + error + '```\n\n'
                                     , MessageType.text);
                             }
