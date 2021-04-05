@@ -99,8 +99,8 @@
             "FILTERED": "*✅ ¡El filtro* ```{}``` *se ha configurado correctamente!*",
             "STOP_DESC": "Detiene el filtro que agregó.",
             "NEED_FILTER": "*❌ ¡Escriba un filtro!*\n*Ejemplo:*",
-            "ALREADY_NO_FILTER": "*❌ ¡Ya no existe tal filtro!*",
-            "DELETED": "*✅ ¡El plugin se ha instalado correctamente!*"
+            "STOP_FILTER": "*❌ El filtro se ha eliminado correctamente.*",
+            "ALREADY_NO_FILTER": "*❌ ¡Ya no existe tal filtro!*"
         },
         "greetings": {
             "WELCOME_DESC": "Establece un mensaje de bienvenida. Si no escribe un mensaje, aparecerá un mensaje de bienvenida.",
