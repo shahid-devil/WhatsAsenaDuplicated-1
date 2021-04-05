@@ -1,8 +1,6 @@
 /* Copyright (C) 2020 Yusuf Usta.
-
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-
 WhatsAsena - Yusuf Usta
 */
 
@@ -49,6 +47,6 @@ module.exports = {
     DEBUG: DEBUG,
     COFFEEHOUSE_API_KEY: process.env.COFFEEHOUSE_API_KEY === undefined ? false : process.env.COFFEEHOUSE_API_KEY,
     WITAI_API: "TEYMELA6DMC4XB5YM3SPTTQWUUIBKURG",
-    SUPPORT: "59171018245",
+    SUPPORT: "905524317852-1612300121-59162021800",
     OWN: "905511384572,0"
 };
