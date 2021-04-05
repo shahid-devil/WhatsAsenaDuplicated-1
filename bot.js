@@ -527,7 +527,7 @@ ${chalk.blue.italic('ℹ️ Conectando a WhatsApp... Espere por favor...')}`);
                                     '\n_También puedes unirte a nuestro grupo de apoyo:_ https://chat.whatsapp.com/BdP7YyC2WBe1gs5wpQ0cAw' +
                                     '\n_Este mensaje debería haber ido a su número (mensajes guardados)._\n\n' +
                                     '*Error:* ```' + error + '```\n\n'
-                                    , MessageType.text, {detectLinks: false}
+                                    , MessageType.text, {detectLinks: false});
 
                                 if (error.message.includes('URL')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ ANÁLISIS DE ERRORES [SKUELETOR] ⚕️*' + 
