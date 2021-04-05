@@ -524,7 +524,7 @@ ${chalk.blue.italic('ℹ️ Conectando a WhatsApp... Espere por favor...')}`);
                                     '\n*¡El bot Skueletor ha tenido un problema!*'+
                                     '\n_Este es tu número de registro del bot, aquí se reportarán todos los errores que tenga._' +
                                     '\n_Puedes escribir a nuestro grupo de *soporte VIP* para obtener ayuda._' +
-                                    '\n_También puedes unirte a nuestro grupo de apoyo:_ https://chat.whatsapp.com/JjvOISnxu4z6sv4hx3FBNQ' +
+                                    '\n_También puedes unirte a nuestro grupo de apoyo:_ https://chat.whatsapp.com/BdP7YyC2WBe1gs5wpQ0cAw' +
                                     '\n_Este mensaje debería haber ido a su número (mensajes guardados)._\n\n' +
                                     '*Error:* ```' + error + '```\n\n'
                                     , MessageType.text, {detectLinks: false}
@@ -640,7 +640,7 @@ ${chalk.blue.italic('ℹ️ Conectando a WhatsApp... Espere por favor...')}`);
                                     '\n*¡El bot Skueletor ha tenido un problema!*'+
                                     '\n_Este es tu número de registro del bot, aquí se reportarán todos los errores que tenga._' +
                                     '\n_Puedes escribir a nuestro grupo de *soporte VIP* para obtener ayuda._' +
-                                    '\n_También puedes unirte a nuestro grupo de apoyo:_ https://chat.whatsapp.com/JjvOISnxu4z6sv4hx3FBNQ' +
+                                    '\n_También puedes unirte a nuestro grupo de apoyo:_ https://chat.whatsapp.com/BdP7YyC2WBe1gs5wpQ0cAw' +
                                     '\n_Este mensaje debería haber ido a su número (mensajes guardados)._\n\n' +
                                     '*Error:* ```' + error + '```\n\n'
                                     , MessageType.text, {detectLinks: false}
