@@ -52,7 +52,6 @@ if (cn.WORKTYPE == 'private') {
             await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName))
         })
     });
-}
 
     Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
 
@@ -107,7 +106,6 @@ else if (cn.WORKTYPE == 'public') {
             await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName))
         })
     });
-}
 
     Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: Tlang.TİKTOK }, async (message, match) => {
 
