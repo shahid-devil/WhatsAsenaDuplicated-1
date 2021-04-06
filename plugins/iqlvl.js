@@ -8,7 +8,7 @@ Asena.addCommand({pattern: 'iqtest', fromMe: true, desc: IQDESC }, (async (messa
 
     if (message.reply_message === false) return await message.sendMessage('```¡Responde un mensaje!```');
 
-    await message.client.sendMessage(message.jid, 'Analizando el Coeficiente Intelectual de' + '@' + message.reply_message.jid.split('@')[0] + ' ```... 🧠```', MessageType.text, {
+    await message.client.sendMessage(message.jid, 'Analizando el Coeficiente Intelectual de ' + '@' + message.reply_message.jid.split('@')[0] + '```... 🧠```', MessageType.text, {
         quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
 
     });
