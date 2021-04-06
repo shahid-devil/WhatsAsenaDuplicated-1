@@ -30,48 +30,29 @@ const Tlang = Language.getString('tiktok')
 
 if (cn.WORKTYPE == 'private') {
 
-    Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc: Lang.DESC }, async (message, match) => {
+    Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, desc: Lang.DESC }, async (message, match) => {
 
         const userName = match[1]
 
-        if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORD))
+        if (userName === '') return await message.sendMessage(errorMessage(Lang.NEED_WORD))
 
         await message.sendMessage(infoMessage(Lang.LOADING))
 
-        await axios
-          .get(`https://videfikri.com/api/igstalk/?username=${userName}`)
-          .then(async (response) => {
-            const {
-              profile_hd,
-              username,
-              bio,
-              followers,
-              following,
-              full_name,
-              is_private,
-            } = response.data.result
+        await axios.get(`https://docs-jojo.herokuapp.com/api/stalk?username=${userName}`).then(async (response) => {
 
-            const profileBuffer = await axios.get(profile_hd, {
-              responseType: 'arraybuffer',
-            })
+            const {biography, username, edge_follow, edge_followed_by, category_name, is_verified, is_private, edge_owner_to_timeline_media, profile_pic_url_hd, full_name, is_business_account } = response.data.graphql.user
 
-            const msg = `
-            *${Lang.NAME}*: ${full_name}
-            *${Lang.USERNAME}*: ${username}
-            *${Lang.BIO}*: ${bio}
-            *${Lang.FOLLOWERS}*: ${followers}
-            *${Lang.FOLLOWS}*: ${following}
-            *${Lang.ACCOUNT}*: ${is_private ? Lang.HIDDEN : Lang.PUBLIC}`
+            const profileBuffer = await axios.get(profile_pic_url_hd, { responseType: 'arraybuffer' })
 
-            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
-              caption: msg,
-            })
-          })
-          .catch(
-            async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)),
-          )
-      },
-    )
+            const msg = `*${Lang.NAME}*: ${full_name} \n*${Lang.USERNAME}*: ${username} \n*${Lang.BIO}*: ${biography} \n*${Lang.FOLLOWERS}*: ${edge_followed_by.count} \n*${Lang.FOLLOWS}*: ${edge_follow.count} \n*${Lang.ACCOUNT}*: ${is_private ? Lang.HIDDEN : Lang.PUBLIC} \n*Hesap Türü:* ${is_verified ? vf : novf} \n*İşletme Hesabı mı?:* ${is_business_account ? bs : nobs} \n*Kategori:* ${category_name} \n*Post Sayısı:* ${edge_owner_to_timeline_media.count}`
+
+            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, { caption: msg })
+
+        }).catch(async (err) => {
+            await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName))
+        })
+    });
+}
 
     Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
 
@@ -104,48 +85,29 @@ if (cn.WORKTYPE == 'private') {
 }
 else if (cn.WORKTYPE == 'public') {
 
-    Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, usage: Lang.USAGE, desc: Lang.DESC }, async (message, match) => {
+    Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, desc: Lang.DESC }, async (message, match) => {
 
         const userName = match[1]
 
-        if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORD))
+        if (userName === '') return await message.sendMessage(errorMessage(Lang.NEED_WORD))
 
         await message.sendMessage(infoMessage(Lang.LOADING))
 
-        await axios
-          .get(`https://videfikri.com/api/igstalk/?username=${userName}`)
-          .then(async (response) => {
-            const {
-              profile_hd,
-              username,
-              bio,
-              followers,
-              following,
-              full_name,
-              is_private,
-            } = response.data.result
+        await axios.get(`https://docs-jojo.herokuapp.com/api/stalk?username=${userName}`).then(async (response) => {
 
-            const profileBuffer = await axios.get(profile_hd, {
-              responseType: 'arraybuffer',
-            })
+            const {biography, username, edge_follow, edge_followed_by, category_name, is_verified, is_private, edge_owner_to_timeline_media, profile_pic_url_hd, full_name, is_business_account } = response.data.graphql.user
 
-            const msg = `
-            *${Lang.NAME}*: ${full_name}
-            *${Lang.USERNAME}*: ${username}
-            *${Lang.BIO}*: ${bio}
-            *${Lang.FOLLOWERS}*: ${followers}
-            *${Lang.FOLLOWS}*: ${following}
-            *${Lang.ACCOUNT}*: ${is_private ? Lang.HIDDEN : Lang.PUBLIC}`
+            const profileBuffer = await axios.get(profile_pic_url_hd, { responseType: 'arraybuffer' })
 
-            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
-              caption: msg,
-            })
-          })
-          .catch(
-            async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)),
-          )
-      },
-    )
+            const msg = `*${Lang.NAME}*: ${full_name} \n*${Lang.USERNAME}*: ${username} \n*${Lang.BIO}*: ${biography} \n*${Lang.FOLLOWERS}*: ${edge_followed_by.count} \n*${Lang.FOLLOWS}*: ${edge_follow.count} \n*${Lang.ACCOUNT}*: ${is_private ? Lang.HIDDEN : Lang.PUBLIC} \n*Hesap Türü:* ${is_verified ? vf : novf} \n*İşletme Hesabı mı?:* ${is_business_account ? bs : nobs} \n*Kategori:* ${category_name} \n*Post Sayısı:* ${edge_owner_to_timeline_media.count}`
+
+            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, { caption: msg })
+
+        }).catch(async (err) => {
+            await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName))
+        })
+    });
+}
 
     Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: Tlang.TİKTOK }, async (message, match) => {
 
