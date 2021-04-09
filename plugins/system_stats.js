@@ -24,7 +24,7 @@ Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async
 
         await message.client.sendMessage(
             message.jid, 
-            fs.readFileSync("/root/Skueletor/media/gif/Skuelogo.mp4"),
+            fs.readFileSync("/Skueletor/media/gif/Skuelogo.mp4"),
             MessageType.video, 
             { mimetype: Mimetype.gif, caption: "hola" }
         )
@@ -32,7 +32,7 @@ Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async
     else if (Config.ALIVEMSG == 'SELO') {
         await message.client.sendMessage(
             message.jid, 
-            fs.readFileSync("/root/Skueletor/media/gif/Skuelogo.mp4"),
+            fs.readFileSync("/Skueletor/media/gif/Skuelogo.mp4"),
             MessageType.video, 
             { mimetype: Mimetype.mpeg, caption: "hola" }
         )
@@ -40,7 +40,7 @@ Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async
     else if (Config.ALIVEMSG == 'ONUR') {
         await message.client.sendMessage(
             message.jid, 
-            fs.readFileSync("/root/Skueletor/media/gif/Skuelogo.mp4"),
+            fs.readFileSync("/Skueletor/media/gif/Skuelogo.mp4"),
             MessageType.video, 
             { mimetype: Mimetype.gif, caption: "hola" }
         )
