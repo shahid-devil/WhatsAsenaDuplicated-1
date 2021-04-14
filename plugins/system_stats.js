@@ -35,7 +35,7 @@ Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async
             message.jid, 
             fs.readFileSync("media/gif/Skuelogo.mp4"),
             MessageType.video, 
-            { mimetype: Mimetype.mpeg, caption: "====*🐺 Skueletor 🐺*====\n\n*Version:* 1.0.1\n*Grado:* Fundador ❤" }
+            { mimetype: Mimetype.mpeg, caption: "====*🐺 *Skueletor* 🐺*====\n\n*Versión:* 1.0.1\n*Grado:* Fundador ❤" }
         )
     }
     }));
@@ -68,7 +68,7 @@ Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (asyn
             message.jid, 
             fs.readFileSync("media/gif/Skuelogo.mp4"),
             MessageType.video, 
-            { mimetype: Mimetype.mpeg, caption: "====*🐺 Skueletor 🐺*====\n\n*Version:* 1.0.1\n*Grado:* Fundador ❤" }
+            { mimetype: Mimetype.mpeg, caption: "====*🐺 *Skueletor* 🐺*====\n\n*Versión:* 1.0.1\n*Grado:* Fundador ❤" }
         )
     }
     }));
