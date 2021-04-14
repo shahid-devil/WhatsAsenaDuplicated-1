@@ -31,7 +31,7 @@ Asena.addCommand({pattern: 'faceai', fromMe: true, desc: sh}, (async (message, m
 
     var webimage = await axios.get('https://screenshotapi.net/api/v1/screenshot?url=https://thispersondoesnotexist.com/&output=image&width=1000&height=1000', { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *Skueletor*'})
+    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Esta persona no existe.\n\nHecho por *Skueletor*'})
 
 }));
 
@@ -40,7 +40,7 @@ Asena.addCommand({pattern: 'animai', fromMe: true, desc: dh}, (async (message, m
 
     var webimage = await axios.get('https://screenshotapi.net/api/v1/screenshot?url=https://www.thiswaifudoesnotexist.net/&output=image&width=1000&height=1000&retina=true&full_page=false', { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *Skueletor*'})
+    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Este anime no existe.\n\nHecho por *Skueletor*'})
 
 }));
 
@@ -62,7 +62,7 @@ Asena.addCommand({pattern: 'faceai', fromMe: false, desc: sh}, (async (message, 
 
     var webimage = await axios.get('https://screenshotapi.net/api/v1/screenshot?url=https://thispersondoesnotexist.com/&output=image&width=1000&height=1000', { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *Skueletor*'})
+    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Esta persona no existe.\n\nHecho por *Skueletor*'})
 
 }));
 
@@ -71,7 +71,7 @@ Asena.addCommand({pattern: 'animai', fromMe: false, desc: dh}, (async (message, 
 
     var webimage = await axios.get('https://screenshotapi.net/api/v1/screenshot?url=https://www.thiswaifudoesnotexist.net/&output=image&width=1000&height=1000&retina=true&full_page=false', { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *Skueletor*'})
+    await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Este anime no existe.\n\nHecho por *Skueletor*'})
 
 }));
 }
