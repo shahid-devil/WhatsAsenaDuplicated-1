@@ -52,7 +52,7 @@ Asena.addCommand({ pattern: 'igphoto ?(.*)', fromMe: true, desc: ph }, async (me
           {responseType: 'arraybuffer',
         })
 
-        const msg = `*Kullanıcı Adı:* ${owner} \n*Açıklama:* ${caption}`
+        const msg = `*Nombre de usuario:* ${owner} \n*Descripción:* ${caption}`
 
         await message.sendMessage(Buffer.from(phig.data), MessageType.image, { 
           caption: msg,
