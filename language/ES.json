@@ -414,7 +414,7 @@
             "FROM": " Del grupo con ID, ",
             "MSG": "Mensaje: \n\n",
             "SUC": "*¡Mensaje guardado correctamente en tus registros!*"
-        {,
+        },
         "instagram": {
             "NEED_WORD": "*Escribe cualquier nombre de usuario de Instagram.*",
             "USAGE": "/insta <nombre de usuario>",
