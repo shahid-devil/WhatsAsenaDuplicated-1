@@ -405,6 +405,16 @@
             "DELETE_USAGE": "Elimina *todas* las notas que ha guardado.",
             "SUCCESSFULLY_DELETED": "Todas tus notas se han eliminado correctamente."
         },
+        "log": {
+            "LOG": "Guarda el mensaje que responde a su número privado",
+            "REPLY": "*Por favor, responda a cualquier mensaje.*",
+            "ANIM": "¡El comando no es compatible con stickers animados!",
+            "HEAD": "```===== [MENSAJE REGISTRADO] =====```\n\n",
+            "USER": " Desde el número de usuario \n",
+            "FROM": " Del grupo con ID, ",
+            "MSG": "Mensaje: \n\n",
+            "SUC": "*¡Mensaje guardado correctamente en tus registros!*"
+        {,
         "instagram": {
             "NEED_WORD": "*Escribe cualquier nombre de usuario de Instagram.*",
             "USAGE": "/insta <nombre de usuario>",
