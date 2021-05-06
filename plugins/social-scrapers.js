@@ -39,6 +39,35 @@ if (cn.WORKTYPE == 'private') {
         });
 
     }));
+
+    Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
+
+        const userName = match[1]
+
+        if (!userName) return await message.client.sendMessage(message.jid, Tlang.NEED, MessageType.text)
+
+        await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text)
+
+        await axios
+          .get(`https://shinoa-rest.herokuapp.com/dl/tiktok?link=${userName}`)
+          .then(async (response) => {
+            const {
+              data,
+            } = response.data
+
+            const profileBuffer = await axios.get(data.mp4, {
+              responseType: 'arraybuffer',
+            })
+
+            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
+              caption: 'Hecho por *Skueletor*',
+            })
+          })
+          .catch(
+            async (err) => await message.client.sendMessage(message.jid, Tlang.NOT + userName, MessageType.text),
+          )
+      },
+    )
 }
 else if (cn.WORKTYPE == 'public') {
 
@@ -90,4 +119,60 @@ else if (cn.WORKTYPE == 'public') {
         });
 
     }));
+    Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: Tlang.TİKTOK }, async (message, match) => {
+
+        const userName = match[1]
+
+        if (!userName) return await message.client.sendMessage(message.jid, Tlang.NEED, MessageType.text)
+
+        await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text)
+
+        await axios
+          .get(`https://api.xteam.xyz/dl/tiktok?url=${userName}&APIKEY=ab9942f95c09ca89`)
+          .then(async (response) => {
+            const {
+              server_1,
+            } = response.data
+
+            const profileBuffer = await axios.get(server_1, {
+              responseType: 'arraybuffer',
+            })
+
+            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
+              caption: 'Hecho por *Skueletor*',
+            })
+          })
+          .catch(
+            async (err) => await message.client.sendMessage(message.jid, Tlang.NOT + userName, MessageType.text),
+          )
+      },
+    )
+    Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
+
+        const userName = match[1]
+
+        if (!userName) return await message.client.sendMessage(message.jid, Tlang.NEED, MessageType.text)
+
+        await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text)
+
+        await axios
+          .get(`https://shinoa-rest.herokuapp.com/dl/tiktok?link=${userName}`)
+          .then(async (response) => {
+            const {
+              data,
+            } = response.data
+
+            const profileBuffer = await axios.get(data.mp4, {
+              responseType: 'arraybuffer',
+            })
+
+            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
+              caption: 'Hecho por *Skueletor*',
+            })
+          })
+          .catch(
+            async (err) => await message.client.sendMessage(message.jid, Tlang.NOT + userName, MessageType.text),
+          )
+      },
+    )
 }
