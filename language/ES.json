@@ -21,9 +21,11 @@
             "INSTALLED_FROM_REMOTE": "*plugins instalados externamente:*",
             "NO_PLUGIN": "*¡No ha instalado ningún plugin externo!*",
             "REMOVE_DESC": "Elimina el plugin.",
-            "NEED_PLUGIN": "```Introduzca un plugin. Ejemplo: /plugin enlace```",
+            "NEED_PLUGIN": "```Introduzca un complemento. Ejemplo: /plugin _ejemplo```",
             "NOT_FOUND_PLUGIN": "```Tal vez haya instalado un complemento de este tipo, o tal vez no. Pero seguro que no ahora mismo.```",
-            "DELETED": "*✅ ¡Plugin eliminado correctamente!*"
+            "DELETED": "*✅ ¡Plugin eliminado correctamente!*",
+            "UNOFF": "⚠️ *Atención!* \n*El plugin que subiste no es oficial!*",
+            "WARN": "Obtenga complementos solo del canal t.me/SkueletorSupport."
         },
         "admin": {
             "BAN_DESC": "La persona del grupo será baneada. (Responda o etiquete a la persona junto al comando).",
@@ -232,6 +234,10 @@
             "SPEEDTESTING": "```Prueba de velocidad en ejecución...```",
             "SPEEDTEST_RESULT": "*¡Prueba de velocidad hecha!*",
             "UPLOAD": "Subida",
+            "CALC": "Realiza operaciones matemáticas simples.",
+            "SUC": "*Cálculo hecho ✅*\n*Resultado:* ",
+            "UNSUC": "*Error de cálculo ❌*\n*Error:* \n",
+            "VALİD": "*¡Utilice el comando según corresponda!*\n\nSuma: */calc 1 + 2*\n*Resta: /calc 5 - 2*\nMultiplicación: */calc 3 x 5*\nDivisión: */calc 10 / 5*",
             "DOWNLOAD": "Bajada",
             "PING_DESC": "Mide tu ping.",
             "URL": "Acorta el enlace largo."
