@@ -91,7 +91,12 @@
             "GETVAR_DESC": "obtener heroku config var",
             "DELVAR_DESC": "Eliminar heroku config var",
             "DEL_SUCCESS": "```{} eliminado con éxito```",
-            "NOT_FOUND": "```No se encontraron resultados para esta key```"           
+            "NOT_FOUND": "```No se encontraron resultados para esta key```",
+            "SUCC": "*Configurado exitosamente ✅* \n*Espere un poco.*",
+            "SUCC_AF": "*Utiliza el texto* ```default``` *para restaurarlo.*",
+            "DEGİS_NONE": "```Ingrese cualquier nombre de módulo!``` \n\n*/degis afk*\n*/degis alive* _({pp}, {info}, {version}, {plugin})_\n*/degis ban*\n*/degis add*\n*/degis mute*\n*/degis unmute*\n*/degis promote*\n*/degis demote*\n*/degis kickme*\n*/degis block*\n*/degis unblock*",
+            "WR": "*Utilice los módulos que correspondan!*",
+            "DEGİS_DESC": "Reemplazar el texto de módulos como alive, afk."             
         },
         "filters": {
             "FILTER_DESC": "Agrega un filtro. Si alguien escribe el filtro que escribiste, envía la respuesta que escribiste. Si solo escribe filtro, devuelve los filtros que agregó.",
@@ -205,7 +210,16 @@
         },
         "tagall": {
             "TAGALL_DESC": "Etiqueta a todos en el grupo.",
-            "ADMİN": "*¡No soy un administrador en este grupo!*"
+            "ADMİN": "*¡No soy un administrador en este grupo!*",
+            "SCAN": "Comprueba si el número introducido está registrado en WhatApp.",
+            "NO": "*Ingrese cualquier número de teléfono!*\n*Muestra:* ```.scan 90xxxx```",
+            "SUC": "*Persona numerada usa WhatsApp! ✅*",
+            "UNSUC": "*Persona numerada no usa WhatsApp! ❌*",
+            "TAGADMİN": "Administradores de grupos de etiquetas.",
+            "REPORT": "Envía informes a los administradores del grupo.",
+            "USER": "=== ```Informe``` ===\n\n*Usuario:* ",
+            "REASON": "\n*Razón:* ",
+            "REPLY": "*Responda al mensaje del usuario para informar!*"
         },
         "updater": {
             "UPDATER_DESC": "Verificar actualizaciones.",
@@ -216,7 +230,8 @@
             "INVALID_HEROKU": "*❌ ¡Tu información de Heroku es incorrecta!*",
             "UPDATED": "*✅ ¡La actualización fue exitosa!*",
             "UPDATED_LOCAL": "*✅ ¡La actualización fue exitosa!*",
-            "AFTER_UPDATE": "*¡Reinicio de WhatsAsena*"
+            "AFTER_UPDATE": "*¡Reinicio de Skueletor Bot*",
+            "IN_AF": "*Asegúrate de que* ```HEROKU_APP_NAME``` *sea el mismo que* ```app name```\n*Si estos dos valores son iguales, cambie* ```HEROKU_API_KEY```!*\n\n_Siga estos pasos para acceder a estas configuraciones: Heroku >> App >> Settings >> Reavel Configs_\n_Siga estos pasos para renovar su API key:  Heroku >> Account >> API Key Luego reemplácelo con el viejo API key._"
         },
         "whois": {
             "PL_DESC": "Muestra datos de metadatos de grupo o persona.",
@@ -431,11 +446,12 @@
             "SUC": "*¡Mensaje guardado correctamente en tus registros!*"
         },
         "instagram": {
-            "NEED_WORD": "*Escribe cualquier nombre de usuario de Instagram.*",
-            "USAGE": "/insta <nombre de usuario>",
-            "DESC": "Acceso a la información del usuario de Instagram.",
+            "NEED_WORD": "*Ingrese cualquier enlace de medios de Instagram!*",
+            "USAGE": "/insta <Enlace de video o foto>",
+            "DESC": "Descarga videos o fotos de Instagram.",
             "LOADING": "Cargando perfil de usuario. Espere por favor...",
             "USERNAME": "Nombre de usuario",
+            "FİX": "*Realización de trabajos de mantenimiento!*",
             "NAME": "Nombre",
             "BIO": "Biografía",
             "FOLLOWERS": "Seguidores",
@@ -443,7 +459,7 @@
             "ACCOUNT": "Privacidad de la cuenta",
             "PUBLIC": "Pública",
             "HIDDEN": "Oculta",
-            "NOT_FOUND": "Usuario no encontrado: "
+            "NOT_FOUND": "*Medios no encontrados*"
         },
         "github": {
             "GİTHUB_DESC": "Recopila información de github del nombre de usuario dado.\n⌨️ Ejemplo: /github phaticusthiccy",
