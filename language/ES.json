@@ -218,6 +218,15 @@
             "UPDATED_LOCAL": "*✅ ¡La actualización fue exitosa!*",
             "AFTER_UPDATE": "*¡Reinicio de WhatsAsena*"
         },
+        "whois": {
+            "PL_DESC": "Muestra datos de metadatos de grupo o persona.",
+            "SUB": "*Nombre del grupo:* ",
+            "DES": "*Descripción del Grupo:* ",
+            "OWN": "*Fundador:* ",
+            "COD": "*Código de grupo único:* ",
+            "JİD": "*JID de la persona:* ",
+            "ST": "*Estado de la persona:* "
+        },
         "weather": {
             "WEATHER_DESC": "Trae el clima.",
             "NEED_LOCATION": "*¡Por favor, escriba una ubicación!*\n*Ejemplo:* ```/weather Colombia```",
