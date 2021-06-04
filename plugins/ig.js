@@ -17,7 +17,7 @@ Skueletor.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async
 
     if (userName === '') return await message.client.sendMessage(message.jid, '```¡Necesitas intruducir un enlace!```')
 
-    await axios.get(`https://docs-jojo.herokuapp.com/api/insta?url=${userName}`).then(async (response) => {
+    await axios.get(`https://api.zeks.xyz/api/ig?apikey=wvwR0etKIJ3BZQg552K1FCRqIV5&url={userName}`).then(async (response) => {
 
         const { resource } = response.data
 
@@ -40,7 +40,7 @@ Skueletor.addCommand({ pattern: 'igphoto ?(.*)', fromMe: true, desc: ph }, async
     if (userName === '') return await message.client.sendMessage(message.jid, '```¡Necesitas intruducir un enlace!```')
 
     await axios
-      .get(`https://api.zeks.xyz/api/ig?url=${userName}&apikey=apivinz`)
+      .get(`https://api.zeks.xyz/api/ig?url=${userName}&apikey=wvwR0etKIJ3BZQg552K1FCRqIV5`)
       .then(async (response) => {
 
         const {
@@ -109,7 +109,7 @@ else if (Config.WORKTYPE == 'public') {
 
     if (userName === '') return await message.client.sendMessage(message.jid, '```¡Necesitas intruducir un enlace!```')
 
-    await axios.get(`https://docs-jojo.herokuapp.com/api/insta?url=${userName}`).then(async (response) => {
+    await axios.get(`https://api.zeks.xyz/api/ig?apikey=wvwR0etKIJ3BZQg552K1FCRqIV5&url={userName}`).then(async (response) => {
 
         const { resource } = response.data
 
@@ -132,7 +132,7 @@ Skueletor.addCommand({ pattern: 'igphoto ?(.*)', fromMe: false, desc: ph }, asyn
     if (userName === '') return await message.client.sendMessage(message.jid, '```¡Necesitas intruducir un enlace!```')
 
     await axios
-      .get(`https://api.zeks.xyz/api/ig?url=${userName}&apikey=apivinz`)
+      .get(`https://api.zeks.xyz/api/ig?url=${userName}&apikey=wvwR0etKIJ3BZQg552K1FCRqIV5`)
       .then(async (response) => {
 
         const {
