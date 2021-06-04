@@ -6,7 +6,7 @@ Instagram: www.instagram.com/kyrie.baran
 const Asena = require('../events')
 const { MessageType } = require('@adiwajshing/baileys')
 const axios = require('axios')
-const cn = require('../config');
+const Config = require('../config');
 
 const Language = require('../language')
 const { errorMessage, infoMessage } = require('../helpers')
@@ -16,7 +16,7 @@ const Ierr = "¡No encuentro tu busqueda!"
 const Wath = "¡Necesito un enlace!"
 const Ivd = "¡Cargando el video!."
 
-if (cn.WORKTYPE == 'private') {
+if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, desc: Lang.DESC }, (async (message, match) => {
         if (match[0].includes('install')) return;
@@ -43,7 +43,7 @@ if (cn.WORKTYPE == 'private') {
 
     }));
 
-Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true}, async (message, match) => {
+	Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true}, async (message, match) => {
 
         const userName = match[1]
 
@@ -63,7 +63,7 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true}, async (message, match
             await message.sendMessage(errorMessage(Ierr))
         })
     });
-else if (cn.WORKTYPE == 'public') {
+else if (Config.WORKTYPE == 'public') {
 
     Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, desc: Lang.DESC }, (async (message, match) => {
         if (match[0].includes('install')) return;
@@ -113,7 +113,7 @@ else if (cn.WORKTYPE == 'public') {
         });
 
     }));
-Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false}, async (message, match) => {
+	Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false}, async (message, match) => {
 
         const userName = match[1]
 
@@ -133,7 +133,7 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false}, async (message, matc
             await message.sendMessage(errorMessage(Ierr))
         })
     });
-Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false}, async (message, match) => {
+	Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false}, async (message, match) => {
 
         const userName = match[1]
 
