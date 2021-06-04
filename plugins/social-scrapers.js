@@ -12,9 +12,9 @@ const Language = require('../language')
 const { errorMessage, infoMessage } = require('../helpers')
 const Lang = Language.getString('instagram')
 const Tlang = Language.getString('tiktok')
-const Ierr = "¡No encuentro tu busqueda!"
-const Wath = "¡Necesito un enlace!"
-const Ivd = "¡Cargando el video!."
+const Ierr = "¡No encuentro ningún Tiktok con esa URL!"
+const Wath = "¡Necesito que ingreses un enlace!"
+const Ivd = "¡Descargando y enviando el video!"
 
 if (Config.WORKTYPE == 'private') {
 
@@ -115,26 +115,6 @@ else if (Config.WORKTYPE == 'public') {
         });
 
     }));
-	Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false}, async (message, match) => {
-
-        const userName = match[1]
-
-        if (userName === '') return await message.sendMessage(errorMessage(Wath))
-
-        await message.sendMessage(infoMessage(Ivd))
-
-        await axios.get(`https://api.xteam.xyz/dl/tiktok?url=${userName}?lang=id-ID&is_copy_url=1&is_from_webapp=v1&APIKEY=23da2e1fb81e0053`).then(async (response) => {
-
-            const {server_1 } = response.data
-
-            const tktkscrap = await axios.get(server_1, { responseType: 'arraybuffer' })
-
-            await message.sendMessage(Buffer.from(tktkscrap.data), MessageType.video, { caption: 'Hecho por *Skueletor*' })
-
-        }).catch(async (err) => {
-            await message.sendMessage(errorMessage(Ierr))
-        })
-    });
 	Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false}, async (message, match) => {
 
         const userName = match[1]
