@@ -63,6 +63,8 @@ if (Config.WORKTYPE == 'private') {
             await message.sendMessage(errorMessage(Ierr))
         })
     });
+ }
+
 else if (Config.WORKTYPE == 'public') {
 
     Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, desc: Lang.DESC }, (async (message, match) => {
