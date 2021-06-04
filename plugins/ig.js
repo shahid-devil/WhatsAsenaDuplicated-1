@@ -1,7 +1,7 @@
-const Asena = require('../events');
+const Skueletor = require('../events');
 const { MessageType, Mimetype} = require("@adiwajshing/baileys");
 const axios = require('axios');
-const con = require('../config');
+const Config = require('../config');
 const sd = "Descarga videos de Instagram."
 const tvig = "Descarga video de IGTV."
 const ph = "Descarga fotos de Instagram."
@@ -9,9 +9,9 @@ const { errorMessage, infoMessage } = require('../helpers');
 const Language = require('../language');
 const Lang = Language.getString('instagram');
 
-if (Con.WORKTYPE == 'private') {
+if (Config.WORKTYPE == 'private') {
         
-Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (message, match) => {
+Skueletor.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (message, match) => {
 
     const userName = match[1]
 
@@ -33,7 +33,7 @@ Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (me
         await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName))
     })
 });
-Asena.addCommand({ pattern: 'igphoto ?(.*)', fromMe: true, desc: ph }, async (message, match) => {
+Skueletor.addCommand({ pattern: 'igphoto ?(.*)', fromMe: true, desc: ph }, async (message, match) => {
 
     const userName = match[1]
 
@@ -65,7 +65,7 @@ Asena.addCommand({ pattern: 'igphoto ?(.*)', fromMe: true, desc: ph }, async (me
   },
 )
 
-Asena.addCommand({ pattern: 'igtv ?(.*)', fromMe: true, desc: tvig }, async (message, match) => {
+Skueletor.addCommand({ pattern: 'igtv ?(.*)', fromMe: true, desc: tvig }, async (message, match) => {
 
     const userName = match[1]
 
@@ -101,9 +101,9 @@ Asena.addCommand({ pattern: 'igtv ?(.*)', fromMe: true, desc: tvig }, async (mes
          },
         )
     }
-else if (Con.WORKTYPE == 'public') {
+else if (Config.WORKTYPE == 'public') {
     
-    Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: false, desc: sd }, async (message, match) => {
+    Skueletor.addCommand({ pattern: 'igvideo ?(.*)', fromMe: false, desc: sd }, async (message, match) => {
 
     const userName = match[1]
 
@@ -125,7 +125,7 @@ else if (Con.WORKTYPE == 'public') {
         await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName))
     })
 });
-Asena.addCommand({ pattern: 'igphoto ?(.*)', fromMe: false, desc: ph }, async (message, match) => {
+Skueletor.addCommand({ pattern: 'igphoto ?(.*)', fromMe: false, desc: ph }, async (message, match) => {
 
     const userName = match[1]
 
@@ -157,7 +157,7 @@ Asena.addCommand({ pattern: 'igphoto ?(.*)', fromMe: false, desc: ph }, async (m
   },
 )
 
-Asena.addCommand({ pattern: 'igtv ?(.*)', fromMe: false, desc: tvig }, async (message, match) => {
+Skueletor.addCommand({ pattern: 'igtv ?(.*)', fromMe: false, desc: tvig }, async (message, match) => {
 
     const userName = match[1]
 
