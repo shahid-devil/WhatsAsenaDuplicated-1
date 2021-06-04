@@ -100,8 +100,8 @@ Asena.addCommand({ pattern: 'igtv ?(.*)', fromMe: true, desc: tvig }, async (mes
             )
          },
         )
-    
-if (Con.WORKTYPE == 'public') {
+    }
+else if (Con.WORKTYPE == 'public') {
     
     Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (message, match) => {
 
@@ -189,7 +189,7 @@ Asena.addCommand({ pattern: 'igtv ?(.*)', fromMe: true, desc: tvig }, async (mes
       })
       .catch(
         async (err) => await message.client.sendMessage(message.jid, 'No pude encontrar nada :('),
-      )
-  },
-)
+          )
+        },
+        )
 }
