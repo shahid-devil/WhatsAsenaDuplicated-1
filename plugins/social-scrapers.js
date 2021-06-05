@@ -12,7 +12,7 @@ const Language = require('../language')
 const { errorMessage, infoMessage } = require('../helpers')
 const Lang = Language.getString('instagram')
 const Tlang = Language.getString('tiktok')
-const Ierr = "¡No encuentro ningún Tiktok con esa URL!"
+const Ierr = "¡No encontré ningún Tiktok! :("
 const Wath = "¡Necesito que ingreses un enlace!"
 const Ivd = "¡Descargando y enviando el video!"
 
