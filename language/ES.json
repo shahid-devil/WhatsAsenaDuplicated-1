@@ -416,7 +416,8 @@
         },
         "webss": {
             "SS_DESC": "Toma una captura de pantalla de la página en el enlace dado.",
-            "LİNK": "¡Debes ingresar cualquier enlace!"
+            "LİNK": "¡Debes ingresar cualquier enlace!",
+            "SPDF_DESC": "Convierte un sitio en PDF"
         },
         "voicy": {
             "NEED_REPLY": "```¡Responda al mensaje de un usuario```",
