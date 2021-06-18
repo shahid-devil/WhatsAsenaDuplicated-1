@@ -128,7 +128,7 @@ async function whatsAsena () {
             }
             else if (infopt !== '' && config.LANG == 'PT') {
                 while (getGMTh == 17 && getGMTm == 1) { 
-                    return conn.sendMessage(conn.user.jid, 'Hola :), MessageType.text) 
+                    return conn.sendMessage(conn.user.jid, 'Hola :)', MessageType.text) 
                 }
             }
         })
