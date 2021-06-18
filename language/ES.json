@@ -216,7 +216,7 @@
             "SUC": "*¡Este número está registrado en WhatsApp! ✅*",
             "UNSUC": "*¡Este número no está registrado en WhatsApp! ❌*",
             "TAGADMİN": "Administradores de grupos de etiquetas.",
-            "ISADMIN": "\n*Administradores del grupo:*",
+            "ISADMIN": "\n*Administradores del grupo:* ",
             "REPORT": "Envía informes a los administradores del grupo.",
             "USER": "=== ```Reporte``` ===\n\n*Usuario:* ",
             "REASON": "\n*Razón:* ",
