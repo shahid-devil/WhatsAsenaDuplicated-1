@@ -128,11 +128,12 @@ async function whatsAsena () {
             }
             else if (infopt !== '' && config.LANG == 'PT') {
                 while (getGMTh == 17 && getGMTm == 1) { 
-                    return conn.sendMessage(conn.user.jid, 'Hola :)', MessageType.text) 
+                    return conn.sendMessage(conn.user.jid, '[ ```Anúncios Diários``` ]\n\n' + infopt.replace('{user}', conn.user.name).replace('{wa_version}', conn.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', conn.user.phone.os_version).replace('{device_model}', conn.user.phone.device_model).replace('{device_brand}', conn.user.phone.device_manufacturer), MessageType.text) 
                 }
             }
         })
     }, 50000);
+    
     var insult = await axios.get('https://gist.githubusercontent.com/phaticusthiccy/f16bbd4ceeb4324d4a727b431a4ef1f2/raw')
     const { shs1, shl2, lss3, dsl4 } = insult.data.inside
     await config.DATABASE.sync();
@@ -215,7 +216,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         );
         if (os.userInfo().homedir !== clh.pay) return;
         await new Promise(r => setTimeout(r, 200));
-        console.log(chalk.bgGreen('🐺 WhatsAsena'));
+        let afwhasena = config.WORKTYPE == 'public' ? ' Public' : ' Private'
+        console.log(chalk.bgGreen('🐺 WhatsAsena' + afwhasena));
         await new Promise(r => setTimeout(r, 500));
         if (conn.user.jid == one || conn.user.jid == two || conn.user.jid == three || conn.user.jid == four) {
             await conn.sendMessage(conn.user.jid,nw, MessageType.text), console.log(nw), await new Promise(r => setTimeout(r, 1000))
@@ -482,7 +484,16 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         } else {
                             whats = new Message(conn, msg);
                         }
-                        if (msg.key.fromMe) { try { if (command.deleteCommand) { await whats.delete() } } catch (err) { await command.function(whats, match) } }
+                        if (msg.key.fromMe) {
+                            var vers = conn.user.phone.wa_version.split('.')[2]
+                            try {
+                                if (command.deleteCommand && vers < 12) { 
+                                    await whats.delete() 
+                                 }
+                                 else { 
+                                     await command.function(whats, match);
+                                 }
+                             } catch (err) { await command.function(whats, match) } }
                         // ==================== End Message Catcher ====================
 
                         // ==================== Error Message ====================
@@ -754,8 +765,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else {
-                                    return await conn.sendMessage(conn.user.jid, '*🙇🏻 Lo siento, no pude leer este error. 🙇🏻*' +
-                                        '\n_Puede escribir a nuestro grupo de apoyo para obtener más ayuda._'
+                                    return await conn.sendMessage(conn.user.jid, '*🙇🏻 Sorry, I Couldnt Read This Error! 🙇🏻*' +
+                                        '\n_You can write to our support group for more help._'
                                         , MessageType.text
                                     );
                                 }    
@@ -772,7 +783,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         await conn.connect();
     } catch {
         if (!nodb) {
-            console.log(chalk.red.bold('Se está renovando la cadena de su versión anterior...'))
+            console.log(chalk.red.bold('Eski sürüm stringiniz yenileniyor...'))
             conn.loadAuthInfo(Session.deCrypt(config.SESSION)); 
             try {
                 await conn.connect();
