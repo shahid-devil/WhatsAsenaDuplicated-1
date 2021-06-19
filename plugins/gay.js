@@ -11,7 +11,7 @@ const ENREP = "```¡Debes responder algún mensaje!```"
 
     if (con.WORKTYPE === 'private') {
 
-        Asena.addCommand({pattern: 'gay', fromMe: true, desc: ENGAY}, (async (message, match) => {
+        Asena.addCommand({pattern: 'gay', fromMe: true, OnlyGroup: true, desc: ENGAY}, (async (message, match) => {
 
             if (message.reply_message === false) return await message.client.sendMessage(message.jid, ENREP, MessageType.text);
 
@@ -137,7 +137,7 @@ const ENREP = "```¡Debes responder algún mensaje!```"
     }
     else if (con.WORKTYPE === 'public') {
 
-        Asena.addCommand({pattern: 'gay', fromMe: false, desc: ENGAY}, (async (message, match) => {
+        Asena.addCommand({pattern: 'gay', fromMe: false, OnlyGroup: true, desc: ENGAY}, (async (message, match) => {
 
             if (message.reply_message === false) return await message.client.sendMessage(message.jid, ENREP, MessageType.text);
 
