@@ -19,7 +19,7 @@ var OTHER = ''
 if (CON.LANG == 'TR') ADMİN_USER = '*Admin Sayısı:*', USER_USER = '*Üye Sayısı:*', TR_USER = '*Türk Üye Sayısı:*', Hİ_USER = '*Hint Üye Sayısı:*', AZ_USER = '*Azeri Üye Sayısı:*', SRİ_USER = '*Sri Lanka Üye Sayısı:*', RU_USER = '*Rus Üye Sayısı:*', USA_USER = '*ABD Üye Sayısı:*', OTHER = '*Diğer Üye Sayısı:*'
 if (CON.LANG == 'EN') ADMİN_USER = '*Admin Count:*', USER_USER = '*Member Count:*', TR_USER = '*Turkish Member Count:*', Hİ_USER = '*Indian Member Count:*', AZ_USER = '*Azerbayjan Member Count:*', SRİ_USER = '*Sri Lanka Member Count:*', RU_USER = '*Russian Member Count:*', USA_USER = '*USA Member Count:*', OTHER = '*Other Member Count:*'
 if (CON.LANG == 'AZ') ADMİN_USER = '*Admin sayı:*', USER_USER = '*Üzv sayı:*', TR_USER = '*Türk Üzv Sayısı:*', Hİ_USER = '*Hindistan üzv sayı:*', AZ_USER = '*Azərbaycan Üzv Sayısı:*', SRİ_USER = '*Şri Lanka üzv sayı:*', RU_USER = '*Rusiya Üzv Sayısı:*', USA_USER = '*ABD Üzv sayı:*', OTHER = '*Digər üzv sayı:*'
-if (CON.LANG == 'ES') ADMİN_USER = '*Recuento de administradores:*', USER_USER = '*Cuenta de miembro:*', TR_USER = '*Recuento de miembros turcos:*', Hİ_USER = '*Recuento de miembros indios:*', AZ_USER = '*Recuento de miembros de Azerbaiyán:*', SRİ_USER = '*Recuento de miembros de Sri Lanka:*', RU_USER = '*Recuento de miembros rusos:*', USA_USER = '*Recuento de miembros de USA:*', OTHER = '*Otro recuento de miembros:*'
+if (CON.LANG == 'ES') ADMİN_USER = '*Administradores:*', USER_USER = '*Miembros:*', TR_USER = '*Miembros Españoles 🇪🇸:*', Hİ_USER = '*Miembros Bolivianos 🇧🇴:*', AZ_USER = '*Miembros Argentinos 🇦🇷:*', SRİ_USER = '*Miembros Colombianos 🇨🇴:*', RU_USER = '*Miembros Peruanos 🇵🇪:*', USA_USER = '*Miembros Mexicanos 🇲🇽:*', OTHER = '*Otros miembros:*'
 if (CON.LANG == 'PT') ADMİN_USER = '*Contagem de Admin:*', USER_USER = '*Contagem de membro:*', TR_USER = '*Contagem de membros turcos:*', Hİ_USER = '*Contagem de membros indianos:*', AZ_USER = '*Contagem de membros do Azerbaijão:*', SRİ_USER = '*Contagem de membros do Sri Lanka:*', RU_USER = '*Contagem de membros russos:*', USA_USER = '*Contagem de membros dos USA:*', OTHER = '*Contagem de outros membros:*'
 if (CON.LANG == 'RU') ADMİN_USER = '*Количество администраторов:*', USER_USER = '*Количество участников:*', TR_USER = '*Количество членов в Турции:*', Hİ_USER = '*Количество членов в Индии:*', AZ_USER = '*Количество участников из Азербайджана:*', SRİ_USER = '*Количество членов из Шри-Ланки:*', RU_USER = '*Количество участников в России:*', USA_USER = '*Количество участников в США:*', OTHER = '*Количество других участников:*'
 if (CON.LANG == 'HI') ADMİN_USER = '*व्यवस्थापक गणना:*', USER_USER = '*सदस्य गणना:*', TR_USER = '*तुर्की सदस्य संख्या:*', Hİ_USER = '*भारतीय सदस्य संख्या:*', AZ_USER = '*अज़रबैजान सदस्य संख्या:*', SRİ_USER = '*श्रीलंका सदस्य संख्या:*', RU_USER = '*रूसी सदस्य संख्या:*', USA_USER = '*यूएसए सदस्य संख्या:*', OTHER = '*अन्य सदस्य संख्या:*'
@@ -44,33 +44,33 @@ if (CON.WORKTYPE == 'private') {
                 }
                 users1.push(uye.id.replace('c.us', 's.whatsapp.net'));
             });
-            var admin_count = jids.length + '\n'
-            var user_count = users1.length + '\n'
-            var tr_user = [];
-            var hi_user = [];
-            var az_user = [];
-            var sri_user = [];
-            var ru_user = [];
-            var usa_user = [];
+            var admin_count = ' ' + jids.length + '\n'
+            var user_count = ' ' +  users1.length + '\n'
+            var es_user = [];
+            var bo_user = [];
+            var ar_user = [];
+            var co_user = [];
+            var pe_user = [];
+            var mx_user = [];
             var other_user = [];
             region['participants'].map(async (reg) => {
-                if (reg.jid.startsWith('90')) { tr_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
-                } if (reg.jid.startsWith('994')) { az_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
-                } if (reg.jid.startsWith('91')) { hi_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
-                } if (reg.jid.startsWith('94')) { sri_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
-                } if (reg.jid.startsWith('7')) { ru_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
-                } if (reg.jid.startsWith('1')) { usa_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
+                if (reg.jid.startsWith('34')) { es_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
+                } if (reg.jid.startsWith('591')) { bo_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
+                } if (reg.jid.startsWith('54')) { ar_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
+                } if (reg.jid.startsWith('57')) { co_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
+                } if (reg.jid.startsWith('51')) { pe_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
+                } if (reg.jid.startsWith('52')) { mx_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
                 } 
             });
-            var trus = ' ' + tr_user.length + '\n'
-            var hius = ' ' + hi_user.length + '\n'
-            var azus = ' ' + az_user.length + '\n'
-            var srius = ' ' + sri_user.length + '\n'
-            var ruus = ' ' + ru_user.length + '\n'
-            var usaus = ' ' + usa_user.length + '\n'
-            var oth = ' ' + user_count - trus - hius - azus - srius - ruus - usaus
-            const user_count_msg = ADMİN_USER + admin_count + USER_USER + user_count + TR_USER + trus + Hİ_USER + hius + AZ_USER + azus + SRİ_USER + srius + RU_USER + ruus + USA_USER + usaus + OTHER + oth + '\n'
-            const msg = `*ID del grupo:* ${json.id} \n` + Lang.SUB + `${nwjson.subject} \n` + Lang.OWN + `${json.owner} \n` + Lang.COD + `${code} \n` + user_count_msg + Lang.DES + `\n\n${nwjson.desc}`
+            var trus = ' ' + es_user.length + '\n'
+            var hius = ' ' + bo_user.length + '\n'
+            var azus = ' ' + ar_user.length + '\n'
+            var srius = ' ' + co_user.length + '\n'
+            var ruus = ' ' + pe_user.length + '\n'
+            var usaus = ' ' + mx_user.length + '\n'
+            var oth = user_count - trus - hius - azus - srius - ruus - usaus
+            const user_count_msg = ADMİN_USER + admin_count + USER_USER + user_count + ES_USER + trus + BO_USER + hius + AR_USER + azus + CO_USER + srius + PE_USER + ruus + MX_USER + usaus + OTHER + ' ' + oth + '\n'
+            const msg = `*ID del Grupo:* ${json.id} \n` + Lang.SUB + `${nwjson.subject} \n` + Lang.OWN + `${json.owner} \n` + Lang.COD + `${code} \n` + user_count_msg + Lang.DES + `\n\n${nwjson.desc}`
             var ppUrl = await message.client.getProfilePicture(message.jid) 
             const resim = await Axios.get(ppUrl, {responseType: 'arraybuffer'})
             await message.sendMessage(
@@ -111,33 +111,33 @@ else if (CON.WORKTYPE == 'public') {
                 }
                 users1.push(uye.id.replace('c.us', 's.whatsapp.net'));
             });
-            var admin_count = jids.length + '\n'
-            var user_count = users1.length + '\n'
-            var tr_user = [];
-            var hi_user = [];
-            var az_user = [];
-            var sri_user = [];
-            var ru_user = [];
-            var usa_user = [];
+            var admin_count = ' ' +  jids.length + '\n'
+            var user_count = ' ' +  users1.length + '\n'
+            var es_user = [];
+            var bo_user = [];
+            var ar_user = [];
+            var co_user = [];
+            var pe_user = [];
+            var mx_user = [];
             var other_user = [];
             region['participants'].map(async (reg) => {
-                if (reg.jid.startsWith('90')) { tr_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
-                } if (reg.jid.startsWith('994')) { az_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
-                } if (reg.jid.startsWith('91')) { hi_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
-                } if (reg.jid.startsWith('94')) { sri_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
-                } if (reg.jid.startsWith('7')) { ru_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
-                } if (reg.jid.startsWith('1')) { usa_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
+                if (reg.jid.startsWith('34')) { es_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
+                } if (reg.jid.startsWith('591')) { bo_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
+                } if (reg.jid.startsWith('54')) { ar_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
+                } if (reg.jid.startsWith('57')) { co_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
+                } if (reg.jid.startsWith('51')) { pe_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
+                } if (reg.jid.startsWith('52')) { mx_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
                 } 
             });
-            var trus = ' ' + tr_user.length + '\n'
-            var hius = ' ' + hi_user.length + '\n'
-            var azus = ' ' + az_user.length + '\n'
-            var srius = ' ' + sri_user.length + '\n'
-            var ruus = ' ' + ru_user.length + '\n'
-            var usaus = ' ' + usa_user.length + '\n'
-            var oth = ' ' + user_count - trus - hius - azus - srius - ruus - usaus
-            const user_count_msg = ADMİN_USER + admin_count + USER_USER + user_count + TR_USER + trus + Hİ_USER + hius + AZ_USER + azus + SRİ_USER + srius + RU_USER + ruus + USA_USER + usaus + OTHER + oth + '\n'
-            const msg = `*ID del grupo:* ${json.id} \n` + Lang.SUB + `${nwjson.subject} \n` + Lang.OWN + `${json.owner} \n` + Lang.COD + `${code} \n` + user_count_msg + Lang.DES + `\n\n${nwjson.desc}`
+            var trus = ' ' + es_user.length + '\n'
+            var hius = ' ' + bo_user.length + '\n'
+            var azus = ' ' + ar_user.length + '\n'
+            var srius = ' ' + co_user.length + '\n'
+            var ruus = ' ' + pe_user.length + '\n'
+            var usaus = ' ' + mx_user.length + '\n'
+            var oth = user_count - trus - hius - azus - srius - ruus - usaus
+            const user_count_msg = ADMİN_USER + admin_count + USER_USER + user_count + ES_USER + trus + BO_USER + hius + AR_USER + azus + CO_USER + srius + PE_USER + ruus + MX_USER + usaus + OTHER + ' ' + oth + '\n'
+            const msg = `*ID del Grupo:* ${json.id} \n` + Lang.SUB + `${nwjson.subject} \n` + Lang.OWN + `${json.owner} \n` + Lang.COD + `${code} \n` + user_count_msg + Lang.DES + `\n\n${nwjson.desc}`
             var ppUrl = await message.client.getProfilePicture(message.jid) 
             const resim = await Axios.get(ppUrl, {responseType: 'arraybuffer'})
             await message.sendMessage(
