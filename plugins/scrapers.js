@@ -50,6 +50,15 @@ var dlang_similarity = ''
 var dlang_other = ''
 var dlang_input = ''
 
+if (config.LANG == 'ES') {
+    dlang_dsc = 'Adivina el idioma del mensaje respondido.'
+    closer_res = 'Resultado más cercano:'
+    dlang_lang = 'Idioma:'
+    dlang_similarity = 'Semejanza:'
+    dlang_other = 'Otros idiomas:'
+    dlang_input = 'Texto procesado:'
+    }
+
 
 if (config.WORKTYPE == 'private') {
 
