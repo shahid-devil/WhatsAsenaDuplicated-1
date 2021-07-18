@@ -175,6 +175,32 @@ if (config.WORKTYPE == 'private') {
             });
     }));
 
+        Asena.addCommand({pattern: 'detectlang$', fromMe: true, desc: dlang_dsc}, (async (message, match) => {
+
+        if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text)
+        const msg = message.reply_message.text
+        var ldet = lngDetector.detect(msg)
+        async function upperfirstLetter(letter) {
+            return letter.charAt(0).toUpperCase() + letter.slice(1).toLowerCase();
+        }
+        var cls1 = await upperfirstLetter(ldet[0][0])
+        var cls2 = ldet[0][1].toString()
+        var cls3 = await upperfirstLetter(ldet[1][0])
+        var cls4 = ldet[1][1].toString()
+        var cls5 = await upperfirstLetter(ldet[2][0])
+        var cls6 = ldet[2][1].toString()
+        var cls7 = await upperfirstLetter(ldet[3][0])
+        var cls8 = ldet[3][1].toString()
+        const res_1 = '*' + dlang_input + '* ' + '_' + msg + '_ \n'
+        const res_2 = '*' + closer_res + '* ' + '_' + cls1 + '_\n*' + dlang_similarity + '* ' + '_' + cls2 + '_ \n\n'
+        const res_3 = '```[ ' + dlang_other + ' ]```\n\n'
+        const res_4 = '#2 *' + dlang_lang + '* ' + '_' + cls3 + '_\n*' + dlang_similarity + '* ' + '_' + cls4 + '_ \n'
+        const res_5 = '#3 *' + dlang_lang + '* ' + '_' + cls5 + '_\n*' + dlang_similarity + '* ' + '_' + cls6 + '_ \n'
+        const res_6 = '#4 *' + dlang_lang + '* ' + '_' + cls7 + '_\n*' + dlang_similarity + '* ' + '_' + cls8 + '_'
+        const rep_7 = res_1 + res_2 + res_3 + res_4 + res_5 + res_6
+        await message.client.sendMessage(message.jid,rep_7,MessageType.text);
+    }));
+    
     Asena.addCommand({pattern: 'video ?(.*)', fromMe: true, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_VIDEO,MessageType.text);    
@@ -428,6 +454,32 @@ else if (config.WORKTYPE == 'public') {
         var info = await arama.rawContent();
         await message.client.sendMessage(message.jid, info, MessageType.text);
         await reply.delete();
+    }));
+    
+        Asena.addCommand({pattern: 'detectlang$', fromMe: false, desc: dlang_dsc}, (async (message, match) => {
+
+        if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text)
+        const msg = message.reply_message.text
+        var ldet = lngDetector.detect(msg)
+        async function upperfirstLetter(letter) {
+            return letter.charAt(0).toUpperCase() + letter.slice(1).toLowerCase();
+        }
+        var cls1 = await upperfirstLetter(ldet[0][0])
+        var cls2 = ldet[0][1].toString()
+        var cls3 = await upperfirstLetter(ldet[1][0])
+        var cls4 = ldet[1][1].toString()
+        var cls5 = await upperfirstLetter(ldet[2][0])
+        var cls6 = ldet[2][1].toString()
+        var cls7 = await upperfirstLetter(ldet[3][0])
+        var cls8 = ldet[3][1].toString()
+        const res_1 = '*' + dlang_input + '* ' + '_' + msg + '_ \n'
+        const res_2 = '*' + closer_res + '* ' + '_' + cls1 + '_\n*' + dlang_similarity + '* ' + '_' + cls2 + '_ \n\n'
+        const res_3 = '```[ ' + dlang_other + ' ]```\n\n'
+        const res_4 = '#2 *' + dlang_lang + '* ' + '_' + cls3 + '_\n*' + dlang_similarity + '* ' + '_' + cls4 + '_ \n'
+        const res_5 = '#3 *' + dlang_lang + '* ' + '_' + cls5 + '_\n*' + dlang_similarity + '* ' + '_' + cls6 + '_ \n'
+        const res_6 = '#4 *' + dlang_lang + '* ' + '_' + cls7 + '_\n*' + dlang_similarity + '* ' + '_' + cls8 + '_'
+        const rep_7 = res_1 + res_2 + res_3 + res_4 + res_5 + res_6
+        await message.client.sendMessage(message.jid,rep_7,MessageType.text);
     }));
 
     Asena.addCommand({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
