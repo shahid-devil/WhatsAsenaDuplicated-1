@@ -43,6 +43,13 @@ const Slang = Language.getString('lyrics');
 const wiki = require('wikijs').default;
 var gis = require('g-i-s');
 
+var dlang_dsc = ''
+var closer_res = ''
+var dlang_lang = ''
+var dlang_similarity = ''
+var dlang_other = ''
+var dlang_input = ''
+
 
 if (config.WORKTYPE == 'private') {
 
