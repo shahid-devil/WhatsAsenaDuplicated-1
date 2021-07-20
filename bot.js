@@ -140,10 +140,10 @@ async function whatsAsena () {
     setInterval(async () => { 
         if (biography_var == 'true') {
             if (conn.user.jid.startsWith('51')) { // Perú
-                var ov_time = new Date().toLocaleString('BO', { timeZone: 'America/La_Paz' }).split(' ')[1]
+                var ov_time = new Date().toLocaleString('PE', { timeZone: 'America/Lima' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\nHora de Bolivia 🇧🇴\n\n🐺 Skueletor 🐺'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\nHora de Perú 🇵🇪\n\n🐺 Skueletor...'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('994')) { // Azerbayjan
