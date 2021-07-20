@@ -17,14 +17,29 @@
             "required": false
         },
         "LANGUAGE": {
-            "description": "Bot language. Azerice => az, English => en, Türkçe => tr, Malayalam => ml, Hindi => HI, Indonesia => IN, Español => ES",
+            "description": "Bot language. Azerice => az, English => en, Türkçe => tr, Malayalam => ml, Hindi => HI, Indonesia => ID, Español => ES, Portuguese => pt, Russian => ru",
             "required": true,
             "value": "TR"
+        },
+        "ANTİ_LİNK": {
+            "description": "Link Engelleme Sistemi. Link Blocking System.",
+            "required": true,
+            "value": "false"
+        },
+        "AUTO_BİO": {
+            "description": "Duruma otomatik tarih ve zaman eklemek için true yapın. Set true for auto date, time in biography.",
+            "required": true,
+            "value": "false"
         },
         "HANDLERS": {
             "description": "Komutlar için. For commands.",
             "required": true,
             "value": "^[.!;]"
+        },
+        "FULL_EVA": {
+            "description": "Hesabınızı bir Chatbot'a Çevirin! Turn your account into a chatbot!",
+            "required": true,
+            "value": "false"
         },
         "NO_LOG": {
             "description": "Hata logu görmek istemiyorsanız true yapın. Set true if you don't want to see error log.",
@@ -60,7 +75,7 @@
             "required": false,
             "value": "default"
         },
-         "BLOCK_MESSAGE": {
+        "BLOCK_MESSAGE": {
             "description": "Düzenlenebilir Block Mesajı. Customizable Block Message! Use => default, to change back.",
             "required": false,
             "value": "default"
@@ -71,7 +86,7 @@
             "value": "default"
         },
         "WORK_TYPE": {
-            "description": "WhatsAsena Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, anyone can use your bot.",
+            "description": "WhatsAsena Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
             "required": true,
             "value": "private"
         },
@@ -134,7 +149,7 @@
             "value": "true"
         },
         "COFFEEHOUSE_API_KEY": {
-            "description": "CoffeeHouse API Key. Need for Lydia. https://coffeehouse.intellivoid.net/",
+            "description": "Pass This Step! - Bu Bölümü Geçin!",
             "required": false,
             "value": "true"
         }
