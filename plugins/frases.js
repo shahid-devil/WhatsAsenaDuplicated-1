@@ -84,6 +84,7 @@ Asena.addCommand({pattern: 'chocolate', fromMe: true, OnlyGroup: true}, (async (
     await message.sendMessage('Hecho por *Skueletor* >:D');
 
 }));
+}
     
 else if (con.WORKTYPE === 'public') {
     
@@ -159,3 +160,4 @@ Asena.addCommand({pattern: 'chocolate', fromMe: false, OnlyGroup: true}, (async 
     await message.sendMessage('Hecho por *Skueletor* >:D');
 
 }));
+}
