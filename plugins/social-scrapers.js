@@ -32,7 +32,6 @@ if (Config.WORKTYPE == 'private') {
             await message.sendMessage(Buffer.from(instascrap.data), MessageType.image, { caption: 'Hecho por *Skueletor*' })
         }).catch(async (err) => {
             await message.sendMessage(errorMessage(Lang.iErr))
-        }
     });
 
 	Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true}, async (message, match) => {
@@ -79,7 +78,6 @@ else if (Config.WORKTYPE == 'public') {
         let name = json.result.data[0].type;
         await axios({ method: "get", url, headers: { 'DNT': 1, 'Upgrade-Insecure-Request': 1 }, responseType: 'arraybuffer'}).then(async (res) => {
             if (name === 'video') { return await message.sendMessage(Buffer(res.data), MessageType.video, { caption: '*' + Tlang.USERNAME + '* ' + json.result.username + '\n*' + Tlang.LİNK + '* ' + 'http://instagram.com/' + json.result.username + '\n*' + Tlang.CAPTİON + '* ' + json.result.caption }) } else { return await message.sendMessage(Buffer(res.data), MessageType.image, { caption: '*' + Tlang.USERNAME + '* ' + json.result.username + '\n*' + Tlang.LİNK + '* ' + 'http://instagram.com/' + json.result.username + '\n*' + Tlang.CAPTİON + '* ' + json.result.caption });
-        }
     });
 
     Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, desc: Lang.DESC}, async (message, match) => {
@@ -96,7 +94,6 @@ else if (Config.WORKTYPE == 'public') {
             await message.sendMessage(Buffer.from(instascrap.data), MessageType.image, { caption: 'Hecho por *Skueletor*' })
         }).catch(async (err) => {
             await message.sendMessage(errorMessage(Lang.iErr))
-        })
     });
 
 	Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false}, async (message, match) => {
