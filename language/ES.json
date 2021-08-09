@@ -461,7 +461,10 @@
             "ACCOUNT": "Privacidad de la cuenta",
             "PUBLIC": "Pública",
             "HIDDEN": "Oculta",
-            "NOT_FOUND": "*Medios no encontrados*"
+            "NOT_FOUND": "*Medios no encontrados*",
+            "need": "¡Ingresa el nombre de usuario del perfil a buscar!",
+            "loading": "Cargando información del perfil. Espere por favor.",
+            "iErr": "⚠️ *Parece que se ha ocurrido un error, inténtelo nuevamente más tarde o utilice otro perfil.*"
         },
         "github": {
             "GİTHUB_DESC": "Recopila información de github del nombre de usuario dado.\n⌨️ Ejemplo: /github phaticusthiccy",
