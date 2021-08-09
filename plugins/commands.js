@@ -13,7 +13,7 @@ Asena.addCommand({pattern: 'commands', fromMe: true}, (async (message, match) =>
   }));
 }
 
-else if (Config.WORKTYPE == 'public') {
+else if (con.WORKTYPE == 'public') {
 
 Asena.addCommand({pattern: 'commands', fromMe: false}, (async (message, match) => {
 
