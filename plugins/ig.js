@@ -1,3 +1,4 @@
+/*
 const Skueletor = require('../events');
 const { MessageType, Mimetype} = require("@adiwajshing/baileys");
 const axios = require('axios');
@@ -193,3 +194,4 @@ Skueletor.addCommand({ pattern: 'igtv ?(.*)', fromMe: false, desc: tvig }, async
         },
         )
 }
+/*
