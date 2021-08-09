@@ -104,7 +104,7 @@ else if (Config.WORKTYPE == 'public') {
 
         await message.sendMessage(infoMessage(Ivd))
 
-        await axios.get(`https://api.xteam.xyz/dl/tiktok?url=${userName}?lang=id-ID&is_copy_url=1&is_from_webapp=v1&APIKEY=23da2e1fb81e0053`).then(async (response) => {
+        await axios.get(`https://api.xteam.xyz/dl/tiktok?url=${userName}?lang=id-ID&is_copy_url=1&is_from_webapp=v1&APIKEY=e67bd1bafe81b611`).then(async (response) => {
 
             const {server_1 } = response.data
 
