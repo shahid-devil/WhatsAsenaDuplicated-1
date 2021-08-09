@@ -42,7 +42,7 @@ if (Config.WORKTYPE == 'private') {
 
         await message.sendMessage(infoMessage(Ivd))
 
-        await axios.get(`https://api.xteam.xyz/dl/tiktok?url=${userName}?lang=id-ID&is_copy_url=1&is_from_webapp=v1&APIKEY=23da2e1fb81e0053`).then(async (response) => {
+        await axios.get(`https://api.xteam.xyz/dl/tiktok?url=${userName}?lang=id-ID&is_copy_url=1&is_from_webapp=v1&APIKEY=e67bd1bafe81b611`).then(async (response) => {
 
             const {server_1 } = response.data
 
@@ -63,7 +63,7 @@ else if (Config.WORKTYPE == 'public') {
         if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
         if (!match[1].includes('www.instagram.com')) return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
 	
-        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=23da2e1fb81e0053`
+        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=e67bd1bafe81b611`
         let response
         try { response = await got(urls) } catch { return await message.client.sendMessage(message.jid, Lang.FİX, MessageType.text, { quoted: message.data });
         }
