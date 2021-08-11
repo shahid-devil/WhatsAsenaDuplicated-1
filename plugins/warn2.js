@@ -8,7 +8,7 @@ const rep = "*Por favor, responda al mensaje del usuario ¡Le advertiré por seg
 
 const rap = "=== ```2da Advertencia``` ===\n\n"
 
-Asena.addCommand({pattern: 'warn2 ?(.*)', fromMe: true, OnlyGroup: true, deleteCommand: false, desc: tor}, (async (message, match) => {
+Asena.addCommand({pattern: 'warn2 ?(.*)', fromMe: false, OnlyGroup: true, deleteCommand: false, desc: tor}, (async (message, match) => {
 
     if (match[1] == '' && message.reply_message) {
 
