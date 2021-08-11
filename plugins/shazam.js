@@ -1,66 +1,42 @@
-
 const Asena = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
-const translatte = require('translatte');
-const StoreDB = require("axios");
-const config = require('../config');
-const Language = require('../language');
-const Lang = Language.getString('scrapers');
-const bix = Language.getString('unvoice');
-const Config = require('../config');
+
+const fs = require('fs');
+const axios = require('axios');
+const FormData = require('form-data');
 const ffmpeg = require('fluent-ffmpeg');
-const sh = "Encuentra la música en el archivo de audio respondido."
 
-if (Config.WORKTYPE == 'private') {
+const FIND_DESC = "Busca la canción."
 
-Asena.addCommand({pattern: 'shazam', fromMe: true, desc: sh }, (async (message, match) => { 
-
-    if (message.reply_message === false) return await message.client.sendMessage(message.jid, bix.UV_REPLY, MessageType.text);
-
-    var location = await message.client.downloadAndSaveMediaMessage({
+Asena.addCommand({pattern: 'shazam', fromMe: false, desc: FIND_DESC }, (async (message, match) => {
+    if (message.reply_message === false) return await message.client.sendMessage(message.jid, '*Responda a algún audio mp3 para realizar la búsqueda*', MessageType.text);
+    var filePath = await message.client.downloadAndSaveMediaMessage({
         key: {
             remoteJid: message.reply_message.jid,
             id: message.reply_message.id
         },
         message: message.reply_message.data.quotedMessage
     });
-
-    ffmpeg(location)
-        .format('mp3')
-        .save('lyr.mp3')
-        .on('end', async () => {
-
-            var data = { 'api_token': '822e72c7422a16f94025b1416ce36cc0', 'file': fs.createReadStream('./lyr.mp3'), 'return': 'apple_music,spotify' };
-            req ({ uri: 'https://api.audd.io/', form: data, method: "POST" }, async (err, res, body) => {
-                return await message.client.sendMessage(message.jid, body, MessageType.text);
-            })
-        })
-    }));
-}
-
-else if (Config.WORKTYPE == 'public') {
-
-Asena.addCommand({pattern: 'shazam', fromMe: false, desc: sh }, (async (message, match) => { 
-
-    if (message.reply_message === false) return await message.client.sendMessage(message.jid, bix.UV_REPLY, MessageType.text);
-
-    var location = await message.client.downloadAndSaveMediaMessage({
-        key: {
-            remoteJid: message.reply_message.jid,
-            id: message.reply_message.id
-        },
-        message: message.reply_message.data.quotedMessage
+    var form = new FormData();
+    ffmpeg(filePath).format('mp3').save('music.mp3').on('end', async () => {
+        form.append('api_token', '822e72c7422a16f94025b1416ce36cc0');
+        form.append('file', fs.createReadStream('./music.mp3'));
+        form.append('return', 'apple_music, spotify');
+        var configs = {
+            headers: {
+                ...form.getHeaders()
+            }
+        }
+        await axios.post('https://api.audd.io/', form, configs).then(async (response) => {
+            var res = response.data
+            if (res === 'success') {
+                await message.client.sendMessage(message.jid, `Título: ${res.title}\nArtista: ${res.artist}`, MessageType.text);
+            } else {
+                await message.client.sendMessage(message.jid, '*Canción no encontrada...*', MessageType.text);
+            }
+        }).catch((error) =>  {
+            console.log(error);
+        });
     });
 
-    ffmpeg(location)
-        .format('mp3')
-        .save('lyr.mp3')
-        .on('end', async () => {
-
-            var data = { 'api_token': '822e72c7422a16f94025b1416ce36cc0', 'file': fs.createReadStream('./lyr.mp3'), 'return': 'apple_music,spotify' };
-            req ({ uri: 'https://api.audd.io/', form: data, method: "POST" }, async (err, res, body) => {
-                return await message.client.sendMessage(message.jid, body, MessageType.text);
-            })
-        })
-    }));
-}
+}));
