@@ -25,7 +25,7 @@ Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async
             message.jid, 
             fs.readFileSync("media/gif/LogoSkuel.mp4"),
             MessageType.video, 
-            { mimetype: Mimetype.mpeg, caption: '╔─────────────────────────╗\n```El bot Skueletor está funcionando correctamente 🐺```\n\n*Versión:* ```'+Config.VERSION+'```\n*Creador:* https://telegram.dog/DKzippO\n*Grupo de Soporte:* https://chat.whatsapp.com/Fc1FbIaYlvxLRkJq1q1WQP\n*Canal de Telegram:* https://t.me/SkueletorSupport\n╚─────────────────────────╝' }
+            { mimetype: Mimetype.mpeg, caption: '╔──────────────────────╗\n```El bot Skueletor está funcionando correctamente 🐺```\n\n*Versión:* ```'+Config.VERSION+'```\n*Creador:* https://telegram.dog/DKzippO\n*Grupo de Soporte:* https://chat.whatsapp.com/Fc1FbIaYlvxLRkJq1q1WQP\n*Canal de Telegram:* https://t.me/SkueletorSupport\n╚──────────────────────╝' }
         )
     }
         
@@ -58,7 +58,7 @@ Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (asyn
             message.jid, 
             fs.readFileSync("media/gif/LogoSkuel.mp4"),
             MessageType.video, 
-            { mimetype: Mimetype.mpeg, caption: '╔─────────────────────────╗\n```El bot Skueletor está funcionando correctamente 🐺```\n\n*Versión:* ```'+Config.VERSION+'```\n*Creador:* https://telegram.dog/DKzippO\n*Grupo de Soporte:* https://chat.whatsapp.com/Fc1FbIaYlvxLRkJq1q1WQP\n*Canal de Telegram:* https://t.me/SkueletorSupport\n╚─────────────────────────╝'}
+            { mimetype: Mimetype.mpeg, caption: '╔──────────────────────╗\n```El bot Skueletor está funcionando correctamente 🐺```\n\n*Versión:* ```'+Config.VERSION+'```\n*Creador:* https://telegram.dog/DKzippO\n*Grupo de Soporte:* https://chat.whatsapp.com/Fc1FbIaYlvxLRkJq1q1WQP\n*Canal de Telegram:* https://t.me/SkueletorSupport\n╚──────────────────────╝'}
         )
     }
         
