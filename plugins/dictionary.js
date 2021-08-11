@@ -60,7 +60,7 @@ Asena.addCommand({pattern: 'dictionary ?(.*)', fromMe: true,  dontAddCommandList
 
 Asena.addCommand({ pattern: 'definition ?(.*)', fromMe: true, desc: "Use it as a dictionary.\nEg: .dict en_US;lead\n For supporting languages send *.lngcode*" }, async (message, match) => {
 
-    if (!match[1]) return await message.sendMessage(errorMessage("Need word"))
+    if (!match[1]) return await message.sendMessage(errorMessage("Necesito una palabra para investigar..."))
 
  if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -98,7 +98,7 @@ Asena.addCommand({ pattern: 'definition ?(.*)', fromMe: true, desc: "Use it as a
 
       })
       .catch(
-        async (err) => await message.sendMessage(""),
+        async (err) => await message.sendMessage("test"),
       )}
   },
 )
@@ -155,7 +155,7 @@ Asena.addCommand({pattern: 'dictionary ?(.*)', fromMe: false,  dontAddCommandLis
 
 Asena.addCommand({ pattern: 'definition ?(.*)', fromMe: false, desc: "Use it as a dictionary.\nEg: .dict en_US;lead\n For supporting languages send *.lngcode*" }, async (message, match) => {
 
-    if (!match[1]) return await message.sendMessage(errorMessage("Need word"))
+    if (!match[1]) return await message.sendMessage(errorMessage("Necesito una palabra para investigar..."))
 
  if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -184,8 +184,8 @@ Asena.addCommand({ pattern: 'definition ?(.*)', fromMe: false, desc: "Use it as 
    
 	
 	const msg = `
-        *${"Definición"}*: ${definition}    
-        *${"Ejemplo"}*: ${example}`
+*${"Definición"}*: ${definition}
+*${"Ejemplo"}*: ${example}`
 	
 	 await message.client.sendMessage(message.jid, msg , MessageType.text, {
           quoted: message.data,
@@ -193,7 +193,7 @@ Asena.addCommand({ pattern: 'definition ?(.*)', fromMe: false, desc: "Use it as 
 
       })
       .catch(
-        async (err) => await message.sendMessage(""),
+        async (err) => await message.sendMessage("test"),
       )}
   },
 )
