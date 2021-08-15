@@ -1,6 +1,7 @@
 const Asena = require('../events');
 import { MessageType, MessageOptions, Mimetype } from '@adiwajshing/baileys'
 const sendMsg = await conn.sendMessage(id, button, MessageType.listMessage)
+const con = require('../config');
 
 // send a buttons message!
 const buttons = [
@@ -16,3 +17,22 @@ const buttonMessage = {
 }
 
 const sendMsg = await conn.sendMessage(id, buttonMessage, MessageType.buttonsMessage)
+
+
+if (con.WORKTYPE == 'private') {
+  
+  Asena.addCommand({pattern: 'test', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+
+            await message.sendMessage('buttonMessage');
+
+        }));
+}
+
+else if (con.WORKTYPE == 'public') {
+  
+  Asena.addCommand({pattern: 'test', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+            await message.sendMessage('buttonMessage');
+
+        }));
+}
