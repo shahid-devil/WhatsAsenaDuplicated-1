@@ -11,7 +11,7 @@ const buttonsMessage = [
 const buttonMessage = {
     contentText: "Hola, esto es una prueba",
     footerText: 'Hello World',
-    buttons: buttons,
+    buttons: buttonsMessage,
     headerType: 1
 }
 
