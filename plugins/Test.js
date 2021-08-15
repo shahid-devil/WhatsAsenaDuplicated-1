@@ -1,35 +1,23 @@
-const Asena = require('../events');
+const Skueletor = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require("@adiwajshing/baileys");
-const con = require('../config');
 const id = '51912545279@s.whatsapp.net' // the WhatsApp ID 
 
-// send a buttons message!
-const buttons = [
-  {buttonId: 'id1', buttonText: {displayText: 'Button 1'}, type: 1},
-  {buttonId: 'id2', buttonText: {displayText: 'Button 2'}, type: 1}
+const rows = [
+ {title: 'Test 1', description: "Hola esta es la prueba de descripción 1", rowId:"rowid1"},
+ {title: 'Test 2', description: "Hola esta es la prueba de descripción 2", rowId:"rowid2"}
 ]
 
-const buttonMessage = {
-    contentText: "Hola, esto es una prueba",
-    footerText: 'Hello World',
-    buttons: buttons,
-    headerType: 1
+const sections = [{title: "Skueletor", rows: rows}]
+
+const button = {
+ buttonText: '¡Toca aquí!',
+ description: "Hola, esta es la lista de mensajes.",
+ sections: sections,
+ listType: 1
 }
 
-if (con.WORKTYPE == 'private') {
-  
-  Asena.addCommand({pattern: 'test', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+  Skueletor.addCommand({pattern: 'test', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
-      await conn.sendMessage(id, buttonMessage, MessageType.text)
+      await conn.sendMessage(id, buttonMessage, MessageType.listMessage)
 
         }));
-}
-
-else if (con.WORKTYPE == 'public') {
-  
-  Asena.addCommand({pattern: 'test', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
-
-      await conn.sendMessage(id, buttonMessage, MessageType.text)
-
-        }));
-}
