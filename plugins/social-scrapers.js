@@ -23,7 +23,7 @@ const NOT_FOUNDFB = "Video no encontrado."
 
 if (Config.WORKTYPE == 'private') {
 
-Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true}, async (message, match) => {
+/*Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true}, async (message, match) => {
     const userName = match[1]
     if (!userName) return await message.sendMessage(errorMessage(NEED_WORD))
     await message.sendMessage(infoMessage("Descargando el post..."))
@@ -74,7 +74,7 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true}, async (message, match)
       )
   },
 )
-
+*/
 	Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true}, async (message, match) => {
 
         const userName = match[1]
@@ -99,7 +99,7 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true}, async (message, match)
 
 else if (Config.WORKTYPE == 'public') {
 
-Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false}, async (message, match) => {
+/*Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false}, async (message, match) => {
     const userName = match[1]
     if (!userName) return await message.sendMessage(errorMessage(NEED_WORD))
     await message.sendMessage(infoMessage("Descargando el post..."))
@@ -150,7 +150,7 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false}, async (message, match
       )
   },
 )
-		
+*/		
 	Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false}, async (message, match) => {
 
         const userName = match[1]
