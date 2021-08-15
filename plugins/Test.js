@@ -1,17 +1,18 @@
 const Asena = require('../events');
-const {MessageType} = require('@adiwajshing/baileys');
+import { MessageType, MessageOptions, Mimetype } from '@adiwajshing/baileys'
+const sendMsg = await conn.sendMessage(id, button, MessageType.listMessage)
 
-// Languages
-const END = "Ese es un complemento con herramientas agradables juntas en su interior. (Paquete de emojis V1)"
+// send a buttons message!
+const buttons = [
+  {buttonId: 'id1', buttonText: {displayText: 'Button 1'}, type: 1},
+  {buttonId: 'id2', buttonText: {displayText: 'Button 2'}, type: 1}
+]
 
-        Asena.addCommand({pattern: 'asdasdasd', fromMe: true, desc: END}, (async (message, match) => {
+const buttonMessage = {
+    contentText: "Hola, esto es una prueba",
+    footerText: 'Hello World',
+    buttons: buttons,
+    headerType: 1
+}
 
-            await message.sendMessage("_Ese es un complemento con herramientas agradables juntas en su interior._\n💻Uso: */cumple*\nℹ️Descripción: *Celebra un cumpleaños.*\n\n💻Uso: */guerra*\nℹ️Descripción: *¿Qué tal un pequeño trago, amigo?*\n\n💻Uso: */amor*\nℹ️Descripción: *Una forma diferente de decir te amo*\n\n💻Uso: */helicoptero*\nℹ️Descripción: *¿Qué tal aterrizar en un helicóptero y saludar?*\n\n💻Uso: */corazon*\nℹ️Descripción: *Envíale un corazón a alguien.*\n\n💻Uso: */tanque*\nℹ️Descripción: *¿Qué tal enviar un tanque?*\n\n💻Uso: */luna*\nℹ️Descripción: *Para aquellos que arden con el amor de la luna*\n\n💻Uso: */gato*\nℹ️Descripción: *¿Qué tal enviar un gato para animar la charla?*\n\nCodded by *@DKzippO*\nVersión: *1.0*");
-
-        }));
-
-        Asena.addCommand({pattern: 'testbutton', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-
-            await message.sendMessage("test") [test](buttonurl:www.youtube.com);
-
-        }));
+const sendMsg = await conn.sendMessage(id, buttonMessage, MessageType.buttonsMessage)
