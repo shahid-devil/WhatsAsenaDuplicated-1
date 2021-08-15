@@ -3,7 +3,7 @@ const {MessageType, MessageOptions, Mimetype} = require("@adiwajshing/baileys");
 const con = require('../config');
 
 // send a buttons message!
-const buttons = [
+const buttonsMessage = [
   {buttonId: 'id1', buttonText: {displayText: 'Button 1'}, type: 1},
   {buttonId: 'id2', buttonText: {displayText: 'Button 2'}, type: 1}
 ]
