@@ -18,6 +18,6 @@ const button = {
 
   Skueletor.addCommand({pattern: 'test', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
-      await message.client.sendMessage(id, buttonMessage, MessageType.listMessage)
+      await conn.sendMessage(id, buttonMessage, MessageType.listMessage)
 
         }));
