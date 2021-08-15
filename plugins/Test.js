@@ -1,9 +1,10 @@
 const Asena = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require("@adiwajshing/baileys");
 const con = require('../config');
+const id = '51912545279@s.whatsapp.net' // the WhatsApp ID 
 
 // send a buttons message!
-const buttonsMessage = [
+const buttons = [
   {buttonId: 'id1', buttonText: {displayText: 'Button 1'}, type: 1},
   {buttonId: 'id2', buttonText: {displayText: 'Button 2'}, type: 1}
 ]
@@ -11,7 +12,7 @@ const buttonsMessage = [
 const buttonMessage = {
     contentText: "Hola, esto es una prueba",
     footerText: 'Hello World',
-    buttons: buttonsMessage,
+    buttons: buttons,
     headerType: 1
 }
 
