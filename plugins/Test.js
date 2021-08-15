@@ -1,6 +1,5 @@
 const Asena = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require("@adiwajshing/baileys");
-const sendMsg = await conn.sendMessage(id, button, MessageType.listMessage);
 const con = require('../config');
 
 // send a buttons message!
@@ -15,9 +14,6 @@ const buttonMessage = {
     buttons: buttons,
     headerType: 1
 }
-
-const sendMsg = await conn.sendMessage(id, buttonMessage, MessageType.buttonsMessage)
-
 
 if (con.WORKTYPE == 'private') {
   
