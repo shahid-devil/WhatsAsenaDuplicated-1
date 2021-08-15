@@ -1,6 +1,5 @@
 const Asena = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require("@adiwajshing/baileys");
-import { MessageType, MessageOptions, Mimetype } from '@adiwajshing/baileys';
 const sendMsg = await conn.sendMessage(id, button, MessageType.listMessage);
 const con = require('../config');
 
