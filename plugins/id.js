@@ -9,7 +9,7 @@ const NEED_UWONG = "*¡Menciona a un usuario!*"
 
 if (config.WORKTYPE === 'private') {
 
-      Asena.addCommand({pattern: 'wame ?(.*)', fromMe: true, onlyGroup: true, desc: WAME_DESC}, (async (message, match) => {    
+      Asena.addCommand({pattern: 'idsku ?(.*)', fromMe: true, onlyGroup: true, desc: WAME_DESC}, (async (message, match) => {    
         if (message.reply_message !== false) {
             await message.client.sendMessage(message.jid, WAME.format(message.reply_message.jid.split('@')[0], message.reply_message.jid.replace('@s.whatsapp.net', ' ')), MessageType.text, {
                 quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
@@ -28,7 +28,7 @@ if (config.WORKTYPE === 'private') {
 
 else if (con.WORKTYPE === 'public') {
 
-      Asena.addCommand({pattern: 'wame ?(.*)', fromMe: false, onlyGroup: true, desc: WAME_DESC}, (async (message, match) => {    
+      Asena.addCommand({pattern: 'idsku ?(.*)', fromMe: false, onlyGroup: true, desc: WAME_DESC}, (async (message, match) => {    
         if (message.reply_message !== false) {
             await message.client.sendMessage(message.jid, WAME.format(message.reply_message.jid.split('@')[0], message.reply_message.jid.replace('@s.whatsapp.net', ' ')), MessageType.text, {
                 quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
