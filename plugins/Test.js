@@ -20,7 +20,7 @@ if (con.WORKTYPE == 'private') {
   
   Asena.addCommand({pattern: 'test', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
-      await conn.sendMessage(id, buttonMessage, MessageType.buttonsMessage)
+      await conn.sendMessage(id, buttonMessage, MessageType.text)
 
         }));
 }
@@ -29,7 +29,7 @@ else if (con.WORKTYPE == 'public') {
   
   Asena.addCommand({pattern: 'test', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
-      await conn.sendMessage(id, buttonMessage, MessageType.buttonsMessage)
+      await conn.sendMessage(id, buttonMessage, MessageType.text)
 
         }));
 }
