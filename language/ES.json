@@ -388,6 +388,17 @@
             "VİD_DESC": "Envía el video respondido como spam.",
             "VİD_NEED": "```¡Responde a cualquier video!```"
         },
+        "mods": {
+            "NAMEY": "Nombre:",
+            "PUBLISHER": "Editor",
+            "MODINFO": "Información del mod:",
+            "DOWNLOAD": "Enlace de descarga:",
+            "SIZE": "Tamaño:",
+            "MODD_DESC": "Obtenga detalles de la aplicación modificada de MODDROID.",
+            "HMODD_DESC": "Obtenga detalles de la aplicación modificada de HappyMod.",
+            "NEED_APPNAME": "*Solicitud no válida, proporcione un nombre de aplicación válido.*",
+            "NOT_FOUNDMD": "```Lo siento, no pude encontrar una aplicación de este tipo. 😖```"
+        },
         "carbon": {
             "CARBON_DESC": "Convierte texto en imagen con carbon.sh.",
             "CARBON_NEEDWORD": "*No hay suficientes argumentos para convertirlo en una foto.!*\nEjemplo: ```/carbon test```\nEjemplo: ```/carbon Making#Test```",
