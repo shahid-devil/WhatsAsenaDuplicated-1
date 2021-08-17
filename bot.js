@@ -751,7 +751,7 @@ ${chalk.blue.italic('ℹ️ Conectando con WhatsApp, espere por favor...')}`);
                                         '\n========== ```¡Error resuelto!``` ==========' +
                                         '\n\n*Error principal:* _Función de eliminación de respuesta_' +
                                         '\n*Razón:* _Usando comandos IMG o Wiki._' +
-                                        '\n*Solución:* _No hay solución para este error... Pero tampoco es un error fatal._
+                                        '\n*Solución:* _No hay solución para este error... Pero tampoco es un error fatal._'
                                         , MessageType.text
                                     );
                                 }
