@@ -258,7 +258,14 @@
             "HUMI": "Humedad",
             "WIND": "Velocidad del viento",
             "CLOUD": "Nubes",
-            "NOT_FOUND": "```No pude encontrar una ciudad con ese nombre. 😖```"
+            "NOT_FOUND": "```No pude encontrar una ciudad con ese nombre. 😖```",
+            "SONG": "Canción",
+            "ALBUM": "Álbum",
+            "TITLE": "Título",
+            "PUBLICATION": "Publicación",
+            "SONGL": "Enlace",
+            "NEED_SONG": "Necesito que ingreses el nombre de alguna canción 🥲.",
+            "NOT_FOUNDS" : "¡No se encontró tal canción!"
         },
         "web": {
             "SPEEDTEST_DESC": "Mide la velocidad de carga y descarga.",
