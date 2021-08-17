@@ -21,21 +21,6 @@ async function checkImAdmin(message, user = message.client.user.jid) {
 
 }
 
-if (con.WORKTYPE == 'private') {
-
-Asena.addCommand({pattern: 'clear', fromMe: true, desc: END, dontAddCommandList: true}, (async (message, match) => {
-
-    await message.sendMessage('Limpiando el chat ☏');
-
-    await message.client.modifyChat (message.jid, ChatModification.delete);
-
-    await message.sendMessage('Mensajes del chat eliminados correctamente...✅\nHecho por *Skueletor* 🐺');
-
-}));
-}
-
-else if (con.WORKTYPE == 'public') {
-
 Asena.addCommand({pattern: 'clear', fromMe: false, desc: END, dontAddCommandList: true}, (async (message, match) => {
 
     await message.sendMessage('Limpiando el chat ☏');
@@ -45,4 +30,3 @@ Asena.addCommand({pattern: 'clear', fromMe: false, desc: END, dontAddCommandList
     await message.sendMessage('Mensajes del chat eliminados correctamente...✅\nHecho por *Skueletor* 🐺');
 
 }));
-}
