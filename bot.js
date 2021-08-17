@@ -353,7 +353,7 @@ ${chalk.blue.italic('ℹ️ Conectando con WhatsApp, espere por favor...')}`);
         console.log(chalk.bgGreen('🐺 Skueletor' + afwhasena));
         await new Promise(r => setTimeout(r, 500));
         let EVA_ACTİON = config.LANG == 'TR' || config.LANG == 'AZ' ? '*Skueletor Bot está trabajando como un chatbot! 🐺*\n\n_El propósito de este mod es convertir el bot en un chatbot AI completamente funcional._\n_Puedes usar el comando_ *.fulleva off*_para regresar al modo normal._\n\n *Gracias por usar Skueletor Bot. 💌*\n    *- Skueletor 🐺*'
-        if (conn.user.jid == one || conn.user.jid == two || conn.user.jid == three || conn.user.jid == four) {
+        else if (conn.user.jid == one || conn.user.jid == two || conn.user.jid == three || conn.user.jid == four) {
             await conn.sendMessage(conn.user.jid,nw, MessageType.text), console.log(nw), await new Promise(r => setTimeout(r, 1000))
             await heroku.get(baseURI + '/formation').then(async (formation) => { 
                 forID = formation[0].id; 
