@@ -15,7 +15,7 @@ Asena.addCommand({pattern: 'tiny ?(.*)', fromMe: false, desc: Lang.TIN_DESC}, as
   const response = await got(url);
   const json = JSON.parse(response.body);
   if (response.statusCode === 200) return await message.client.sendMessage(message.jid, 
-  '\n *🔗 ' + Lang.SLINK +'*
+  '\n *🔗 ' + Lang.SLINK +*'
 ' + json.result + '
 \n\n', MessageType.text);
  } catch {
@@ -32,7 +32,7 @@ Asena.addCommand({pattern: 'tiny ?(.*)', fromMe: true, desc: Lang.TIN_DESC}, asy
   const response = await got(url);
   const json = JSON.parse(response.body);
   if (response.statusCode === 200) return await message.client.sendMessage(message.jid, 
-  '\n *🔗 ' + Lang.SLINK +'*
+  '\n *🔗 ' + Lang.SLINK +*'
 ' + json.result + '
 \n\n', MessageType.text);
  } catch {
