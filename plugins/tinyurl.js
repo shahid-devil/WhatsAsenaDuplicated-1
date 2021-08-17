@@ -15,10 +15,9 @@ Asena.addCommand({pattern: 'tiny ?(.*)', fromMe: false, desc: Lang.TIN_DESC}, as
   const response = await got(url);
   const json = JSON.parse(response.body);
   if (response.statusCode === 200) return await message.client.sendMessage(message.jid, 
-  '\n *🔗 ' + Lang.SLINK +*'
-' + json.result + '
-\n\n', MessageType.text);
- } catch {
+  '\n *🔗 ' + Lang.SLINK +'*' + json.result + '\n\n', MessageType.text);
+ }
+ catch {
   return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDLI, MessageType.text);
  }
 });
@@ -32,10 +31,9 @@ Asena.addCommand({pattern: 'tiny ?(.*)', fromMe: true, desc: Lang.TIN_DESC}, asy
   const response = await got(url);
   const json = JSON.parse(response.body);
   if (response.statusCode === 200) return await message.client.sendMessage(message.jid, 
-  '\n *🔗 ' + Lang.SLINK +*'
-' + json.result + '
-\n\n', MessageType.text);
- } catch {
+  '\n *🔗 ' + Lang.SLINK +'*' + json.result + '\n\n', MessageType.text);
+ } 
+ catch {
   return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDLI, MessageType.text);
  }
 });
