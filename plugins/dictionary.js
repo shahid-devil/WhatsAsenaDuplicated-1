@@ -98,7 +98,7 @@ Asena.addCommand({ pattern: 'definition ?(.*)', fromMe: true, desc: "Use it as a
 
       })
       .catch(
-        async (err) => await message.sendMessage("test"),
+        async (err) => await message.sendMessage(""),
       )}
   },
 )
@@ -193,7 +193,7 @@ Asena.addCommand({ pattern: 'definition ?(.*)', fromMe: false, desc: "Use it as 
 
       })
       .catch(
-        async (err) => await message.sendMessage("test"),
+        async (err) => await message.sendMessage(""),
       )}
   },
 )
