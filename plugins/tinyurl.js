@@ -10,7 +10,7 @@ if (Config.WORKTYPE == 'public') {
 
 Asena.addCommand({pattern: 'tiny ?(.*)', fromMe: false, desc: Lang.TIN_DESC}, async (message, match) => {
  if (match[1] === '') return await message.reply(Lang.NEED_LINK);
- const url = https://tobz-api.herokuapp.com/api/tinyurl?url=${match[1]}&apikey=Tobzzz17;
+ const url = `https://tobz-api.herokuapp.com/api/tinyurl?url=${match[1]}&apikey=Tobzzz17`;
  try {
   const response = await got(url);
   const json = JSON.parse(response.body);
@@ -27,7 +27,7 @@ else if (Config.WORKTYPE == 'private') {
 
 Asena.addCommand({pattern: 'tiny ?(.*)', fromMe: true, desc: Lang.TIN_DESC}, async (message, match) => {
  if (match[1] === '') return await message.reply(Lang.NEED_LINK);
- const url = https://tobz-api.herokuapp.com/api/tinyurl?url=${match[1]}&apikey=Tobzzz17;
+ const url = `https://tobz-api.herokuapp.com/api/tinyurl?url=${match[1]}&apikey=Tobzzz17`;
  try {
   const response = await got(url);
   const json = JSON.parse(response.body);
