@@ -208,6 +208,12 @@
             "ALIVE_DESC": "Verifica si funciona correctamente el bot",
             "SYSD_DESC": "Dice las propiedades del sistema."
         },
+        "tinyurl": {
+            "TIN_DESC": "Acorta el enlace dado usando tinyurl.",
+            "NOT_FOUNDLI": "Letras no encontradas",
+            "SLINK": "Enlace",
+            "NEED_LINK":"Por favor proporcione el enlace"
+        },
         "tagall": {
             "TAGALL_DESC": "Etiqueta a todos en el grupo.",
             "ADMİN": "*¡No soy un administrador en este grupo!*",
@@ -391,8 +397,8 @@
         "mods": {
             "NAMEY": "Nombre:",
             "PUBLISHER": "Editor",
-            "MODINFO": "Información del mod:",
-            "DOWNLOAD": "Enlace de descarga:",
+            "MODINFO": "Información del mod",
+            "DOWNLOAD": "Enlace de descarga",
             "SIZE": "Tamaño:",
             "MODD_DESC": "Obtenga detalles de la aplicación modificada de MODDROID.",
             "HMODD_DESC": "Obtenga detalles de la aplicación modificada de HappyMod.",
