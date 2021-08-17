@@ -50,4 +50,3 @@ if (con.WORKTYPE === 'private') {
 
         }));
     }
-}
