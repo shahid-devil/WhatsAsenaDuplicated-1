@@ -10,8 +10,8 @@ if (con.WORKTYPE === 'private') {
 
         Asena.addCommand({pattern: 'dado', fromMe: true, desc: ZAR}, (async (message, match) => {
 
-           // await message.client.sendMessage(message.jid, SEN, MessageType.text);
-           // await new Promise(r => setTimeout(r, 4000));
+            await message.client.sendMessage(message.jid, SEN, MessageType.text);
+            await new Promise(r => setTimeout(r, 4000));
 
             // Numbers
             var r_text = new Array ();
@@ -32,8 +32,8 @@ if (con.WORKTYPE === 'private') {
 
         Asena.addCommand({pattern: 'dado', fromMe: false, desc: ZAR}, (async (message, match) => {
 
-          //  await message.client.sendMessage(message.jid, SEN, MessageType.text);
-         //   await new Promise(r => setTimeout(r, 4000));
+            await message.client.sendMessage(message.jid, SEN, MessageType.text);
+            await new Promise(r => setTimeout(r, 4000));
 
             // Numbers
             var r_text = new Array ();
