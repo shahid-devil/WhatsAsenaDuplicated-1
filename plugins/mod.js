@@ -4,7 +4,7 @@ const got = require('got');
 const Config = require('../config');
 
 const Language = require('../language');
-const Lang = Language.getString('weather');
+const Lang = Language.getString('mods');
 
 if (Config.WORKTYPE == 'private') {
 
