@@ -11,7 +11,7 @@ const { errorMessage, infoMessage } = require('../helpers');
 
 if (Config.WORKTYPE == 'private') {
 
-Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: private, desc: "Use it as a dictionary.\nEg: .dict en_US;lead\n For supporting languages send *.lngcode*" }, async (message, match) => {
+Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: true, desc: "Use it as a dictionary.\nEg: .dict en_US;lead\n For supporting languages send *.lngcode*" }, async (message, match) => {
 
     if (!match[1]) return await message.sendMessage(errorMessage("Ingrese una palabra para buscar."))
 
@@ -177,7 +177,7 @@ Asena.addCommand({ pattern: 'definition ?(.*)', fromMe: true, desc: "Use it as a
 
 else if (Config.WORKTYPE == 'public') {
 	
-Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: private, desc: "Use it as a dictionary.\nEg: .dict en_US;lead\n For supporting languages send *.lngcode*" }, async (message, match) => {
+Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: false, desc: "Use it as a dictionary.\nEg: .dict en_US;lead\n For supporting languages send *.lngcode*" }, async (message, match) => {
 
     if (!match[1]) return await message.sendMessage(errorMessage("Ingrese una palabra para buscar."))
 
