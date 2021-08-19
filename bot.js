@@ -917,7 +917,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else {
-                                else {
                                     return await conn.sendMessage(conn.user.jid, '*🙇🏻 Lo siento, no pude leer este error. 🙇🏻*' +
                                         '\n_Puede escribir a nuestro grupo de apoyo para obtener más ayuda._'
                                         , MessageType.text
