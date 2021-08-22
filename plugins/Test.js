@@ -14,8 +14,10 @@ const buttonMessage = {
     headerType: 1
 }
 
+await conn.relayWAMessage(WAMessageProto.ButtonsMessage.fromObject(buttonMessage), {})
+
   Skueletor.addCommand({pattern: 'test', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
-await conn.relayWAMessage(WAMessageProto.ButtonsMessage.fromObject(buttonMessage), {})
+    await conn.sendMessage(id, buttonMessage, MessageType.buttonsMessage)
 
         }));
