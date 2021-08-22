@@ -21,7 +21,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
 
 }
 
-Asena.addCommand({pattern: 'clear', fromMe: false, desc: END, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'clear', fromMe: true, desc: END, dontAddCommandList: true}, (async (message, match) => {
 
     await message.sendMessage('Limpiando el chat ☏');
 
