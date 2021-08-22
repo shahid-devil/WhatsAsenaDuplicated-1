@@ -1,4 +1,6 @@
 const {MessageType, MessageOptions, Mimetype} = require("@adiwajshing/baileys");
+const Asena = require('../events');
+const Config = require('../config');
 const id = '51912545279@s.whatsapp.net' // the WhatsApp ID 
 
 const rows = [
