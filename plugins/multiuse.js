@@ -52,11 +52,11 @@ Asena.addCommand({ pattern: 'twitter ?(.*)', fromMe: true, desc: "download from 
         const msg = `${format}`
 
 
-      if (msg === 'Image/jpg or png') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
+      if (msg === 'Hecho por *Skueletor*') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
           caption: msg,
         })}
 		 	 
-	if (msg === 'video/mp4') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
+	if (msg === 'Hecho por *Skueletor*') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
           caption: msg,
         })}
 
@@ -174,11 +174,11 @@ Asena.addCommand({ pattern: 'twitter ?(.*)', fromMe: false, desc: "download from
         const msg = `${format}`
 
 
-      if (msg === 'Image/jpg or png') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
+      if (msg === 'Hecho por *Skueletor*') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
           caption: msg,
         })}
 		 	 
-	if (msg === 'video/mp4') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
+	if (msg === 'Hecho por *Skueletor*') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
           caption: msg,
         })}
 
