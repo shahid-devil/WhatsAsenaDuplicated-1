@@ -101,18 +101,10 @@ async function whatsAsena () {
     });
     setInterval(async () => { 
         if (biography_var == 'true') {
-            if (conn.user.jid.startsWith('51')) { // Spain
                 var ov_time = new Date().toLocaleString('ES', { timeZone: 'Europe/Madrid' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\nHora de España 🇪🇸\n\nby Skueletor 🐺'
-                await conn.setStatus(biography)
-            }
-            else {
-                var ov_time = new Date().toLocaleString('EN', { timeZone: 'America/New_York' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\nUnited States Time 🇺🇸\n\nby Skueletor 🐺'
                 await conn.setStatus(biography)
             }
         }
