@@ -871,7 +871,8 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 }
-*/else if (Config.WORKTYPE == 'public') {
+*/
+else if (Config.WORKTYPE == 'public') {
 /*
     Asena.addCommand({pattern: 'skuelmedia', fromMe: false, desc: Lang.XMEDİA_DESC}, (async (message, match) => {    
 
