@@ -14,7 +14,7 @@ const Config = require('../config'); // GAN STYLE Support
 
 const got = require("got"); // Responses Catcher
 const deepai = require('deepai'); // Localde ise deepmain.js oluşturarak özelleştirilebilir şekilde kullanabilirsiniz. Web Sunucularında Çalışmaz!!
-deepai.setApiKey('3098e7e8-2590-436e-89b0-939da517c1f1'); // Quickstart API Key
+deepai.setApiKey('4b1a0d1c-cdc1-45f4-ad8b-15531f74834a'); // Quickstart API Key
 
 const Language = require('../language'); 
 const Lang = Language.getString('deepai'); // Language Support
