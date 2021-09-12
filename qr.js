@@ -1,12 +1,12 @@
-/* Copyright (C) 2020 Yusuf Usta.
+/* Copyright (C) 2021
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-WhatsAsena - Yusuf Usta
+Skueletor
 */
 
 const chalk = require('chalk');
 const {WAConnection, MessageOptions, MessageType} = require('@adiwajshing/baileys');
-const {StringSession} = require('./whatsasena/');
+const { StringSession } = require('./whatsasena/');
 const fs = require('fs');
 
 async function whatsAsena () {
@@ -17,36 +17,32 @@ async function whatsAsena () {
     conn.regenerateQRIntervalMs = 50000;
     
     conn.on('connecting', async () => {
-        console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
-${chalk.white.italic('AsenaString Kodu Alıcı')}
-${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please Wait.')}`);
-    });
+        console.log(`${chalk.green.bold('Skueletor')}${chalk.blue.bold('Bot')}
+    ${chalk.white.italic('Skueletor Bot QRcode')}
+    ${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please Wait.')}`);
+});
     
 
-    conn.on('open', async () => {
+    conn.on('open', () => {
         var st = Session.createStringSession(conn.base64EncodedAuthInfo());
         console.log(
-            chalk.green.bold('Asena String Kodunuz: '), Session.createStringSession(conn.base64EncodedAuthInfo())
+            chalk.green.bold('SkueletorBot String Code: '), Session.createStringSession(conn.base64EncodedAuthInfo())
         );
         
         if (!fs.existsSync('config.env')) {
             fs.writeFileSync('config.env', `ASENA_SESSION="${st}"`);
         }
-        if (conn.user.jid.startsWith('90')) {
-            await conn.sendMessage(conn.user.jid,st, MessageType.text)
-            await conn.sendMessage(conn.user.jid,'*Bu Kodu Kimseyle Paylaşmayın!*', MessageType.text)
-            console.log(
-                chalk.blue.bold('Locale kuruyorsanız node bot.js ile botu başlatabilirsiniz.')
-            );
+        if (conn.user.jid.startsWith('51')) {
+            conn.sendMessage(conn.user.jid,st, MessageType.text)
+            conn.sendMessage(conn.user.jid,'*Por favor, No compartas este codigo con nadie!*', MessageType.text)
         }
         else {
-            await conn.sendMessage(conn.user.jid,st, MessageType.text)
-            await conn.sendMessage(conn.user.jid,'*¡Por favor, no compartas este código con nadie!*', MessageType.text)
-            console.log(
-                chalk.blue.bold('If you are installing locale, you can start the bot with node bot.js')
-            );
+            conn.sendMessage(conn.user.jid,st, MessageType.text)
+            conn.sendMessage(conn.user.jid,'*Please, Do Not Share This Code With Anyone!*', MessageType.text)
         }
-        
+        console.log(
+            chalk.blue.bold('If you are installing locale, you can start the bot with the node bot.js.')
+        );
         process.exit(0);
     });
 
