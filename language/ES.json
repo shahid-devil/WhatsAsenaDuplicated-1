@@ -30,6 +30,7 @@
         "admin": {
             "BAN_DESC": "La persona del grupo será baneada. (Responda o etiquete a la persona junto al comando).",
             "IM_NOT_ADMIN": "*¡No soy un administrador en este grupo para ejecutar esa acción! 😖*",
+            "USER_NOT_ADMIN": "¡No eres administrador del grupo, por lo que no puedes ejecutar este comando! 🙃",
             "BANNED": " Ha sido eliminado del grupo.",
             "GIVE_ME_USER": "*¡Responde a un usuario!*",
             "ADD_DESC": "Agrega personas al grupo.",
