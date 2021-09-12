@@ -49,7 +49,7 @@ Asena.addCommand({ pattern: 'twitter ?(.*)', fromMe: true, desc: "download from 
 
         const profileBuffer = await axios.get(result, {responseType: 'arraybuffer'})
 
-        const msg = `${format}`
+        const msg = `Enlace procesado: ${result}\n\nHecho por *Skueletor*`
 
 
       if (msg === 'Hecho por *Skueletor*') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
@@ -171,7 +171,7 @@ Asena.addCommand({ pattern: 'twitter ?(.*)', fromMe: false, desc: "download from
 
         const profileBuffer = await axios.get(result, {responseType: 'arraybuffer'})
 
-        const msg = `${format}`
+        const msg = `Enlace procesado: ${result}\n\nHecho por *Skueletor*`
 
 
       if (msg === 'Hecho por *Skueletor*') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
