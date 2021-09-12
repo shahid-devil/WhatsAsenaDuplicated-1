@@ -7,6 +7,4 @@ Asena.addCommand({pattern: 'staff', fromMe: true, OnlyGroup: true}, (async (mess
     await new Promise(r => setTimeout(r, 1000));
 
     await message.sendMessage('Recuerda que este bot es hecho por *Skueletor* >:D');
-
 }));
-}
