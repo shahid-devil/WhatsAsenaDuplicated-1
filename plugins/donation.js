@@ -14,7 +14,7 @@ const fs = require('fs');
       
         await new Promise(r => setTimeout(r, 1650));
   
-        await message.sendMessage('Por cierto... Muy pronto los donadores tendrán beneficios dentro del bot... 😌\nPor ahora, los donadores tendrán acceso a que el bot sea añadido a un grupo, si *deseas y puedes apoyar* este proyecto, envíame una captura de pantalla de tu donación por Telegram, t.me/DKzippO\nCuando me escribas, dime cuál es tu número de teléfono con el que utilizas el bot y te tomaré en cuenta. 🤭');
+        await message.sendMessage('Por cierto... Los donadores tienen beneficios dentro del bot... 😎\nRevisa el siguiente mensaje https://t.me/SkueletorSupport/75 para ver los beneficios que existen dentro de los grupos actualmente.\nSi *deseas y puedes apoyar* este proyecto, envíame una captura de pantalla de tu donación por Telegram, t.me/DKzippO\nCuando me escribas, dime cuál es tu número de teléfono con el que utilizas el bot y te diré los pasos que debes seguir para añadir el bot a tu grupo 🤭');
   
         }));
   }
@@ -27,7 +27,7 @@ const fs = require('fs');
       
         await new Promise(r => setTimeout(r, 1650));
   
-        await message.sendMessage('Por cierto... Muy pronto los donadores tendrán beneficios dentro del bot... 😌\nPor ahora, los donadores tendrán acceso a que el bot sea añadido a un grupo, si *deseas y puedes apoyar* este proyecto, envíame una captura de pantalla de tu donación por Telegram, t.me/DKzippO\nCuando me escribas, dime cuál es tu número de teléfono con el que utilizas el bot y te tomaré en cuenta. 🤭');
+        await message.sendMessage('Por cierto... Los donadores tienen beneficios dentro del bot... 😎\nRevisa el siguiente mensaje https://t.me/SkueletorSupport/75 para ver los beneficios que existen dentro de los grupos actualmente.\nSi *deseas y puedes apoyar* este proyecto, envíame una captura de pantalla de tu donación por Telegram, t.me/DKzippO\nCuando me escribas, dime cuál es tu número de teléfono con el que utilizas el bot y te diré los pasos que debes seguir para añadir el bot a tu grupo 🤭');
   
         }));
   }
