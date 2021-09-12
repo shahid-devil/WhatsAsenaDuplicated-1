@@ -99,8 +99,7 @@ async function whatsAsena () {
                 var ov_time = new Date().toLocaleString('ES', { timeZone: 'Europe/Madrid' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\nFecha y hora de España 🇪🇸 \n\nby Skueletor 🐺 \n\nNo olvides que es un proyecto que aún está en desarrollo, lo que significa que puede contener fallas 🚧'
-    }, 7890);
+const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\nFecha y hora de España 🇪🇸 \n\nby Skueletor 🐺 \n\nNo olvides que es un proyecto que aún está en desarrollo, lo que significa que puede contener fallas 🚧'}, 7890);
     var insult = await axios.get('https://gist.githubusercontent.com/SkueletorTlg/c3f79c15bbf70aaf6c4af8e045d0931b/raw/')
     const { shs1, shl2, lss3, dsl4 } = insult.data.inside
     await config.DATABASE.sync();
