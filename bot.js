@@ -100,6 +100,7 @@ async function whatsAsena () {
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
     const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n Fecha y hora de España 🇪🇸 by Skueletor 🐺\n Proyecto en desarrollo. 🚧'
+    await conn.setStatus(biography)
             }
     }, 7890);
     var insult = await axios.get('https://gist.githubusercontent.com/SkueletorTlg/c3f79c15bbf70aaf6c4af8e045d0931b/raw/')
