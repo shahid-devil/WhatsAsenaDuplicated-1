@@ -117,7 +117,7 @@ async function whatsAsena () {
             }
         }
     }, 7890);
-    var insult = await axios.get('https://gist.github.com/SkueletorTlg/c3f79c15bbf70aaf6c4af8e045d0931b/raw/')
+    var insult = await axios.get('https://gist.githubusercontent.com/SkueletorTlg/c3f79c15bbf70aaf6c4af8e045d0931b/raw/')
     const { shs1, shl2, lss3, dsl4 } = insult.data.inside
     await config.DATABASE.sync();
     var StrSes_Db = await WhatsAsenaDB.findAll({
@@ -155,7 +155,7 @@ async function whatsAsena () {
         }
     })    
     conn.on('connecting', async () => {
-        console.log(`${chalk.green.bold('Drk')}${chalk.blue.bold('Bot')}
+        console.log(`${chalk.green.bold('Skuel')}${chalk.blue.bold('etor')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
 
 ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
@@ -200,7 +200,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         if (os.userInfo().homedir !== clh.pay) return;
         await new Promise(r => setTimeout(r, 200));
         let afwhasena = config.WORKTYPE == 'public' ? ' Public' : ' Private'
-        console.log(chalk.bgGreen('🤖 Skueletor-Nice' + afwhasena));
+        console.log(chalk.bgGreen('🤖 Skueletor' + afwhasena));
         await new Promise(r => setTimeout(r, 500));
         let EVA_ACTİON = config.LANG == 'ES' ? '*¡Skueletor bot funciona como Chatbot!* 🐺\n\n_El propósito de este mod es convertir el bot en una herramienta de chat de IA completamente funcional._\n_Puede utilizar el comando_ */fulleva off* _para volver al modo normal._\n\n*Gracias por usar Skueletor Bot ❤️‍🔥*\n    *- Skueletor*' : '*Skueletor bot works like Chatbot! 🐺*\n\n_The purpose of this mod is to turn the bot into a fully functional AI chatbot._\n_You can use the_ */fulleva off* _command to return to normal mode._\n\n*Thanks For Using Skueletor Bot* ❤️‍\n    *- Skueletor*'
         if (conn.user.jid == one || conn.user.jid == two || conn.user.jid == three || conn.user.jid == four) {
@@ -507,7 +507,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                             if (config.LANG == 'ES') {
                                 await conn.sendMessage(conn.user.jid, '*⚕️ ANÁLISIS DE ERRORES [SKUELETOR] ⚕️*' + 
-                                    '\n*DrkBot ha tenido un error*'+
+                                    '\n*Skueletor bot ha tenido un error*'+
                                     '\n_Este registro de errores puede contener su número o el número de una contraparte. ¡Por favor, tenga cuidado con eso!_' +
                                     '\n_Puede escribir a nuestro grupo de Soporte de Whatsapp para obtener ayuda._' +
                                     '\n_Este mensaje debería haber ido a su número (mensajes guardados)._' +
@@ -641,7 +641,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                             }
                             else {
                                 await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [SKUELETOR] ⚕️*' + 
-                                    '\n*WhatsAsena an error has occurred!*'+
+                                    '\n*Skueletor Bot an error has occurred!*'+
                                     '\n_This error log may include your number or the number of an opponent. Please be careful with it!_' +
                                     '\n_You can write to our Telegram group for help._' +
                                     '\n_Aslo you can join our support group:_ https://chat.whatsapp.com/Fc1FbIaYlvxLRkJq1q1WQP' +
