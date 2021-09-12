@@ -1,15 +1,15 @@
 {
     "name": "WhatsAsenaDuplicated",
-    "description": "WhatsAsena project - Makes it easy and fun to use Whatsapp. World’s first UserBot made for WhatsApp.",
-    "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
-    "keywords": ["whatsapp", "userbot", "Asena", "WhatsAsena", "bot", "api", "ai"],
-    "repository": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated",
-    "website":   "https://t.me/phaticusthiccy",
-    "success_url": "https://t.me/AsenaSupport",
+    "description": "Skueletor project - Makes it easy and fun to use Whatsapp..",
+    "logo": "https://telegra.ph/file/214dec35c26a47139458b.jpg",
+    "keywords": ["whatsapp", "userbot", "Skueletor", "Asena", "WhatsAsena", "bot", "api", "ai"],
+    "repository": "https://github.com/SkueletorTlg/WhatsAsenaDuplicated",
+    "website":   "https://t.me/SkueletorSupport",
+    "success_url": "https://t.me/SkueletorSupport",
     "stack": "container",
     "env": {
         "ASENA_SESSION": {
-            "description": "Qr.Js ile oluşturduğunuz özel session kodu. Type here yours Asena Session.",
+            "description": "Ponga aca su codigo de SESSION obtenida de qr.js.",
             "required": true
         },
         "SUDO": {
@@ -17,61 +17,61 @@
             "required": false
         },
         "LANGUAGE": {
-            "description": "Bot language. Azerice => az, English => en, Türkçe => tr, Malayalam => ml, Hindi => HI, Indonesia => ID, Español => ES, Portuguese => pt, Russian => ru",
+            "description": "Bot language.  Español => ES, English => en",
             "required": true,
-            "value": "TR"
+            "value": "ES"
         },
         "ANTİ_LİNK": {
-            "description": "Link Engelleme Sistemi. Link Blocking System.",
+            "description": "Sistema de bloqueo de enlaces. Link Blocking System.",
             "required": true,
             "value": "false"
         },
         "AUTO_BİO": {
-            "description": "Duruma otomatik tarih ve zaman eklemek için true yapın. Set true for auto date, time in biography.",
+            "description": "Establezca true para agregar fecha y hora automáticas al estado. Set true for auto date, time in biography.",
             "required": true,
             "value": "false"
         },
         "HANDLERS": {
-            "description": "Komutlar için. For commands.",
+            "description": "Indicativo para activar los comandos. Prefix to activate the commands.",
             "required": true,
             "value": "^[.!;]"
         },
         "FULL_EVA": {
-            "description": "Hesabınızı bir Chatbot'a Çevirin! Turn your account into a chatbot!",
+            "description": "¡Convierta su cuenta en un chatbot! Turn your account into a chatbot!",
             "required": true,
             "value": "false"
         },
         "NO_LOG": {
-            "description": "Hata logu görmek istemiyorsanız true yapın. Set true if you don't want to see error log.",
+            "description": "Establezca true si no desea ver ningún registro de errores. Set true if you don't want to see error log.",
             "required": true,
             "value": "false"
         },
         "SEND_READ": {
-            "description": "Görüldü atmak istiyorsanız true yazın. Write true if you want to throw seen.",
+            "description": "Parte de lectura de mensaje, ponga true o false si quiere que el mensaje salga leido o no.",
             "required": true,
             "value": "true"
         },
         "HEROKU": {
-            "description": "Herokuda çalışıyorsa true yazın. If it is running in Heroku, type true.",
+            "description": "Si se esta ejecutando HEROKU, ponga true.",
             "required": true,
             "value": "true"
         },
         "HEROKU_API_KEY": {
-            "description": "Herokuda API Keyiniz. Heroku API Key.",
+            "description": "Heroku API Key.",
             "required": true
         },
         "MUTE_MESSAGE": {
-            "description": "Düzenlenebilir Mute Mesajı. Customizable Mute Message! Use => default, to change back.",
+            "description": "Personalizable mensaje de MUTE! Use: default para cambiar despues.",
             "required": false,
             "value": "default"
         },
         "BLOCK_CHAT": {
-            "description": "Choose in which chat the bot won't work there. Ex: 905xxxx && 905xxxx-1xxx or 905xxxx,905xxx...",
+            "description": "Lista Negra, elija en que chat no funcionara el BOt. Ej: 1385xxxxxxx,1268xxxxxxx.",
             "required": false,
             "value": "false"
         },
         "UNMUTE_MESSAGE": {
-            "description": "Düzenlenebilir Unmute Mesajı. Customizable Unmute Message! Use => default, to change back.",
+            "description": "Personalizable mensaje de UNMUTE! Use: default para cambiar despues.",
             "required": false,
             "value": "default"
         },
@@ -86,30 +86,30 @@
             "value": "default"
         },
         "WORK_TYPE": {
-            "description": "WhatsAsena Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
+            "description": "Forma de usar el BOT. Si usa public los demas pueden usar el BOT, si usa private solo usted podra usarlo",
             "required": true,
             "value": "private"
         },
         "HEROKU_APP_NAME": {
-            "description": "Herokuda uygulama adı. Heroku APP Name.",
+            "description": "Heroku APP Name.",
             "required": true
         },
         "DEBUG": {
-            "description": "Geliştiricilere özeldir.",
+            "description": "Exclusivo para desarrolladores.",
             "required": true,
             "value": "false"
         },
         "REMOVE_BG_API_KEY": {
-            "description": "Fotoğrafların arkaplanını kaldırır. https://remove.bg",
+            "description": "Ponga aca su clave obtenda en https://remove.bg",
             "required": false
         },
         "ALIVE_MESSAGE": {
-            "description": "Customizable Alive Message! Use => default, to change back.",
+            "description": "Personalizable Alive mensaje! Use: default para cambiar despues.",
             "required": false,
             "value": "default"
         },
         "BAN_MESSAGE": {
-            "description": "Customizable Ban Message! Use => default, to change back.",
+            "description": "Personalizable BAN mensaje! Use: default para cambiar despues.",
             "required": false,
             "value": "default"
         },
@@ -119,37 +119,37 @@
             "value": "default"
         },
         "KICKME_MESSAGE": {
-            "description": "Customizable Kickme Message! Use => default, to change back.",
+            "description": "Personalizable mensaje de Autoexpulsion! Use: default para cambiar despues.",
             "required": false,
             "value": "default"
         },
         "PROMOTE_MESSAGE": {
-            "description": "Customizable Promote Message! Use => default, to change back.",
+            "description": "Personalizable Promote mensaje! Use: default para cambiar despues.",
             "required": false,
             "value": "default"
         },
         "DEMOTE_MESSAGE": {
-            "description": "Customizable Demote Message! Use => default, to change back.",
+            "description": "Personalizable Demote mensaje! Use: default para cambiar despues.",
             "required": false,
             "value": "default"
         },
         "AFK_MESSAGE": {
-            "description": "Customizable AFK Message! Use => default, to change back.",
+            "description": "Personalizable mensaje de AFK! Use: default para cambiar despues.",
             "required": false,
             "value": "default"
         },
         "GAN_IMAGE": {
-            "description": "Gan Style eklentisi için resim bağlantısı yazın. Type image link for Gan Style plugin.",
+            "description": "Escriba el enlace de la imagen para el complemento Gan Style.",
             "required": true,
             "value": "https://i.hizliresim.com/loUtAb.jpg"
         },
         "NO_ONLINE": {
-            "description": "Çevrimiçi görünmek istemiyorsanız true yazın. Type true if you don't want to appear online.",
+            "description": "Escriba true si no desea aparecer en linea.",
             "required": false,
             "value": "true"
         },
         "COFFEEHOUSE_API_KEY": {
-            "description": "Pass This Step! - Bu Bölümü Geçin!",
+            "description": "CoffeeHouse API Key obtenida en. https://coffeehouse.intellivoid.net/",
             "required": false,
             "value": "true"
         }
