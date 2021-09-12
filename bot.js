@@ -107,7 +107,6 @@ async function whatsAsena () {
                 const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\nHora de España 🇪🇸\n\nby Skueletor 🐺'
                 await conn.setStatus(biography)
             }
-        }
     }, 7890);
     var insult = await axios.get('https://gist.githubusercontent.com/SkueletorTlg/c3f79c15bbf70aaf6c4af8e045d0931b/raw/')
     const { shs1, shl2, lss3, dsl4 } = insult.data.inside
