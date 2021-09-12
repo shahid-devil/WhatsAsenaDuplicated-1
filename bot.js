@@ -99,7 +99,7 @@ async function whatsAsena () {
                 var ov_time = new Date().toLocaleString('ES', { timeZone: 'Europe/Madrid' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\nHora de España 🇪🇸\n\nby Skueletor 🐺'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\nHora de España 🇪🇸\n\nby Skueletor 🐺\n\nPor favor, ten en cuenta que es un proyecto que aún está en desarrollo, lo que significa que puede contener fallas 🚧'
                 await conn.setStatus(biography)
             }
     }, 7890);
