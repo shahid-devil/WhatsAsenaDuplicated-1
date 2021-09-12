@@ -33,7 +33,7 @@ Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: true, desc: "Use it as a dicti
       .then(async (response) => {
         const {
          definition,
-	example,	
+	example,
         } = response.data[0].meanings[0].definitions[0]
 
    
@@ -53,7 +53,7 @@ Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: true, desc: "Use it as a dicti
       .then(async (response) => {
         const {
          definition,
-	example,	
+	example,
         } = response.data[0].meanings[0].definitions[1]
 
    
@@ -72,7 +72,7 @@ Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: true, desc: "Use it as a dicti
       .then(async (response) => {
         const {
          definition,
-	example,	
+	example,
         } = response.data[0].meanings[1].definitions[0]
 
    
@@ -91,7 +91,7 @@ Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: true, desc: "Use it as a dicti
       .then(async (response) => {
         const {
          definition,
-	example,	
+	example,
         } = response.data[0].meanings[1].definitions[1]
 
    
@@ -110,7 +110,7 @@ Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: true, desc: "Use it as a dicti
       .then(async (response) => {
         const {
          definition,
-	example,	
+	example,
         } = response.data[1].meanings[0].definitions[0]
 
    
@@ -199,7 +199,7 @@ Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: false, desc: "Use it as a dict
       .then(async (response) => {
         const {
          definition,
-	example,	
+	example,
         } = response.data[0].meanings[0].definitions[0]
 
    
@@ -219,7 +219,7 @@ Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: false, desc: "Use it as a dict
       .then(async (response) => {
         const {
          definition,
-	example,	
+	example,
         } = response.data[0].meanings[0].definitions[1]
 
    
@@ -238,7 +238,7 @@ Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: false, desc: "Use it as a dict
       .then(async (response) => {
         const {
          definition,
-	example,	
+	example,
         } = response.data[0].meanings[1].definitions[0]
 
    
@@ -257,7 +257,7 @@ Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: false, desc: "Use it as a dict
       .then(async (response) => {
         const {
          definition,
-	example,	
+	example,
         } = response.data[0].meanings[1].definitions[1]
 
    
@@ -276,7 +276,7 @@ Asena.addCommand({ pattern: 'dict ?(.*)', fromMe: false, desc: "Use it as a dict
       .then(async (response) => {
         const {
          definition,
-	example,	
+	example,
         } = response.data[1].meanings[0].definitions[0]
 
    
@@ -320,7 +320,7 @@ Asena.addCommand({ pattern: 'definition ?(.*)', fromMe: false, desc: "Use it as 
       .then(async (response) => {
         const {
          definition,
-	example,	
+	example,
         } = response.data[i].meanings[i].definitions[i]
 
    
