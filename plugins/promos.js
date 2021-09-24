@@ -6,7 +6,7 @@ const Config = require('../config');
 const { successfullMessage, errorMessage, infoMessage } = require('../helpers');
 const NotesDB = require('./sql/notes');
 const Language = require('../language')
-const Lang = Language.getString('notes')
+const Lang = Language.getString('promos')
 
 async function checkAdmin(message, user = message.data.participant) {
     var grup = await message.client.groupMetadata(message.jid);
@@ -38,7 +38,7 @@ Skueletor.addCommand({ pattern: 'promos', fromMe: false, onlyGroup: true }, asyn
     const notes = []
     _notes.map(note => {
         if (!note.note.includes('IMG;;;')) {
-            notes.push('😏 Promociones:\n' + note.note)
+            notes.push('😏 Promociones:' + note.note)
         }
     })
 
