@@ -16,7 +16,7 @@ if (cn.WORKTYPE == 'private') {
 
     if (match[1] === '') return await message.sendMessage(SPDF_LINK);
 
-    var webimage = await axios.get(`https://api.html2pdf.app/v1/generate?url=${match[1]}&apiKey=begC4dFAup1b8LyRXxAfjetfqDg2uYx8PWmh9YJ59tTZXiUyh2Vs72HdYQB68vyc`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.html2pdf.app/v1/generate?url=${match[1]}&apiKey=uKluwn2F9s3dJ9TH5HU8G9F0VkaltFpLyx6m1WAsGoyO56knH1LbmouKMwuEpm9O`, { responseType: 'arraybuffer' })
 
     await message.sendMessage(SPDF_PROC);
 
@@ -31,7 +31,7 @@ else if (cn.WORKTYPE == 'public') {
 
     if (match[1] === '') return await message.sendMessage(SPDF_LINK);
 
-    var webimage = await axios.get(`https://api.html2pdf.app/v1/generate?url=${match[1]}&apiKey=begC4dFAup1b8LyRXxAfjetfqDg2uYx8PWmh9YJ59tTZXiUyh2Vs72HdYQB68vyc`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://api.html2pdf.app/v1/generate?url=${match[1]}&apiKey=uKluwn2F9s3dJ9TH5HU8G9F0VkaltFpLyx6m1WAsGoyO56knH1LbmouKMwuEpm9O`, { responseType: 'arraybuffer' })
 
     await message.sendMessage(SPDF_PROC);
 
