@@ -117,6 +117,8 @@
             "NEED_WELCOME_TEXT": "*Debe escribir un mensaje para configurar un mensaje de bienvenida.*\n*Ejemplo:* ```/welcome ¡BIENVENIDO!```",
             "WELCOME_DELETED": "*✅ ¡El mensaje de bienvenida se ha eliminado correctamente!*",
             "WELCOME_SETTED": "*✅ ¡El mensaje de bienvenida se ha configurado correctamente!*",
+            "IM_NOT_ADMIN": "*¡No soy un administrador en este grupo para ejecutar esa acción! 😖*",
+            "USER_NOT_ADMIN": "¡No eres administrador del grupo, por lo que no puedes ejecutar este comando! 🙃",
             "GOODBYE_DESC": "Establece el mensaje de la despedida. Si no envía un mensaje, le traerá el mensaje por defecto de la despedida.",
             "NOT_SET_GOODBYE": "*¡No estableciste el mensaje de despedida!*\n*Para configurar:* ```/goodbye ¡Adiós!```",
             "GOODBYE_ALREADY_SETTED": "*✅ ¡El mensaje de despedida está configurado!*\n*Mensaje:* ```",
