@@ -219,7 +219,8 @@
         },
         "tagall": {
             "TAGALL_DESC": "Etiqueta a todos en el grupo.",
-            "ADMİN": "*¡No soy un administrador en este grupo!*",
+            "IM_NOT_ADMIN": "*¡No soy un administrador en este grupo para ejecutar esa acción! 😖*",
+            "USER_NOT_ADMIN": "¡No eres administrador del grupo, por lo que no puedes ejecutar este comando! 🙃",
             "SCAN": "Comprueba si el número introducido está registrado en WhatsApp.",
             "NO": "*Ingrese cualquier número de teléfono!*\n*Ejemplo:* ```/scan +57 350xxxx```",
             "SUC": "*¡Este número está registrado en WhatsApp! ✅*",
