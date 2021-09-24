@@ -455,12 +455,27 @@
             "NOTES_USAGE": "Muestra todas sus notas existentes.",
             "NO_SAVED": "No has encontrado ninguna nota grabada.",
             "SAVED": "Aquí están las notas que grabó: ",
+            "IM_NOT_ADMIN": "*¡No soy un administrador en este grupo para ejecutar esa acción! 😖*",
+            "USER_NOT_ADMIN": "¡No eres administrador del grupo, por lo que no puedes ejecutar este comando! 🙃",
             "SAVE_USAGE": "Registra el mensaje al que responde o la nota oficial.",
             "REPLY": "Por favor cite un mensaje o usar como /save <yournote>",
             "SUCCESSFULLY_ADDED": "Tu nota ha sido guardada con éxito, puede acceder a sus notas escribiendo .notes",
             "UNSUCCESSFUL": "Encontramos un error al guardar tu nota, ınténtalo de nuevo. Si el problema persiste, comuníquese con el desarrollador del bot mediante t.me/skueletor_bot.",
             "DELETE_USAGE": "Elimina *todas* las notas que ha guardado.",
             "SUCCESSFULLY_DELETED": "Todas tus notas se han eliminado correctamente."
+        },
+        "promos": {
+            "NOTES_USAGE": "Muestra todas sus promos existentes.",
+            "NO_SAVED": "No se ha encontrado ninguna promoción guardada.",
+            "SAVED": "Aquí están las promociones guardadas: ",
+            "IM_NOT_ADMIN": "*¡No soy un administrador en este grupo para ejecutar esa acción! 😖*",
+            "USER_NOT_ADMIN": "¡No eres administrador del grupo, por lo que no puedes ejecutar este comando! 🙃",
+            "SAVE_USAGE": "Guarda las promociones",
+            "REPLY": "Por favor, responda al mensaje de alguna promoción para guardar el mensaje.",
+            "SUCCESSFULLY_ADDED": "La promoción ha sido guardada correctamente. para revisar las existentes escribe /promos",
+            "UNSUCCESSFUL": "Encontramos un error al guardar tu nota, ınténtalo de nuevo. Si el problema persiste, comuníquese con el desarrollador del bot mediante t.me/skueletor_bot.",
+            "DELETE_USAGE": "Elimina *todas* las promociones que ha guardado.",
+            "SUCCESSFULLY_DELETED": "*Todas* las promociones guardadas han sido eliminadas correctamente. ✅"
         },
         "log": {
             "LOG": "Guarda el mensaje que responde a su número privado",
