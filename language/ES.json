@@ -35,6 +35,8 @@
             "GIVE_ME_USER": "*¡Responde a un usuario!*",
             "ADD_DESC": "Agrega personas al grupo.",
             "ADDED": " Ha sido añadido/a al grupo.",
+            "S_NEED_WORD": "*Necesitas ingresar el nuevo nombre.*",
+            "SUC_SNAME": "✅ Cambió con éxito el nombre del grupo a",
             "ALREADY_PROMOTED": "```¿Cómo hago para ascender a alguien que ya es administrador?```",
             "PROMOTED": " ```Ha sido ascendido al rango de administrador correctamente ✅```",
             "PROMOTE_DESC": "Asciende a cualquier persona a administradora.",
