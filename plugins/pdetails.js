@@ -32,7 +32,7 @@ const NOT_FOUND = "*😔 Celular no encontrado:*"
 
 if (Config.WORKTYPE == 'private') {
 
-cobra.addCommand({ pattern: 'phonedetails ?(.*)', fromMe: true, usage: USAGE, desc: PHONEDE_DESC }, async (message, match) => {
+Skueletor.addCommand({ pattern: 'phonedetails ?(.*)', fromMe: true, usage: USAGE, desc: PHONEDE_DESC }, async (message, match) => {
 
     const pname = match[1]
 
@@ -92,7 +92,7 @@ cobra.addCommand({ pattern: 'phonedetails ?(.*)', fromMe: true, usage: USAGE, de
 
 if (Config.WORKTYPE == 'public') {
 
-cobra.addCommand({ pattern: 'phonedetails ?(.*)', fromMe: false, usage: USAGE, desc: PHONEDE_DESC }, async (message, match) => {
+Skueletor.addCommand({ pattern: 'phonedetails ?(.*)', fromMe: false, usage: USAGE, desc: PHONEDE_DESC }, async (message, match) => {
 
     const pname = match[1]
 
