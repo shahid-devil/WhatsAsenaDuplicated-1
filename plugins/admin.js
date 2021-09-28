@@ -32,6 +32,22 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 
+Asena.addCommand({pattern: 'setname ?(.*)', onlyGroup: true, fromMe: false}, (async (message, match) => {
+    var im = await checkImAdmin(message);
+    var userad = await checkAdmin(message);
+    if (!userad) return await message.client.sendMessage(message.jid,Lang.USER_NOT_ADMIN,MessageType.text);
+    if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
+    
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.S_NEED_WORD,MessageType.text);
+    await message.client.groupUpdateSubject(message.jid, match[1]);
+    await message.client.sendMessage(message.jid,Lang.SUC_SNAME + ` ${match[1]}`,MessageType.text);
+    }
+));
+
+module.exports = {
+    checkImAdmin: checkImAdmin
+};
+
 Asena.addCommand({pattern: 'ban ?(.*)', fromMe: false, onlyGroup: true, desc: Lang.BAN_DESC}, (async (message, match) => {  
     var im = await checkImAdmin(message);
     var userad = await checkAdmin(message);
