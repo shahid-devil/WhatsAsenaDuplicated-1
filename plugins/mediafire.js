@@ -25,7 +25,7 @@ const NO_RESULT = "*no puedo encontrar nada :(...*"
 
 if (Config.WORKTYPE == 'private') {
 
-    cobra.addCommand({ pattern: 'mediafire ?(.*)', fromMe: true }, async (message, match) => {
+    Skueletor.addCommand({ pattern: 'mediafire ?(.*)', fromMe: true }, async (message, match) => {
 
         const link = match[1]
     
@@ -51,7 +51,7 @@ if (Config.WORKTYPE == 'private') {
 }
 
 else if (Config.WORKTYPE == 'public') {
-    cobra.addCommand({ pattern: 'mediafire ?(.*)', fromMe: false }, async (message, match) => {
+    Skueletor.addCommand({ pattern: 'mediafire ?(.*)', fromMe: false }, async (message, match) => {
 
         const link = match[1]
     
